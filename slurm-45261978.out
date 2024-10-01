@@ -1,0 +1,6 @@
+/home/kaim/demucs/demucs/api.py:27: UserWarning: TorchAudio's global backend is now deprecated. Please enable distpatcher by setting `TORCHAUDIO_USE_BACKEND_DISPATCHER=1`, and specify backend when calling load/info/save function.
+  import torchaudio as ta
+Selected model is a bag of 1 models. You will see that many progress bars per track.
+Separated tracks will be stored in /project/6002780/kaim/demucs/job_outputs/htdemucs
+Separating track test.mp3
+  0%|                                                                                   | 0.0/23.4 [00:00<?, ?seconds/s] 25%|██████████████████▌                                                       | 5.85/23.4 [00:26<01:20,  4.57s/seconds] 50%|█████████████████████████████████████                                     | 11.7/23.4 [00:26<00:22,  1.90s/seconds] 75%|████████████████████████████████████████████▉               | 17.549999999999997/23.4 [00:27<00:06,  1.05s/seconds]100%|██████████████████████████████████████████████████████████████████████████| 23.4/23.4 [00:27<00:00,  1.54seconds/s]100%|██████████████████████████████████████████████████████████████████████████| 23.4/23.4 [00:27<00:00,  1.17s/seconds]

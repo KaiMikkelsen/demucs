@@ -1,0 +1,1 @@
+sbatch job.sh --output=job_outputs
