@@ -3,8 +3,8 @@
 
 # Conda dependencies handled by pip equivalents
 #ffmpeg>=4.2
-torch>=1.8.1
-torchaudio>=0.8
+torch
+torchaudio
 tqdm>=4.36
 
 # Pip dependencies
@@ -14,7 +14,7 @@ einops
 hydra-colorlog>=1.1
 hydra-core>=1.1
 julius>=0.2.3
-lameenc>=1.2
+#lameenc>=1.2
 openunmix
 musdb>=0.4.0
 museval>=0.4.0
