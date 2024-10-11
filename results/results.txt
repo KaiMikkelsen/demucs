@@ -1,0 +1,9 @@
+Date and Time: 2024-10-11 11:37:43
+Machine Name: Kais-Air.ht.home
+
+Method Evaluation Results:
+Aggrated Scores (median over frames, median over tracks)
+vocals          ==> SDR:   8.898  SIR:  14.128  ISR:  14.355  SAR:   9.299  
+drums           ==> SDR:   9.534  SIR:  15.429  ISR:  15.050  SAR:  10.523  
+bass            ==> SDR:   9.517  SIR:  15.564  ISR:  13.449  SAR:  10.044  
+other           ==> SDR:   5.721  SIR:   9.109  ISR:  10.042  SAR:   6.594  
