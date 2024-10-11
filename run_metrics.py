@@ -11,7 +11,7 @@ estimates_directory = "/Users/kaimikkelsen/canada_compute/demucs/separated/htdem
 output_directory = '/Users/kaimikkelsen/canada_compute/demucs/results'
 
 estimates_directory = "/home/kaim/projects/def-ichiro/kaim/demucs/separated/htdemucs"
-output_directory = '/home/kaim/projects/def-ichiro/kaim/demucs/results'
+output_directory = '/home/kaim/projects/def-ichiro/kaim/demucs/results/'
 
 mus = musdb.DB(root=dataset_folder, subsets="test")
 

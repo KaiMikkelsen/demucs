@@ -1,0 +1,47 @@
+
+/home/kaim/projects/def-ichiro/kaim/demucs
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+Demucs.ipynb
+LICENSE
+MANIFEST.in
+Makefile
+README.md
+conf
+demucs
+demucs.egg-info
+demucs.png
+docs
+download_tracks.sh
+environment-cpu.yml
+environment-cuda.yml
+hubconf.py
+job_outputs
+lameenc
+metrics_calculation_job.sh
+mypy.ini
+outputs.tar.gz
+requirements.txt
+requirements_minimal.txt
+requirements_venv.txt
+results
+run_metrics.py
+run_separation_demucs.sh
+separated
+separation_demucs_job.sh
+setup.cfg
+setup.py
+slurm-46302848.out
+tools
+Traceback (most recent call last):
+  File "/project/6002780/kaim/demucs/run_metrics.py", line 29, in <module>
+    print(method)
+  File "/project/6002780/kaim/ENV/lib/python3.11/site-packages/museval/aggregate.py", line 256, in __repr__
+    targets = self.df["target"].unique()
+              ~~~~~~~^^^^^^^^^^
+  File "/project/6002780/kaim/ENV/lib/python3.11/site-packages/pandas/core/frame.py", line 4102, in __getitem__
+    indexer = self.columns.get_loc(key)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/project/6002780/kaim/ENV/lib/python3.11/site-packages/pandas/core/indexes/range.py", line 417, in get_loc
+    raise KeyError(key)
+KeyError: 'target'
