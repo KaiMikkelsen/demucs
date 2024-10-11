@@ -18,7 +18,7 @@ import museval
 # print(method)
 
 # initiate musdb
-mus = musdb.DB(root="../data/MUSDB18-7")
+mus = musdb.DB(root="../data/MUSDB18")
 
 # evaluate an existing estimate folder with wav files
 scores = museval.eval_mus_dir(
@@ -30,6 +30,6 @@ scores = museval.eval_mus_dir(
 
 #args = parser.parse_args()
 method = museval.EvalStore(frames_agg="median", tracks_agg="median")
-method.add_eval_dir('/Users/kaimikkelsen/canada_compute/demucs/results')
+method.add_eval_dir('/home/kaim/projects/def-ichiro/kaim/demucs/results')
 print(method)
 
