@@ -19,3 +19,5 @@ Session.vim
 /path
 /.DS_Store
 results/.DS_Store
+results/test/*
+
