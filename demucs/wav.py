@@ -247,6 +247,7 @@ def get_musdb_wav_datasets(args):
         metadata_train = {name: meta for name, meta in metadata.items() if name not in valid_tracks}
     metadata_valid = {name: meta for name, meta in metadata.items() if name in valid_tracks}
     print("metadata valid", metadata_valid)
+    print("valid_tracks", valid_tracks)
     if args.full_cv:
         kw_cv = {}
     else:
