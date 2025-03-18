@@ -230,10 +230,10 @@ def get_musdb_wav_datasets(args):
     metadata_file = Path(args.metadata) / ('musdb_' + sig + ".json")
     root = Path(args.musdb) / "train"
 
-    if not metadata_file.is_file() and distrib.rank == 0:
-        metadata_file.parent.mkdir(exist_ok=True, parents=True)
-        metadata = build_metadata(root, args.sources)
-        json.dump(metadata, open(metadata_file, "w"))
+    #if not metadata_file.is_file() and distrib.rank == 0:
+    metadata_file.parent.mkdir(exist_ok=True, parents=True)
+    metadata = build_metadata(root, args.sources)
+    json.dump(metadata, open(metadata_file, "w"))
     if distrib.world_size > 1:
         distributed.barrier()
     metadata = json.load(open(metadata_file))
@@ -262,5 +262,4 @@ def get_musdb_wav_datasets(args):
     valid_set = Wavset(root, metadata_valid, [MIXTURE] + list(args.sources),
                        samplerate=args.samplerate, channels=args.channels,
                        normalize=args.normalize, **kw_cv)
-    print()
     return train_set, valid_set
