@@ -23,7 +23,7 @@ dset:
   normalize: true
   metadata: ./metadata
   sources: ['drums', 'bass', 'other', 'vocals']
-  valid_samples:14 # valid dataset size
+  valid_samples: 14 # valid dataset size
   backend: null   # if provided select torchaudio backend.
 
 test:
