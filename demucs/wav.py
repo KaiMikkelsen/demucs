@@ -269,8 +269,8 @@ def get_musdb_wav_datasets(args):
     """Extract the wav datasets from the XP arguments."""
     sig = hashlib.sha1(str(args.musdb).encode()).hexdigest()[:8]
     metadata_file = Path(args.metadata) / ('musdb_' + sig + ".json")
-    train_path = Path(args.wav) / "train"
-    valid_path = Path(args.wav) / "valid"
+    train_path = Path(args.musdb) / "train"
+    valid_path = Path(args.musdb) / "valid"
     print("train_path", train_path)
     print("valid_path", valid_path)
 
