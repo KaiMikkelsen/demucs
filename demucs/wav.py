@@ -228,7 +228,7 @@ def get_musdb_wav_datasets(args):
     """Extract the musdb dataset from the XP arguments."""
     sig = hashlib.sha1(str(args.musdb).encode()).hexdigest()[:8]
     metadata_file = Path(args.metadata) / ('musdb_' + sig + ".json")
-    root = Path(args.musdb) / "train"
+    root = Path(args.musdb) #/ "train"
 
     #if not metadata_file.is_file() and distrib.rank == 0:
     metadata_file.parent.mkdir(exist_ok=True, parents=True)
