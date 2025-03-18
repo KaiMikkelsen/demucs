@@ -192,6 +192,8 @@ def get_wav_datasets(args, name='wav'):
     metadata_file = Path(args.metadata) / ('wav_' + sig + ".json")
     train_path = Path(path) / "train"
     valid_path = Path(path) / "valid"
+    print(train_path) 
+    print(valid_path)  
     if not metadata_file.is_file() and distrib.rank == 0:
         metadata_file.parent.mkdir(exist_ok=True, parents=True)
         train = build_metadata(train_path, args.sources)
