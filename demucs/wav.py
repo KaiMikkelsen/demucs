@@ -224,42 +224,85 @@ def _get_musdb_valid():
     return setup['validation_tracks']
 
 
-def get_musdb_wav_datasets(args):
-    """Extract the musdb dataset from the XP arguments."""
-    sig = hashlib.sha1(str(args.musdb).encode()).hexdigest()[:8]
-    metadata_file = Path(args.metadata) / ('musdb_' + sig + ".json")
-    root = Path(args.musdb) #/ "train"
+# def get_musdb_wav_datasets(args):
+#     """Extract the musdb dataset from the XP arguments."""
+#     sig = hashlib.sha1(str(args.musdb).encode()).hexdigest()[:8]
+#     metadata_file = Path(args.metadata) / ('musdb_' + sig + ".json")
+#     root = Path(args.musdb) #/ "train"
 
-    #if not metadata_file.is_file() and distrib.rank == 0:
-    metadata_file.parent.mkdir(exist_ok=True, parents=True)
-    metadata = build_metadata(root, args.sources)
-    json.dump(metadata, open(metadata_file, "w"))
-    if distrib.world_size > 1:
-        distributed.barrier()
-    metadata = json.load(open(metadata_file))
+#     if not metadata_file.is_file() and distrib.rank == 0:
+#         metadata_file.parent.mkdir(exist_ok=True, parents=True)
+#         metadata = build_metadata(root, args.sources)
+#         json.dump(metadata, open(metadata_file, "w"))
+#     if distrib.world_size > 1:
+#         distributed.barrier()
+#     metadata = json.load(open(metadata_file))
 
 
-    valid_tracks = _get_musdb_valid()
-    print("num valid tracks = ", len(valid_tracks))
-    if args.train_valid:
-        metadata_train = metadata
-    else:
-        metadata_train = {name: meta for name, meta in metadata.items() if name not in valid_tracks}
-    metadata_valid = {name: meta for name, meta in metadata.items() if name in valid_tracks}
-    print("metadata valid", metadata_valid)
-    print("valid_tracks", valid_tracks)
-    print("metadata_items", metadata.items())
-    # print(f"Metadata keys: {list(metadata.keys())}")
-    # print(f"Valid tracks: {valid_tracks}")  
-    if args.full_cv:
-        kw_cv = {}
-    else:
-        kw_cv = {'segment': args.segment, 'shift': args.shift}
-    train_set = Wavset(root, metadata_train, args.sources,
+#     valid_tracks = _get_musdb_valid()
+#     print("num valid tracks = ", len(valid_tracks))
+#     if args.train_valid:
+#         metadata_train = metadata
+#     else:
+#         metadata_train = {name: meta for name, meta in metadata.items() if name not in valid_tracks}
+#     metadata_valid = {name: meta for name, meta in metadata.items() if name in valid_tracks}
+#     print("metadata valid", metadata_valid)
+#     print("valid_tracks", valid_tracks)
+#     print("metadata_items", metadata.items())
+#     # print(f"Metadata keys: {list(metadata.keys())}")
+#     # print(f"Valid tracks: {valid_tracks}")  
+#     if args.full_cv:
+#         kw_cv = {}
+#     else:
+#         kw_cv = {'segment': args.segment, 'shift': args.shift}
+#     train_set = Wavset(root, metadata_train, args.sources,
+#                        segment=args.segment, shift=args.shift,
+#                        samplerate=args.samplerate, channels=args.channels,
+#                        normalize=args.normalize)
+#     valid_set = Wavset(root, metadata_valid, [MIXTURE] + list(args.sources),
+#                        samplerate=args.samplerate, channels=args.channels,
+#                        normalize=args.normalize, **kw_cv)
+#     return train_set, valid_set
+
+
+def get_wav_datasets(args):
+    """Extract the wav datasets from the XP arguments."""
+    sig = hashlib.sha1(str(args.wav).encode()).hexdigest()[:8]
+    metadata_file = Path(args.metadata) / ('wav_' + sig + ".json")
+    train_path = Path(args.wav) / "train"
+    valid_path = Path(args.wav) / "valid"
+    print("train_path", train_path)
+    print("valid_path", valid_path)
+
+    print("Valid path exists:", valid_path.exists())  # Should print True
+
+    print("metadata_file", metadata_file)
+    print("metadata path", Path(args.metadata))
+    print("args.wav", args.wav)
+
+    # print("Valid path is a directory:", valid_path.is_dir())  # Should print True
+    # print("Valid path contents:", list(valid_path.iterdir()))  # List files in the valid directory
+
+    #might need to change this if metaladata is different for every dataset
+    if not metadata_file.is_file() and distrib.rank == 0:
+        metadata_file.parent.mkdir(exist_ok=True, parents=True)
+        train = build_metadata(train_path, args.sources)
+        valid = build_metadata(valid_path, args.sources)
+
+        print("Train metadata:", train)
+        print("Valid metadata:", valid) 
+
+        json.dump([train, valid], open(metadata_file, "w"))
+        #accelerator.wait_for_everyone()
+
+    train, valid = json.load(open(metadata_file))
+    kw_cv = {}
+
+    train_set = Wavset(train_path, train, args.sources,
                        segment=args.segment, shift=args.shift,
                        samplerate=args.samplerate, channels=args.channels,
                        normalize=args.normalize)
-    valid_set = Wavset(root, metadata_valid, [MIXTURE] + list(args.sources),
+    valid_set = Wavset(valid_path, valid, [MIXTURE] + list(args.sources),
                        samplerate=args.samplerate, channels=args.channels,
                        normalize=args.normalize, **kw_cv)
     return train_set, valid_set
