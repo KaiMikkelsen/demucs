@@ -108,6 +108,7 @@ def get_optimizer(model, args):
 
 
 def get_datasets(args):
+    print("getting dataset?", args)
     if args.dset.backend:
         torchaudio.set_audio_backend(args.dset.backend)
     if args.dset.use_musdb:
