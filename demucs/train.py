@@ -111,10 +111,13 @@ def get_datasets(args):
     if args.dset.backend:
         torchaudio.set_audio_backend(args.dset.backend)
     if args.dset.use_musdb:
+        print("musdb dataset")
         train_set, valid_set = get_musdb_wav_datasets(args.dset)
     else:
         train_set, valid_set = [], []
     if args.dset.wav:
+        print("wav dataset")
+
         extra_train_set, extra_valid_set = get_wav_datasets(args.dset)
         if len(args.dset.sources) <= 4:
             train_set = ConcatDataset([train_set, extra_train_set])
@@ -124,6 +127,8 @@ def get_datasets(args):
             valid_set = extra_valid_set
 
     if args.dset.wav2:
+        print("wav2 dataset")
+
         extra_train_set, extra_valid_set = get_wav_datasets(args.dset, "wav2")
         weight = args.dset.wav2_weight
         if weight is not None:
@@ -143,6 +148,8 @@ def get_datasets(args):
             else:
                 valid_set = ConcatDataset([valid_set, extra_valid_set])
     if args.dset.valid_samples is not None:
+        print("valid sampled")
+
         valid_set = random_subset(valid_set, args.dset.valid_samples)
     assert len(train_set)
     assert len(valid_set)
