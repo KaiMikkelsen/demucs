@@ -229,6 +229,7 @@ def get_musdb_wav_datasets(args):
     sig = hashlib.sha1(str(args.musdb).encode()).hexdigest()[:8]
     metadata_file = Path(args.metadata) / ('musdb_' + sig + ".json")
     root = Path(args.musdb) / "train"
+
     if not metadata_file.is_file() and distrib.rank == 0:
         metadata_file.parent.mkdir(exist_ok=True, parents=True)
         metadata = build_metadata(root, args.sources)
@@ -237,7 +238,9 @@ def get_musdb_wav_datasets(args):
         distributed.barrier()
     metadata = json.load(open(metadata_file))
 
+
     valid_tracks = _get_musdb_valid()
+    print("num valid tracks = ", len(valid_tracks))
     if args.train_valid:
         metadata_train = metadata
     else:
