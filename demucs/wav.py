@@ -246,6 +246,7 @@ def get_musdb_wav_datasets(args):
     else:
         metadata_train = {name: meta for name, meta in metadata.items() if name not in valid_tracks}
     metadata_valid = {name: meta for name, meta in metadata.items() if name in valid_tracks}
+    print("metadata valid", metadata_valid)
     if args.full_cv:
         kw_cv = {}
     else:
@@ -257,4 +258,5 @@ def get_musdb_wav_datasets(args):
     valid_set = Wavset(root, metadata_valid, [MIXTURE] + list(args.sources),
                        samplerate=args.samplerate, channels=args.channels,
                        normalize=args.normalize, **kw_cv)
+    print()
     return train_set, valid_set
