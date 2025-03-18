@@ -114,6 +114,7 @@ def get_datasets(args):
     if args.dset.use_musdb:
         print("musdb dataset")
         train_set, valid_set = get_musdb_wav_datasets(args.dset)
+        print("after", len(valid_set))
     else:
         train_set, valid_set = [], []
     if args.dset.wav:
