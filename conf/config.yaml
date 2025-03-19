@@ -39,7 +39,7 @@ test:
   nonhq:   # path to non hq MusDB for evaluation
 
 epochs: 360
-batch_size: 64
+batch_size: 32
 max_batches:  # limit the number of batches per epoch, useful for debugging
               # or if your dataset is gigantic.
 optim:
@@ -79,7 +79,7 @@ continue_best: true
 continue_opt: false
 
 misc:
-  num_workers: 10
+  num_workers: 6
   num_prints: 4
   show: false
   verbose: false
