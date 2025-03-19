@@ -299,6 +299,7 @@ class Solver(object):
         total = len(data_loader)
         if args.max_batches:
             total = min(total, args.max_batches)
+        print("logging progress")
         logprog = LogProgress(logger, data_loader, total=total,
                               updates=self.args.misc.num_prints, name=name)
         averager = EMA()
@@ -364,6 +365,10 @@ class Solver(object):
 
             for k, source in enumerate(self.model.sources):
                 losses[f'reco_{source}'] = reco[k]
+            
+                # Log progress at each step (batch progress)
+            if idx % 10 == 0:  # For example, log every 10 steps, adjust as necessary
+                logger.info(f"Epoch {epoch + 1} - Step {idx + 1}/{total} - Loss: {loss.item():.4f}")
 
             # optimize model in training mode
             if train:
