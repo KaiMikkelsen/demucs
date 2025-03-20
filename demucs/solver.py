@@ -12,6 +12,7 @@ from dora.utils import write_and_rename
 from dora.log import LogProgress, bold
 import torch
 import torch.nn.functional as F
+import wandb
 
 from . import augment, distrib, states, pretrained
 from .apply import apply_model
@@ -198,6 +199,10 @@ class Solver(object):
             formatted = self._format_train(metrics['train'])
             logger.info(
                 bold(f'Train Summary | Epoch {epoch + 1} | {_summary(formatted)}'))
+            wandb.log({
+                "epoch": epoch + 1,
+                "train": metrics['train'],
+            })
 
             # Cross validation
             logger.info('-' * 70)
@@ -246,10 +251,18 @@ class Solver(object):
             formatted = self._format_train(metrics['valid'])
             logger.info(
                 bold(f'Valid Summary | Epoch {epoch + 1} | {_summary(formatted)}'))
+            wandb.log({
+                "epoch": epoch + 1,
+                "valid": metrics['valid'],
+            })
 
             # Save the best model
             if valid_loss == best_loss or self.args.dset.train_valid:
                 logger.info(bold('New best valid loss %.4f'), valid_loss)
+                wandb.log({
+                    "epoch": epoch + 1,
+                    "best_valid_loss": valid_loss,
+                })
                 self.best_state = states.copy_state(state)
                 self.best_changed = True
 
