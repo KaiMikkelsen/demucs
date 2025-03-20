@@ -22,7 +22,7 @@ from torch import nn
 import torchaudio
 import wandb
 from torch.utils.data import ConcatDataset
-import datetime
+from datetime import datetime
 import yaml
 
 from . import distrib
