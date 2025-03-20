@@ -192,7 +192,9 @@ class Solver(object):
             metrics = {}
             logger.info('-' * 70)
             logger.info("Training...")
+            print("running 1 epoch")
             metrics['train'] = self._run_one_epoch(epoch)
+            print("done running 1 epoch")
             formatted = self._format_train(metrics['train'])
             logger.info(
                 bold(f'Train Summary | Epoch {epoch + 1} | {_summary(formatted)}'))
@@ -305,6 +307,7 @@ class Solver(object):
         averager = EMA()
 
         for idx, sources in enumerate(logprog):
+            print("idx", idx)
             sources = sources.to(self.device)
             if train:
                 sources = self.augment(sources)
