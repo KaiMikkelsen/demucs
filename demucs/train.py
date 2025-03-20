@@ -232,7 +232,7 @@ def get_solver_from_sig(sig, model_only=False):
         return get_solver(xp.cfg, model_only)
     
 
-def wandb_init(args: argparse.Namespace, config) -> None:
+def wandb_init(args: argparse.Namespace) -> None:
     """
     Initialize the Weights & Biases (wandb) logging system.
 
@@ -278,7 +278,7 @@ def main(args):
     
     # with open(args.config_path, 'r') as file:
     #     config_dict = yaml.safe_load(file)
-    wandb_init(args, config_dict)
+    wandb_init(args)
 
     solver = get_solver(args)
     solver.train()
