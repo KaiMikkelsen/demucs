@@ -250,7 +250,7 @@ def wandb_init(args: argparse.Namespace, config) -> None:
     wandb.init(
         project='demucs',
         name=f"demucs_{date_str}",
-        config={'config': config, 'args': args}
+        config={'args': args}
     )
 
 
@@ -273,12 +273,12 @@ def main(args):
     logger.debug(args)
     from dora import get_xp
     logger.debug(get_xp().cfg)
-    import pprint
-    pprint.pprint(vars(args))  # Print all args
+    # import pprint
+    # pprint.pprint(vars(args))  # Print all args
     
-    with open(args.config_path, 'r') as file:
-        config_dict = yaml.safe_load(file)
-        wandb_init(args, config_dict)
+    # with open(args.config_path, 'r') as file:
+    #     config_dict = yaml.safe_load(file)
+    wandb_init(args, config_dict)
 
     solver = get_solver(args)
     solver.train()
