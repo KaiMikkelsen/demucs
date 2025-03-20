@@ -7,5 +7,6 @@ source demucs_env/bin/activate
 
 module load soundtouch/2.3.3
 
-dora run -d model=htdemucs
 
+
+dora run -d model=htdemucs
