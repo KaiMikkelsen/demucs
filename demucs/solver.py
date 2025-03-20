@@ -385,6 +385,10 @@ class Solver(object):
                 # Log progress at each step (batch progress)
             if idx % 100 == 0:  # For example, log every 10 steps, adjust as necessary
                 logger.info(f"Epoch {epoch + 1} - Step {idx + 1}/{total} - Loss: {loss.item():.4f}")
+                wandb.log({
+                    "epoch": epoch + 1,
+                    "Loss": loss.item(),
+                })
 
             # optimize model in training mode
             if train:
