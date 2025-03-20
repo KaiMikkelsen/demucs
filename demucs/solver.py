@@ -307,7 +307,7 @@ class Solver(object):
         averager = EMA()
 
         for idx, sources in enumerate(logprog):
-            print("idx", idx)
+            #print("idx", idx)
             sources = sources.to(self.device)
             if train:
                 sources = self.augment(sources)
@@ -370,7 +370,7 @@ class Solver(object):
                 losses[f'reco_{source}'] = reco[k]
             
                 # Log progress at each step (batch progress)
-            if idx % 10 == 0:  # For example, log every 10 steps, adjust as necessary
+            if idx % 100 == 0:  # For example, log every 10 steps, adjust as necessary
                 logger.info(f"Epoch {epoch + 1} - Step {idx + 1}/{total} - Loss: {loss.item():.4f}")
 
             # optimize model in training mode

@@ -10,6 +10,7 @@ import logging
 import os
 from pathlib import Path
 import sys
+import argparse
 
 from dora import hydra_main
 import hydra
@@ -19,7 +20,10 @@ from . import audio_legacy
 import torch
 from torch import nn
 import torchaudio
+import wandb
 from torch.utils.data import ConcatDataset
+import datetime
+import yaml
 
 from . import distrib
 from .wav import get_wav_datasets, get_musdb_wav_datasets
@@ -226,6 +230,28 @@ def get_solver_from_sig(sig, model_only=False):
 
     with xp.enter(stack=True):
         return get_solver(xp.cfg, model_only)
+    
+
+def wandb_init(args: argparse.Namespace, config) -> None:
+    """
+    Initialize the Weights & Biases (wandb) logging system.
+
+    Args:
+        args: Parsed command-line arguments containing the wandb key.
+        config: Configuration dictionary for the experiment.
+        device_ids: List of GPU device IDs used for training.
+        batch_size: Batch size for training.
+    """
+
+    # if args.wandb_key is None or args.wandb_key.strip() == '':
+    #     wandb.init(mode='disabled')
+    date_str = datetime.now().strftime('%Y-%m-%d')
+    wandb.login(key="689bb384f0f7e0a9dbe275c4ba6458d13265990d")
+    wandb.init(
+        project='demucs',
+        name=f"demucs_{date_str}",
+        config={'config': config, 'args': args}
+    )
 
 
 @hydra_main(config_path="../conf", config_name="config", version_base="1.1")
@@ -247,6 +273,12 @@ def main(args):
     logger.debug(args)
     from dora import get_xp
     logger.debug(get_xp().cfg)
+    import pprint
+    pprint.pprint(vars(args))  # Print all args
+    
+    with open(args.config_path, 'r') as file:
+        config_dict = yaml.safe_load(file)
+        wandb_init(args, config_dict)
 
     solver = get_solver(args)
     solver.train()
