@@ -17,4 +17,4 @@ module load soundtouch/2.3.3
 
 
 
-dora run -d model=htdemucs
+dora run -f 8ad9d354
