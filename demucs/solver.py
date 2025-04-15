@@ -75,6 +75,18 @@ class Solver(object):
 
         self._reset()
 
+    def log_disk_space(path):
+        import os
+        stat = os.statvfs(path)
+        free = stat.f_frsize * stat.f_bavail / (1024 ** 3)
+        print(f"[INFO] Free disk space: {free:.2f} GB")
+
+    def log_checkpoint_size(path):
+        import os
+        if os.path.exists(path):
+            size = os.path.getsize(path) / (1024 ** 2)
+            print(f"[INFO] Checkpoint size: {size:.2f} MB")
+
     def _serialize(self, epoch):
         package = {}
         package['state'] = self.model.state_dict()
@@ -82,9 +94,15 @@ class Solver(object):
         package['history'] = self.history
         package['best_state'] = self.best_state
         package['args'] = self.args
+        
         for kind, emas in self.emas.items():
             for k, ema in enumerate(emas):
                 package[f'ema_{kind}_{k}'] = ema.state_dict()
+
+        self.log_disk_space(self.checkpoint_file)
+        self.log_checkpoint_size(self.checkpoint_file)
+
+        
         with write_and_rename(self.checkpoint_file) as tmp:
             torch.save(package, tmp)
 
