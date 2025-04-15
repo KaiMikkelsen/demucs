@@ -75,13 +75,13 @@ class Solver(object):
 
         self._reset()
 
-    def log_disk_space(path):
+    def log_disk_space(self, path):
         import os
         stat = os.statvfs(path)
         free = stat.f_frsize * stat.f_bavail / (1024 ** 3)
         print(f"[INFO] Free disk space: {free:.2f} GB")
 
-    def log_checkpoint_size(path):
+    def log_checkpoint_size(self, path):
         import os
         if os.path.exists(path):
             size = os.path.getsize(path) / (1024 ** 2)
