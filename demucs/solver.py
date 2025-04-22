@@ -104,19 +104,19 @@ class Solver(object):
 
         
         with write_and_rename(self.checkpoint_file) as tmp:
-            torch.save(package, tmp)
+            torch.save(package, tmp, _use_new_zipfile_serialization=False)
 
         save_every = self.args.save_every
         if save_every and (epoch + 1) % save_every == 0 and epoch + 1 != self.args.epochs:
             with write_and_rename(self.folder / f'checkpoint_{epoch + 1}.th') as tmp:
-                torch.save(package, tmp)
+                torch.save(package, tmp, _use_new_zipfile_serialization=False)
 
         if self.best_changed:
             # Saving only the latest best model.
             with write_and_rename(self.best_file) as tmp:
                 package = states.serialize_model(self.model, self.args)
                 package['state'] = self.best_state
-                torch.save(package, tmp)
+                torch.save(package, tmp, _use_new_zipfile_serialization=False)
             self.best_changed = False
 
     def _reset(self):
