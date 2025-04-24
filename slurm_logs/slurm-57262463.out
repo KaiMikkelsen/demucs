@@ -1,0 +1,1413 @@
+Already up to date.
+/project/6002780/kaim/demucs/demucs/train.py:22: UserWarning: TorchAudio's global backend is now deprecated. Please enable distpatcher by setting `TORCHAUDIO_USE_BACKEND_DISPATCHER=1`, and specify backend when calling load/info/save function.
+  import torchaudio
+[1mExecutor:[0m Starting 1 worker processes for DDP.
+/project/6002780/kaim/demucs/demucs/train.py:22: UserWarning: TorchAudio's global backend is now deprecated. Please enable distpatcher by setting `TORCHAUDIO_USE_BACKEND_DISPATCHER=1`, and specify backend when calling load/info/save function.
+  import torchaudio
+/project/6002780/kaim/demucs/demucs_env/lib/python3.10/site-packages/hydra/_internal/hydra.py:119: UserWarning: Future Hydra versions will no longer change working directory at job runtime by default.
+See https://hydra.cc/docs/1.2/upgrades/1.1_to_1.2/changes_to_job_working_dir/ for more information.
+  ret = run_job(
+[[36m04-10 16:49:00[0m][[34mdemucs.train[0m][[32mINFO[0m] - For logs, checkpoints and samples check /project/6002780/kaim/demucs/outputs/xps/8ad9d354[0m
+wandb: Appending key for api.wandb.ai to your netrc file: /home/kaim/.netrc
+wandb: Currently logged in as: kaimikkelsen (kaimikkelsen-mcgill-university) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Tracking run with wandb version 0.19.6
+wandb: Run data is saved locally in /project/6002780/kaim/demucs/outputs/xps/8ad9d354/wandb/run-20250410_164900-0uvt6rmg
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run demucs_2025-04-10
+wandb: ⭐️ View project at https://wandb.ai/kaimikkelsen-mcgill-university/demucs
+wandb: 🚀 View run at https://wandb.ai/kaimikkelsen-mcgill-university/demucs/runs/0uvt6rmg
+[[36m04-10 16:49:07[0m][[34mdora.distrib[0m][[32mINFO[0m] - world_size is 1, skipping init.[0m
+musdb dataset
+train_path /home/kaim/scratch/MUSDB18HQ/train
+valid_path /home/kaim/scratch/MUSDB18HQ/valid
+Valid path exists: True
+metadata_file /project/6002780/kaim/demucs/metadata/musdb_6c8313ae.json
+metadata path /project/6002780/kaim/demucs/metadata
+after 14
+valid sampled
+[[36m04-10 16:49:20[0m][[34mdemucs.train[0m][[32mINFO[0m] - train/valid set size: 18368 14[0m
+[[36m04-10 16:49:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-10 16:49:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-10 16:49:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 1/2296 - Loss: 0.1777[0m
+[[36m04-10 16:52:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 101/2296 - Loss: 0.2063[0m
+[[36m04-10 16:54:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 201/2296 - Loss: 0.1662[0m
+[[36m04-10 16:56:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 301/2296 - Loss: 0.1388[0m
+[[36m04-10 16:58:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 401/2296 - Loss: 0.2095[0m
+[[36m04-10 17:00:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 501/2296 - Loss: 0.1889[0m
+[[36m04-10 17:02:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 1 | 574/2296 | 0.75 it/sec | Loss 0.1954 | Reco 0.1954 | Grad 0.0678[0m
+[[36m04-10 17:02:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 601/2296 - Loss: 0.1932[0m
+[[36m04-10 17:04:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 701/2296 - Loss: 0.1462[0m
+[[36m04-10 17:06:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 801/2296 - Loss: 0.1476[0m
+[[36m04-10 17:08:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 901/2296 - Loss: 0.1674[0m
+[[36m04-10 17:10:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 1001/2296 - Loss: 0.1408[0m
+[[36m04-10 17:12:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 1101/2296 - Loss: 0.1648[0m
+[[36m04-10 17:13:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 1 | 1148/2296 | 0.78 it/sec | Loss 0.1796 | Reco 0.1796 | Grad 0.0773[0m
+[[36m04-10 17:15:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 1201/2296 - Loss: 0.1978[0m
+[[36m04-10 17:17:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 1301/2296 - Loss: 0.1393[0m
+[[36m04-10 17:19:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 1401/2296 - Loss: 0.1326[0m
+[[36m04-10 17:21:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 1501/2296 - Loss: 0.1618[0m
+[[36m04-10 17:23:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 1601/2296 - Loss: 0.1530[0m
+[[36m04-10 17:25:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 1701/2296 - Loss: 0.1505[0m
+[[36m04-10 17:25:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 1 | 1722/2296 | 0.79 it/sec | Loss 0.1714 | Reco 0.1714 | Grad 0.0803[0m
+[[36m04-10 17:27:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 1801/2296 - Loss: 0.1649[0m
+[[36m04-10 17:29:21[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 1901/2296 - Loss: 0.1644[0m
+[[36m04-10 17:31:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 2001/2296 - Loss: 0.1155[0m
+[[36m04-10 17:33:27[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 2101/2296 - Loss: 0.1350[0m
+[[36m04-10 17:35:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 2201/2296 - Loss: 0.2109[0m
+done running 1 epoch
+[[36m04-10 17:37:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 1 | Loss=0.1659 | Reco=0.1659 | Grad=0.0818[0m
+[[36m04-10 17:37:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-10 17:37:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-10 17:37:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 1 - Step 1/19.428939819335938 - Loss: 0.1796[0m
+[[36m04-10 17:37:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 1 | 3/14 | 0.16 it/sec | Loss 0.1948 | Reco 0.1948 | Nsdr 4.276[0m
+[[36m04-10 17:38:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 1 | 6/14 | 0.20 it/sec | Loss 0.1959 | Reco 0.1959 | Nsdr 4.416[0m
+[[36m04-10 17:38:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 1 | 9/14 | 0.23 it/sec | Loss 0.1987 | Reco 0.1987 | Nsdr 4.135[0m
+[[36m04-10 17:38:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 1 | 12/14 | 0.25 it/sec | Loss 0.2173 | Reco 0.2173 | Nsdr 3.649[0m
+[[36m04-10 17:38:27[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 1 | Loss=0.2207 | Reco=0.2207 | Nsdr=3.522 | Best=0.2207 | Bname=main[0m
+[[36m04-10 17:38:27[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.2207[0m
+[[36m04-10 17:38:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-10 17:38:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-10 17:38:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 1/2296 - Loss: 0.1074[0m
+[[36m04-10 17:40:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 101/2296 - Loss: 0.1999[0m
+[[36m04-10 17:42:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 201/2296 - Loss: 0.1889[0m
+[[36m04-10 17:44:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 301/2296 - Loss: 0.1538[0m
+[[36m04-10 17:46:47[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 401/2296 - Loss: 0.1974[0m
+[[36m04-10 17:48:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 501/2296 - Loss: 0.1345[0m
+[[36m04-10 17:50:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 2 | 574/2296 | 0.81 it/sec | Loss 0.1444 | Reco 0.1444 | Grad 0.0867[0m
+[[36m04-10 17:50:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 601/2296 - Loss: 0.1421[0m
+[[36m04-10 17:52:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 701/2296 - Loss: 0.1303[0m
+[[36m04-10 17:54:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 801/2296 - Loss: 0.1405[0m
+[[36m04-10 17:57:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 901/2296 - Loss: 0.1508[0m
+[[36m04-10 17:59:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 1001/2296 - Loss: 0.1658[0m
+[[36m04-10 18:01:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 1101/2296 - Loss: 0.1143[0m
+[[36m04-10 18:02:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 2 | 1148/2296 | 0.81 it/sec | Loss 0.1428 | Reco 0.1428 | Grad 0.0859[0m
+[[36m04-10 18:03:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 1201/2296 - Loss: 0.1410[0m
+[[36m04-10 18:05:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 1301/2296 - Loss: 0.1530[0m
+[[36m04-10 18:07:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 1401/2296 - Loss: 0.1505[0m
+[[36m04-10 18:09:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 1501/2296 - Loss: 0.1353[0m
+[[36m04-10 18:11:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 1601/2296 - Loss: 0.1783[0m
+[[36m04-10 18:13:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 1701/2296 - Loss: 0.1362[0m
+[[36m04-10 18:14:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 2 | 1722/2296 | 0.81 it/sec | Loss 0.1411 | Reco 0.1411 | Grad 0.0859[0m
+[[36m04-10 18:15:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 1801/2296 - Loss: 0.1431[0m
+[[36m04-10 18:17:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 1901/2296 - Loss: 0.1649[0m
+[[36m04-10 18:19:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 2001/2296 - Loss: 0.1370[0m
+[[36m04-10 18:21:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 2101/2296 - Loss: 0.1352[0m
+[[36m04-10 18:23:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 2201/2296 - Loss: 0.1502[0m
+done running 1 epoch
+[[36m04-10 18:25:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 2 | Loss=0.1401 | Reco=0.1401 | Grad=0.0848[0m
+[[36m04-10 18:25:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-10 18:25:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-10 18:25:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 2 - Step 1/23.516464233398438 - Loss: 0.1611[0m
+[[36m04-10 18:26:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 2 | 3/14 | 0.22 it/sec | Loss 0.1812 | Reco 0.1812 | Nsdr 4.870[0m
+[[36m04-10 18:26:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 2 | 6/14 | 0.26 it/sec | Loss 0.1814 | Reco 0.1814 | Nsdr 5.068[0m
+[[36m04-10 18:26:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 2 | 9/14 | 0.28 it/sec | Loss 0.1833 | Reco 0.1833 | Nsdr 4.819[0m
+[[36m04-10 18:26:30[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 2 | 12/14 | 0.29 it/sec | Loss 0.1984 | Reco 0.1984 | Nsdr 4.374[0m
+[[36m04-10 18:26:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 2 | Loss=0.2021 | Reco=0.2021 | Nsdr=4.227 | Best=0.2021 | Bname=main[0m
+[[36m04-10 18:26:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.2021[0m
+[[36m04-10 18:26:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-10 18:26:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-10 18:26:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 1/2296 - Loss: 0.1108[0m
+[[36m04-10 18:28:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 101/2296 - Loss: 0.1332[0m
+[[36m04-10 18:30:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 201/2296 - Loss: 0.1600[0m
+[[36m04-10 18:32:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 301/2296 - Loss: 0.1160[0m
+[[36m04-10 18:34:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 401/2296 - Loss: 0.1488[0m
+[[36m04-10 18:36:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 501/2296 - Loss: 0.1390[0m
+[[36m04-10 18:38:30[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 3 | 574/2296 | 0.81 it/sec | Loss 0.1339 | Reco 0.1339 | Grad 0.0852[0m
+[[36m04-10 18:39:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 601/2296 - Loss: 0.1411[0m
+[[36m04-10 18:41:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 701/2296 - Loss: 0.1125[0m
+[[36m04-10 18:43:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 801/2296 - Loss: 0.1222[0m
+[[36m04-10 18:45:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 901/2296 - Loss: 0.1382[0m
+[[36m04-10 18:47:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 1001/2296 - Loss: 0.1604[0m
+[[36m04-10 18:49:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 1101/2296 - Loss: 0.1100[0m
+[[36m04-10 18:50:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 3 | 1148/2296 | 0.81 it/sec | Loss 0.1324 | Reco 0.1324 | Grad 0.0840[0m
+[[36m04-10 18:51:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 1201/2296 - Loss: 0.1479[0m
+[[36m04-10 18:53:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 1301/2296 - Loss: 0.1449[0m
+[[36m04-10 18:55:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 1401/2296 - Loss: 0.1011[0m
+[[36m04-10 18:57:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 1501/2296 - Loss: 0.1219[0m
+[[36m04-10 18:59:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 1601/2296 - Loss: 0.1250[0m
+[[36m04-10 19:01:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 1701/2296 - Loss: 0.1178[0m
+[[36m04-10 19:02:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 3 | 1722/2296 | 0.81 it/sec | Loss 0.1312 | Reco 0.1312 | Grad 0.0838[0m
+[[36m04-10 19:03:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 1801/2296 - Loss: 0.1103[0m
+[[36m04-10 19:05:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 1901/2296 - Loss: 0.1168[0m
+[[36m04-10 19:07:47[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 2001/2296 - Loss: 0.1125[0m
+[[36m04-10 19:09:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 2101/2296 - Loss: 0.1541[0m
+[[36m04-10 19:11:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 2201/2296 - Loss: 0.1255[0m
+done running 1 epoch
+[[36m04-10 19:13:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 3 | Loss=0.1303 | Reco=0.1303 | Grad=0.0836[0m
+[[36m04-10 19:13:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-10 19:13:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-10 19:13:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 3 - Step 1/25.098255157470703 - Loss: 0.1549[0m
+[[36m04-10 19:14:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 3 | 3/14 | 0.30 it/sec | Loss 0.1777 | Reco 0.1777 | Nsdr 5.076[0m
+[[36m04-10 19:14:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 3 | 6/14 | 0.31 it/sec | Loss 0.1769 | Reco 0.1769 | Nsdr 5.304[0m
+[[36m04-10 19:14:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 3 | 9/14 | 0.32 it/sec | Loss 0.1788 | Reco 0.1788 | Nsdr 5.006[0m
+[[36m04-10 19:14:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 3 | 12/14 | 0.33 it/sec | Loss 0.1925 | Reco 0.1925 | Nsdr 4.591[0m
+[[36m04-10 19:14:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 3 | Loss=0.1966 | Reco=0.1966 | Nsdr=4.431 | Best=0.1966 | Bname=main[0m
+[[36m04-10 19:14:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.1966[0m
+[[36m04-10 19:14:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-10 19:14:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-10 19:14:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 1/2296 - Loss: 0.1308[0m
+[[36m04-10 19:16:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 101/2296 - Loss: 0.1500[0m
+[[36m04-10 19:18:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 201/2296 - Loss: 0.1490[0m
+[[36m04-10 19:20:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 301/2296 - Loss: 0.1410[0m
+[[36m04-10 19:22:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 401/2296 - Loss: 0.1709[0m
+[[36m04-10 19:24:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 501/2296 - Loss: 0.0749[0m
+[[36m04-10 19:26:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 4 | 574/2296 | 0.81 it/sec | Loss 0.1259 | Reco 0.1259 | Grad 0.0807[0m
+[[36m04-10 19:27:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 601/2296 - Loss: 0.1362[0m
+[[36m04-10 19:29:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 701/2296 - Loss: 0.1091[0m
+[[36m04-10 19:31:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 801/2296 - Loss: 0.1409[0m
+[[36m04-10 19:33:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 901/2296 - Loss: 0.1375[0m
+[[36m04-10 19:35:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 1001/2296 - Loss: 0.1492[0m
+[[36m04-10 19:37:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 1101/2296 - Loss: 0.1071[0m
+[[36m04-10 19:38:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 4 | 1148/2296 | 0.81 it/sec | Loss 0.1247 | Reco 0.1247 | Grad 0.0808[0m
+[[36m04-10 19:39:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 1201/2296 - Loss: 0.1209[0m
+[[36m04-10 19:41:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 1301/2296 - Loss: 0.1086[0m
+[[36m04-10 19:43:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 1401/2296 - Loss: 0.1632[0m
+[[36m04-10 19:45:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 1501/2296 - Loss: 0.1155[0m
+[[36m04-10 19:47:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 1601/2296 - Loss: 0.1380[0m
+[[36m04-10 19:49:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 1701/2296 - Loss: 0.1509[0m
+[[36m04-10 19:50:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 4 | 1722/2296 | 0.81 it/sec | Loss 0.1237 | Reco 0.1237 | Grad 0.0806[0m
+[[36m04-10 19:51:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 1801/2296 - Loss: 0.1418[0m
+[[36m04-10 19:53:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 1901/2296 - Loss: 0.0957[0m
+[[36m04-10 19:55:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 2001/2296 - Loss: 0.1668[0m
+[[36m04-10 19:57:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 2101/2296 - Loss: 0.1164[0m
+[[36m04-10 19:59:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 2201/2296 - Loss: 0.0893[0m
+done running 1 epoch
+[[36m04-10 20:01:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 4 | Loss=0.1232 | Reco=0.1232 | Grad=0.0810[0m
+[[36m04-10 20:01:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-10 20:01:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-10 20:02:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 4 - Step 1/26.0926570892334 - Loss: 0.1492[0m
+[[36m04-10 20:02:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 4 | 3/14 | 0.30 it/sec | Loss 0.1706 | Reco 0.1706 | Nsdr 5.424[0m
+[[36m04-10 20:02:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 4 | 6/14 | 0.32 it/sec | Loss 0.1712 | Reco 0.1712 | Nsdr 5.602[0m
+[[36m04-10 20:02:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 4 | 9/14 | 0.33 it/sec | Loss 0.1743 | Reco 0.1743 | Nsdr 5.250[0m
+[[36m04-10 20:02:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 4 | 12/14 | 0.33 it/sec | Loss 0.1878 | Reco 0.1878 | Nsdr 4.845[0m
+[[36m04-10 20:02:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 4 | Loss=0.1915 | Reco=0.1915 | Nsdr=4.691 | Best=0.1915 | Bname=main[0m
+[[36m04-10 20:02:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.1915[0m
+[[36m04-10 20:02:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-10 20:02:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-10 20:02:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 1/2296 - Loss: 0.1394[0m
+[[36m04-10 20:04:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 101/2296 - Loss: 0.1364[0m
+[[36m04-10 20:06:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 201/2296 - Loss: 0.0771[0m
+[[36m04-10 20:08:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 301/2296 - Loss: 0.1121[0m
+[[36m04-10 20:10:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 401/2296 - Loss: 0.1007[0m
+[[36m04-10 20:12:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 501/2296 - Loss: 0.1112[0m
+[[36m04-10 20:14:30[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 5 | 574/2296 | 0.81 it/sec | Loss 0.1207 | Reco 0.1207 | Grad 0.0752[0m
+[[36m04-10 20:15:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 601/2296 - Loss: 0.1439[0m
+[[36m04-10 20:17:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 701/2296 - Loss: 0.0830[0m
+[[36m04-10 20:19:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 801/2296 - Loss: 0.1550[0m
+[[36m04-10 20:21:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 901/2296 - Loss: 0.0963[0m
+[[36m04-10 20:23:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 1001/2296 - Loss: 0.0848[0m
+[[36m04-10 20:25:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 1101/2296 - Loss: 0.1476[0m
+[[36m04-10 20:26:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 5 | 1148/2296 | 0.81 it/sec | Loss 0.1194 | Reco 0.1194 | Grad 0.0777[0m
+[[36m04-10 20:27:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 1201/2296 - Loss: 0.1562[0m
+[[36m04-10 20:29:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 1301/2296 - Loss: 0.1407[0m
+[[36m04-10 20:31:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 1401/2296 - Loss: 0.0771[0m
+[[36m04-10 20:33:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 1501/2296 - Loss: 0.1248[0m
+[[36m04-10 20:35:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 1601/2296 - Loss: 0.1074[0m
+[[36m04-10 20:37:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 1701/2296 - Loss: 0.1097[0m
+[[36m04-10 20:38:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 5 | 1722/2296 | 0.81 it/sec | Loss 0.1191 | Reco 0.1191 | Grad 0.0778[0m
+[[36m04-10 20:39:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 1801/2296 - Loss: 0.1468[0m
+[[36m04-10 20:41:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 1901/2296 - Loss: 0.1389[0m
+[[36m04-10 20:43:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 2001/2296 - Loss: 0.1221[0m
+[[36m04-10 20:45:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 2101/2296 - Loss: 0.0896[0m
+[[36m04-10 20:47:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 2201/2296 - Loss: 0.1237[0m
+done running 1 epoch
+[[36m04-10 20:49:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 5 | Loss=0.1182 | Reco=0.1182 | Grad=0.0776[0m
+[[36m04-10 20:49:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-10 20:49:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-10 20:49:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 5 - Step 1/25.93011474609375 - Loss: 0.1496[0m
+[[36m04-10 20:50:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 5 | 3/14 | 0.30 it/sec | Loss 0.1677 | Reco 0.1677 | Nsdr 5.558[0m
+[[36m04-10 20:50:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 5 | 6/14 | 0.32 it/sec | Loss 0.1672 | Reco 0.1672 | Nsdr 5.783[0m
+[[36m04-10 20:50:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 5 | 9/14 | 0.32 it/sec | Loss 0.1694 | Reco 0.1694 | Nsdr 5.426[0m
+[[36m04-10 20:50:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 5 | 12/14 | 0.33 it/sec | Loss 0.1819 | Reco 0.1819 | Nsdr 5.045[0m
+[[36m04-10 20:50:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 5 | Loss=0.1864 | Reco=0.1864 | Nsdr=4.866 | Best=0.1864 | Bname=main[0m
+[[36m04-10 20:50:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.1864[0m
+[[36m04-10 20:50:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-10 20:50:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-10 20:50:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 1/2296 - Loss: 0.1051[0m
+[[36m04-10 20:52:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 101/2296 - Loss: 0.1501[0m
+[[36m04-10 20:54:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 201/2296 - Loss: 0.0982[0m
+[[36m04-10 20:56:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 301/2296 - Loss: 0.1099[0m
+[[36m04-10 20:58:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 401/2296 - Loss: 0.1564[0m
+[[36m04-10 21:01:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 501/2296 - Loss: 0.0862[0m
+[[36m04-10 21:02:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 6 | 574/2296 | 0.81 it/sec | Loss 0.1148 | Reco 0.1148 | Grad 0.0750[0m
+[[36m04-10 21:03:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 601/2296 - Loss: 0.1287[0m
+[[36m04-10 21:05:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 701/2296 - Loss: 0.1528[0m
+[[36m04-10 21:07:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 801/2296 - Loss: 0.1313[0m
+[[36m04-10 21:09:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 901/2296 - Loss: 0.1086[0m
+[[36m04-10 21:11:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 1001/2296 - Loss: 0.1260[0m
+[[36m04-10 21:13:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 1101/2296 - Loss: 0.1160[0m
+[[36m04-10 21:14:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 6 | 1148/2296 | 0.81 it/sec | Loss 0.1144 | Reco 0.1144 | Grad 0.0782[0m
+[[36m04-10 21:15:21[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 1201/2296 - Loss: 0.0993[0m
+[[36m04-10 21:17:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 1301/2296 - Loss: 0.1288[0m
+[[36m04-10 21:19:30[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 1401/2296 - Loss: 0.1014[0m
+[[36m04-10 21:21:33[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 1501/2296 - Loss: 0.0836[0m
+[[36m04-10 21:23:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 1601/2296 - Loss: 0.1208[0m
+[[36m04-10 21:25:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 1701/2296 - Loss: 0.1159[0m
+[[36m04-10 21:26:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 6 | 1722/2296 | 0.81 it/sec | Loss 0.1139 | Reco 0.1139 | Grad 0.0773[0m
+[[36m04-10 21:27:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 1801/2296 - Loss: 0.1061[0m
+[[36m04-10 21:29:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 1901/2296 - Loss: 0.1184[0m
+[[36m04-10 21:31:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 2001/2296 - Loss: 0.1138[0m
+[[36m04-10 21:33:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 2101/2296 - Loss: 0.1269[0m
+[[36m04-10 21:35:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 2201/2296 - Loss: 0.0989[0m
+done running 1 epoch
+[[36m04-10 21:37:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 6 | Loss=0.1139 | Reco=0.1139 | Grad=0.0782[0m
+[[36m04-10 21:37:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-10 21:37:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-10 21:37:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 6 - Step 1/26.829259872436523 - Loss: 0.1475[0m
+[[36m04-10 21:38:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 6 | 3/14 | 0.30 it/sec | Loss 0.1669 | Reco 0.1669 | Nsdr 5.684[0m
+[[36m04-10 21:38:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 6 | 6/14 | 0.32 it/sec | Loss 0.1660 | Reco 0.1660 | Nsdr 5.949[0m
+[[36m04-10 21:38:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 6 | 9/14 | 0.33 it/sec | Loss 0.1706 | Reco 0.1706 | Nsdr 5.465[0m
+[[36m04-10 21:38:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 6 | 12/14 | 0.33 it/sec | Loss 0.1822 | Reco 0.1822 | Nsdr 5.135[0m
+[[36m04-10 21:38:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 6 | Loss=0.1871 | Reco=0.1871 | Nsdr=4.947 | Best=0.1864 | Bname=main[0m
+[[36m04-10 21:38:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-10 21:38:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-10 21:38:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 1/2296 - Loss: 0.1311[0m
+[[36m04-10 21:40:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 101/2296 - Loss: 0.0917[0m
+[[36m04-10 21:42:47[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 201/2296 - Loss: 0.0932[0m
+[[36m04-10 21:44:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 301/2296 - Loss: 0.0962[0m
+[[36m04-10 21:46:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 401/2296 - Loss: 0.1260[0m
+[[36m04-10 21:49:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 501/2296 - Loss: 0.1001[0m
+[[36m04-10 21:50:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 7 | 574/2296 | 0.81 it/sec | Loss 0.1118 | Reco 0.1118 | Grad 0.0772[0m
+[[36m04-10 21:51:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 601/2296 - Loss: 0.1356[0m
+[[36m04-10 21:53:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 701/2296 - Loss: 0.1339[0m
+[[36m04-10 21:55:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 801/2296 - Loss: 0.1559[0m
+[[36m04-10 21:57:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 901/2296 - Loss: 0.0850[0m
+[[36m04-10 21:59:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 1001/2296 - Loss: 0.1199[0m
+[[36m04-10 22:01:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 1101/2296 - Loss: 0.0954[0m
+[[36m04-10 22:02:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 7 | 1148/2296 | 0.81 it/sec | Loss 0.1116 | Reco 0.1116 | Grad 0.0758[0m
+[[36m04-10 22:03:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 1201/2296 - Loss: 0.1088[0m
+[[36m04-10 22:05:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 1301/2296 - Loss: 0.0613[0m
+[[36m04-10 22:07:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 1401/2296 - Loss: 0.1207[0m
+[[36m04-10 22:09:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 1501/2296 - Loss: 0.1239[0m
+[[36m04-10 22:11:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 1601/2296 - Loss: 0.1160[0m
+[[36m04-10 22:13:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 1701/2296 - Loss: 0.1124[0m
+[[36m04-10 22:14:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 7 | 1722/2296 | 0.81 it/sec | Loss 0.1111 | Reco 0.1111 | Grad 0.0757[0m
+[[36m04-10 22:15:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 1801/2296 - Loss: 0.1155[0m
+[[36m04-10 22:17:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 1901/2296 - Loss: 0.0752[0m
+[[36m04-10 22:19:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 2001/2296 - Loss: 0.1288[0m
+[[36m04-10 22:21:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 2101/2296 - Loss: 0.1324[0m
+[[36m04-10 22:23:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 2201/2296 - Loss: 0.1287[0m
+done running 1 epoch
+[[36m04-10 22:25:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 7 | Loss=0.1107 | Reco=0.1107 | Grad=0.0761[0m
+[[36m04-10 22:25:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-10 22:25:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-10 22:25:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 7 - Step 1/26.673290252685547 - Loss: 0.1463[0m
+[[36m04-10 22:26:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 7 | 3/14 | 0.30 it/sec | Loss 0.1616 | Reco 0.1616 | Nsdr 5.907[0m
+[[36m04-10 22:26:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 7 | 6/14 | 0.32 it/sec | Loss 0.1632 | Reco 0.1632 | Nsdr 6.004[0m
+[[36m04-10 22:26:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 7 | 9/14 | 0.33 it/sec | Loss 0.1656 | Reco 0.1656 | Nsdr 5.623[0m
+[[36m04-10 22:26:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 7 | 12/14 | 0.33 it/sec | Loss 0.1774 | Reco 0.1774 | Nsdr 5.256[0m
+[[36m04-10 22:26:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 7 | Loss=0.1816 | Reco=0.1816 | Nsdr=5.082 | Best=0.1816 | Bname=main[0m
+[[36m04-10 22:26:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.1816[0m
+[[36m04-10 22:26:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-10 22:26:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-10 22:26:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 1/2296 - Loss: 0.1165[0m
+[[36m04-10 22:28:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 101/2296 - Loss: 0.1079[0m
+[[36m04-10 22:30:47[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 201/2296 - Loss: 0.0558[0m
+[[36m04-10 22:32:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 301/2296 - Loss: 0.0751[0m
+[[36m04-10 22:34:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 401/2296 - Loss: 0.1248[0m
+[[36m04-10 22:36:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 501/2296 - Loss: 0.0905[0m
+[[36m04-10 22:38:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 8 | 574/2296 | 0.81 it/sec | Loss 0.1095 | Reco 0.1095 | Grad 0.0809[0m
+[[36m04-10 22:39:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 601/2296 - Loss: 0.1776[0m
+[[36m04-10 22:41:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 701/2296 - Loss: 0.1136[0m
+[[36m04-10 22:43:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 801/2296 - Loss: 0.1409[0m
+[[36m04-10 22:45:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 901/2296 - Loss: 0.1077[0m
+[[36m04-10 22:47:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 1001/2296 - Loss: 0.1329[0m
+[[36m04-10 22:49:21[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 1101/2296 - Loss: 0.1001[0m
+[[36m04-10 22:50:21[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 8 | 1148/2296 | 0.81 it/sec | Loss 0.1089 | Reco 0.1089 | Grad 0.0776[0m
+[[36m04-10 22:51:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 1201/2296 - Loss: 0.1213[0m
+[[36m04-10 22:53:27[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 1301/2296 - Loss: 0.0859[0m
+[[36m04-10 22:55:30[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 1401/2296 - Loss: 0.0977[0m
+[[36m04-10 22:57:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 1501/2296 - Loss: 0.1154[0m
+[[36m04-10 22:59:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 1601/2296 - Loss: 0.1115[0m
+[[36m04-10 23:01:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 1701/2296 - Loss: 0.0870[0m
+[[36m04-10 23:02:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 8 | 1722/2296 | 0.81 it/sec | Loss 0.1090 | Reco 0.1090 | Grad 0.0782[0m
+[[36m04-10 23:03:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 1801/2296 - Loss: 0.0806[0m
+[[36m04-10 23:05:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 1901/2296 - Loss: 0.0680[0m
+[[36m04-10 23:07:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 2001/2296 - Loss: 0.0948[0m
+[[36m04-10 23:09:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 2101/2296 - Loss: 0.1137[0m
+[[36m04-10 23:11:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 2201/2296 - Loss: 0.1263[0m
+done running 1 epoch
+[[36m04-10 23:13:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 8 | Loss=0.1084 | Reco=0.1084 | Grad=0.0775[0m
+[[36m04-10 23:13:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-10 23:13:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-10 23:14:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 8 - Step 1/27.02421760559082 - Loss: 0.1440[0m
+[[36m04-10 23:14:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 8 | 3/14 | 0.30 it/sec | Loss 0.1633 | Reco 0.1633 | Nsdr 5.831[0m
+[[36m04-10 23:14:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 8 | 6/14 | 0.32 it/sec | Loss 0.1628 | Reco 0.1628 | Nsdr 6.035[0m
+[[36m04-10 23:14:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 8 | 9/14 | 0.33 it/sec | Loss 0.1635 | Reco 0.1635 | Nsdr 5.772[0m
+[[36m04-10 23:14:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 8 | 12/14 | 0.33 it/sec | Loss 0.1739 | Reco 0.1739 | Nsdr 5.439[0m
+[[36m04-10 23:14:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 8 | Loss=0.1780 | Reco=0.1780 | Nsdr=5.266 | Best=0.1780 | Bname=main[0m
+[[36m04-10 23:14:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.1780[0m
+[[36m04-10 23:14:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-10 23:14:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-10 23:14:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 1/2296 - Loss: 0.1292[0m
+[[36m04-10 23:16:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 101/2296 - Loss: 0.0983[0m
+[[36m04-10 23:18:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 201/2296 - Loss: 0.0787[0m
+[[36m04-10 23:20:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 301/2296 - Loss: 0.0998[0m
+[[36m04-10 23:22:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 401/2296 - Loss: 0.1070[0m
+[[36m04-10 23:25:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 501/2296 - Loss: 0.1091[0m
+[[36m04-10 23:26:33[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 9 | 574/2296 | 0.81 it/sec | Loss 0.1061 | Reco 0.1061 | Grad 0.0740[0m
+[[36m04-10 23:27:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 601/2296 - Loss: 0.1015[0m
+[[36m04-10 23:29:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 701/2296 - Loss: 0.1018[0m
+[[36m04-10 23:31:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 801/2296 - Loss: 0.0814[0m
+[[36m04-10 23:33:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 901/2296 - Loss: 0.0998[0m
+[[36m04-10 23:35:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 1001/2296 - Loss: 0.1410[0m
+[[36m04-10 23:37:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 1101/2296 - Loss: 0.1144[0m
+[[36m04-10 23:38:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 9 | 1148/2296 | 0.81 it/sec | Loss 0.1064 | Reco 0.1064 | Grad 0.0757[0m
+[[36m04-10 23:39:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 1201/2296 - Loss: 0.0877[0m
+[[36m04-10 23:41:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 1301/2296 - Loss: 0.1152[0m
+[[36m04-10 23:43:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 1401/2296 - Loss: 0.1225[0m
+[[36m04-10 23:45:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 1501/2296 - Loss: 0.0874[0m
+[[36m04-10 23:47:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 1601/2296 - Loss: 0.1233[0m
+[[36m04-10 23:49:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 1701/2296 - Loss: 0.0920[0m
+[[36m04-10 23:50:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 9 | 1722/2296 | 0.81 it/sec | Loss 0.1058 | Reco 0.1058 | Grad 0.0748[0m
+[[36m04-10 23:51:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 1801/2296 - Loss: 0.1186[0m
+[[36m04-10 23:53:47[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 1901/2296 - Loss: 0.1045[0m
+[[36m04-10 23:55:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 2001/2296 - Loss: 0.0619[0m
+[[36m04-10 23:57:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 2101/2296 - Loss: 0.1135[0m
+[[36m04-10 23:59:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 2201/2296 - Loss: 0.1020[0m
+done running 1 epoch
+[[36m04-11 00:01:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 9 | Loss=0.1055 | Reco=0.1055 | Grad=0.0751[0m
+[[36m04-11 00:01:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 00:01:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 00:02:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 9 - Step 1/27.22431755065918 - Loss: 0.1447[0m
+[[36m04-11 00:02:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 9 | 3/14 | 0.30 it/sec | Loss 0.1594 | Reco 0.1594 | Nsdr 6.047[0m
+[[36m04-11 00:02:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 9 | 6/14 | 0.32 it/sec | Loss 0.1593 | Reco 0.1593 | Nsdr 6.242[0m
+[[36m04-11 00:02:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 9 | 9/14 | 0.33 it/sec | Loss 0.1629 | Reco 0.1629 | Nsdr 5.787[0m
+[[36m04-11 00:02:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 9 | 12/14 | 0.33 it/sec | Loss 0.1747 | Reco 0.1747 | Nsdr 5.386[0m
+[[36m04-11 00:02:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 9 | Loss=0.1797 | Reco=0.1797 | Nsdr=5.188 | Best=0.1780 | Bname=main[0m
+[[36m04-11 00:02:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 00:02:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 00:02:47[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 1/2296 - Loss: 0.0691[0m
+[[36m04-11 00:04:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 101/2296 - Loss: 0.1010[0m
+[[36m04-11 00:06:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 201/2296 - Loss: 0.1005[0m
+[[36m04-11 00:08:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 301/2296 - Loss: 0.1009[0m
+[[36m04-11 00:10:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 401/2296 - Loss: 0.1355[0m
+[[36m04-11 00:13:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 501/2296 - Loss: 0.0714[0m
+[[36m04-11 00:14:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 10 | 574/2296 | 0.81 it/sec | Loss 0.1038 | Reco 0.1038 | Grad 0.0713[0m
+[[36m04-11 00:15:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 601/2296 - Loss: 0.0839[0m
+[[36m04-11 00:17:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 701/2296 - Loss: 0.0804[0m
+[[36m04-11 00:19:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 801/2296 - Loss: 0.1095[0m
+[[36m04-11 00:21:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 901/2296 - Loss: 0.0490[0m
+[[36m04-11 00:23:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 1001/2296 - Loss: 0.0843[0m
+[[36m04-11 00:25:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 1101/2296 - Loss: 0.0970[0m
+[[36m04-11 00:26:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 10 | 1148/2296 | 0.81 it/sec | Loss 0.1036 | Reco 0.1036 | Grad 0.0725[0m
+[[36m04-11 00:27:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 1201/2296 - Loss: 0.1063[0m
+[[36m04-11 00:29:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 1301/2296 - Loss: 0.0739[0m
+[[36m04-11 00:31:33[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 1401/2296 - Loss: 0.0973[0m
+[[36m04-11 00:33:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 1501/2296 - Loss: 0.1048[0m
+[[36m04-11 00:35:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 1601/2296 - Loss: 0.1047[0m
+[[36m04-11 00:37:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 1701/2296 - Loss: 0.1170[0m
+[[36m04-11 00:38:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 10 | 1722/2296 | 0.81 it/sec | Loss 0.1037 | Reco 0.1037 | Grad 0.0733[0m
+[[36m04-11 00:39:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 1801/2296 - Loss: 0.1384[0m
+[[36m04-11 00:41:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 1901/2296 - Loss: 0.0874[0m
+[[36m04-11 00:43:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 2001/2296 - Loss: 0.1218[0m
+[[36m04-11 00:45:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 2101/2296 - Loss: 0.0838[0m
+[[36m04-11 00:47:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 2201/2296 - Loss: 0.1093[0m
+done running 1 epoch
+[[36m04-11 00:49:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 10 | Loss=0.1032 | Reco=0.1032 | Grad=0.0729[0m
+[[36m04-11 00:49:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 00:49:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 00:50:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 10 - Step 1/27.713512420654297 - Loss: 0.1415[0m
+[[36m04-11 00:50:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 10 | 3/14 | 0.29 it/sec | Loss 0.1519 | Reco 0.1519 | Nsdr 6.363[0m
+[[36m04-11 00:50:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 10 | 6/14 | 0.31 it/sec | Loss 0.1532 | Reco 0.1532 | Nsdr 6.507[0m
+[[36m04-11 00:50:27[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 10 | 9/14 | 0.32 it/sec | Loss 0.1560 | Reco 0.1560 | Nsdr 6.109[0m
+[[36m04-11 00:50:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 10 | 12/14 | 0.33 it/sec | Loss 0.1688 | Reco 0.1688 | Nsdr 5.665[0m
+[[36m04-11 00:50:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 10 | Loss=0.1734 | Reco=0.1734 | Nsdr=5.473 | Best=0.1734 | Bname=main[0m
+[[36m04-11 00:50:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.1734[0m
+[[36m04-11 00:50:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 00:50:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 00:50:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 1/2296 - Loss: 0.0653[0m
+[[36m04-11 00:52:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 101/2296 - Loss: 0.0689[0m
+[[36m04-11 00:54:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 201/2296 - Loss: 0.0544[0m
+[[36m04-11 00:56:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 301/2296 - Loss: 0.1237[0m
+[[36m04-11 00:59:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 401/2296 - Loss: 0.1006[0m
+[[36m04-11 01:01:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 501/2296 - Loss: 0.1526[0m
+[[36m04-11 01:02:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 11 | 574/2296 | 0.81 it/sec | Loss 0.1010 | Reco 0.1010 | Grad 0.0717[0m
+[[36m04-11 01:03:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 601/2296 - Loss: 0.1164[0m
+[[36m04-11 01:05:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 701/2296 - Loss: 0.0977[0m
+[[36m04-11 01:07:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 801/2296 - Loss: 0.1075[0m
+[[36m04-11 01:09:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 901/2296 - Loss: 0.1027[0m
+[[36m04-11 01:11:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 1001/2296 - Loss: 0.1178[0m
+[[36m04-11 01:13:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 1101/2296 - Loss: 0.1052[0m
+[[36m04-11 01:14:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 11 | 1148/2296 | 0.81 it/sec | Loss 0.1009 | Reco 0.1009 | Grad 0.0714[0m
+[[36m04-11 01:15:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 1201/2296 - Loss: 0.0975[0m
+[[36m04-11 01:17:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 1301/2296 - Loss: 0.1016[0m
+[[36m04-11 01:19:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 1401/2296 - Loss: 0.1149[0m
+[[36m04-11 01:21:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 1501/2296 - Loss: 0.1090[0m
+[[36m04-11 01:23:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 1601/2296 - Loss: 0.1041[0m
+[[36m04-11 01:25:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 1701/2296 - Loss: 0.0682[0m
+[[36m04-11 01:26:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 11 | 1722/2296 | 0.81 it/sec | Loss 0.1016 | Reco 0.1016 | Grad 0.0717[0m
+[[36m04-11 01:27:47[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 1801/2296 - Loss: 0.0637[0m
+[[36m04-11 01:29:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 1901/2296 - Loss: 0.1125[0m
+[[36m04-11 01:31:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 2001/2296 - Loss: 0.0892[0m
+[[36m04-11 01:33:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 2101/2296 - Loss: 0.0946[0m
+[[36m04-11 01:36:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 2201/2296 - Loss: 0.0655[0m
+done running 1 epoch
+[[36m04-11 01:37:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 11 | Loss=0.1014 | Reco=0.1014 | Grad=0.0720[0m
+[[36m04-11 01:37:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 01:37:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 01:38:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 11 - Step 1/27.578327178955078 - Loss: 0.1430[0m
+[[36m04-11 01:38:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 11 | 3/14 | 0.30 it/sec | Loss 0.1517 | Reco 0.1517 | Nsdr 6.400[0m
+[[36m04-11 01:38:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 11 | 6/14 | 0.32 it/sec | Loss 0.1528 | Reco 0.1528 | Nsdr 6.536[0m
+[[36m04-11 01:38:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 11 | 9/14 | 0.33 it/sec | Loss 0.1573 | Reco 0.1573 | Nsdr 6.078[0m
+[[36m04-11 01:38:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 11 | 12/14 | 0.33 it/sec | Loss 0.1693 | Reco 0.1693 | Nsdr 5.676[0m
+[[36m04-11 01:38:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 11 | Loss=0.1741 | Reco=0.1741 | Nsdr=5.479 | Best=0.1734 | Bname=main[0m
+[[36m04-11 01:38:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 01:38:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 01:38:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 1/2296 - Loss: 0.0738[0m
+[[36m04-11 01:40:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 101/2296 - Loss: 0.0994[0m
+[[36m04-11 01:42:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 201/2296 - Loss: 0.1033[0m
+[[36m04-11 01:44:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 301/2296 - Loss: 0.1351[0m
+[[36m04-11 01:46:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 401/2296 - Loss: 0.0854[0m
+[[36m04-11 01:49:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 501/2296 - Loss: 0.1045[0m
+[[36m04-11 01:50:33[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 12 | 574/2296 | 0.81 it/sec | Loss 0.1013 | Reco 0.1013 | Grad 0.0723[0m
+[[36m04-11 01:51:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 601/2296 - Loss: 0.0852[0m
+[[36m04-11 01:53:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 701/2296 - Loss: 0.0812[0m
+[[36m04-11 01:55:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 801/2296 - Loss: 0.0964[0m
+[[36m04-11 01:57:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 901/2296 - Loss: 0.1167[0m
+[[36m04-11 01:59:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 1001/2296 - Loss: 0.0949[0m
+[[36m04-11 02:01:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 1101/2296 - Loss: 0.1034[0m
+[[36m04-11 02:02:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 12 | 1148/2296 | 0.81 it/sec | Loss 0.1005 | Reco 0.1005 | Grad 0.0728[0m
+[[36m04-11 02:03:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 1201/2296 - Loss: 0.0964[0m
+[[36m04-11 02:05:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 1301/2296 - Loss: 0.0900[0m
+[[36m04-11 02:07:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 1401/2296 - Loss: 0.0929[0m
+[[36m04-11 02:09:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 1501/2296 - Loss: 0.0961[0m
+[[36m04-11 02:11:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 1601/2296 - Loss: 0.0723[0m
+[[36m04-11 02:13:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 1701/2296 - Loss: 0.0754[0m
+[[36m04-11 02:14:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 12 | 1722/2296 | 0.81 it/sec | Loss 0.0999 | Reco 0.0999 | Grad 0.0732[0m
+[[36m04-11 02:15:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 1801/2296 - Loss: 0.1205[0m
+[[36m04-11 02:17:47[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 1901/2296 - Loss: 0.1037[0m
+[[36m04-11 02:19:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 2001/2296 - Loss: 0.0771[0m
+[[36m04-11 02:21:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 2101/2296 - Loss: 0.0981[0m
+[[36m04-11 02:24:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 2201/2296 - Loss: 0.0925[0m
+done running 1 epoch
+[[36m04-11 02:25:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 12 | Loss=0.1000 | Reco=0.1000 | Grad=0.0735[0m
+[[36m04-11 02:25:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 02:25:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 02:26:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 12 - Step 1/29.48920440673828 - Loss: 0.1364[0m
+[[36m04-11 02:26:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 12 | 3/14 | 0.30 it/sec | Loss 0.1530 | Reco 0.1530 | Nsdr 6.389[0m
+[[36m04-11 02:26:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 12 | 6/14 | 0.32 it/sec | Loss 0.1545 | Reco 0.1545 | Nsdr 6.486[0m
+[[36m04-11 02:26:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 12 | 9/14 | 0.33 it/sec | Loss 0.1573 | Reco 0.1573 | Nsdr 6.092[0m
+[[36m04-11 02:26:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 12 | 12/14 | 0.33 it/sec | Loss 0.1692 | Reco 0.1692 | Nsdr 5.697[0m
+[[36m04-11 02:26:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 12 | Loss=0.1741 | Reco=0.1741 | Nsdr=5.492 | Best=0.1734 | Bname=main[0m
+[[36m04-11 02:26:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 02:26:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 02:26:47[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 1/2296 - Loss: 0.0825[0m
+[[36m04-11 02:28:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 101/2296 - Loss: 0.0636[0m
+[[36m04-11 02:30:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 201/2296 - Loss: 0.0794[0m
+[[36m04-11 02:32:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 301/2296 - Loss: 0.0580[0m
+[[36m04-11 02:35:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 401/2296 - Loss: 0.1053[0m
+[[36m04-11 02:37:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 501/2296 - Loss: 0.0981[0m
+[[36m04-11 02:38:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 13 | 574/2296 | 0.81 it/sec | Loss 0.0982 | Reco 0.0982 | Grad 0.0675[0m
+[[36m04-11 02:39:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 601/2296 - Loss: 0.1022[0m
+[[36m04-11 02:41:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 701/2296 - Loss: 0.0867[0m
+[[36m04-11 02:43:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 801/2296 - Loss: 0.0942[0m
+[[36m04-11 02:45:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 901/2296 - Loss: 0.0926[0m
+[[36m04-11 02:47:21[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 1001/2296 - Loss: 0.1202[0m
+[[36m04-11 02:49:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 1101/2296 - Loss: 0.0837[0m
+[[36m04-11 02:50:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 13 | 1148/2296 | 0.81 it/sec | Loss 0.0986 | Reco 0.0986 | Grad 0.0707[0m
+[[36m04-11 02:51:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 1201/2296 - Loss: 0.1568[0m
+[[36m04-11 02:53:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 1301/2296 - Loss: 0.1149[0m
+[[36m04-11 02:55:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 1401/2296 - Loss: 0.1086[0m
+[[36m04-11 02:57:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 1501/2296 - Loss: 0.0898[0m
+[[36m04-11 02:59:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 1601/2296 - Loss: 0.1134[0m
+[[36m04-11 03:01:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 1701/2296 - Loss: 0.0720[0m
+[[36m04-11 03:02:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 13 | 1722/2296 | 0.81 it/sec | Loss 0.0988 | Reco 0.0988 | Grad 0.0712[0m
+[[36m04-11 03:03:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 1801/2296 - Loss: 0.1157[0m
+[[36m04-11 03:05:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 1901/2296 - Loss: 0.1264[0m
+[[36m04-11 03:07:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 2001/2296 - Loss: 0.0758[0m
+[[36m04-11 03:09:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 2101/2296 - Loss: 0.0961[0m
+[[36m04-11 03:11:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 2201/2296 - Loss: 0.1267[0m
+done running 1 epoch
+[[36m04-11 03:13:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 13 | Loss=0.0987 | Reco=0.0987 | Grad=0.0708[0m
+[[36m04-11 03:13:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 03:13:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 03:14:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 13 - Step 1/29.510787963867188 - Loss: 0.1356[0m
+[[36m04-11 03:14:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 13 | 3/14 | 0.30 it/sec | Loss 0.1509 | Reco 0.1509 | Nsdr 6.539[0m
+[[36m04-11 03:14:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 13 | 6/14 | 0.31 it/sec | Loss 0.1516 | Reco 0.1516 | Nsdr 6.661[0m
+[[36m04-11 03:14:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 13 | 9/14 | 0.32 it/sec | Loss 0.1537 | Reco 0.1537 | Nsdr 6.298[0m
+[[36m04-11 03:14:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 13 | 12/14 | 0.33 it/sec | Loss 0.1658 | Reco 0.1658 | Nsdr 5.869[0m
+[[36m04-11 03:14:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 13 | Loss=0.1711 | Reco=0.1711 | Nsdr=5.647 | Best=0.1711 | Bname=main[0m
+[[36m04-11 03:14:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.1711[0m
+[[36m04-11 03:14:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 03:14:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 03:14:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 1/2296 - Loss: 0.1282[0m
+[[36m04-11 03:16:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 101/2296 - Loss: 0.1382[0m
+[[36m04-11 03:18:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 201/2296 - Loss: 0.1035[0m
+[[36m04-11 03:20:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 301/2296 - Loss: 0.0812[0m
+[[36m04-11 03:23:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 401/2296 - Loss: 0.0778[0m
+[[36m04-11 03:25:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 501/2296 - Loss: 0.0914[0m
+[[36m04-11 03:26:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 14 | 574/2296 | 0.81 it/sec | Loss 0.0987 | Reco 0.0987 | Grad 0.0705[0m
+[[36m04-11 03:27:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 601/2296 - Loss: 0.1162[0m
+[[36m04-11 03:29:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 701/2296 - Loss: 0.1037[0m
+[[36m04-11 03:31:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 801/2296 - Loss: 0.1259[0m
+[[36m04-11 03:33:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 901/2296 - Loss: 0.1028[0m
+[[36m04-11 03:35:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 1001/2296 - Loss: 0.0839[0m
+[[36m04-11 03:37:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 1101/2296 - Loss: 0.0700[0m
+[[36m04-11 03:38:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 14 | 1148/2296 | 0.81 it/sec | Loss 0.0980 | Reco 0.0980 | Grad 0.0719[0m
+[[36m04-11 03:39:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 1201/2296 - Loss: 0.0863[0m
+[[36m04-11 03:41:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 1301/2296 - Loss: 0.1158[0m
+[[36m04-11 03:43:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 1401/2296 - Loss: 0.0877[0m
+[[36m04-11 03:45:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 1501/2296 - Loss: 0.0999[0m
+[[36m04-11 03:47:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 1601/2296 - Loss: 0.1216[0m
+[[36m04-11 03:49:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 1701/2296 - Loss: 0.0691[0m
+[[36m04-11 03:50:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 14 | 1722/2296 | 0.81 it/sec | Loss 0.0980 | Reco 0.0980 | Grad 0.0709[0m
+[[36m04-11 03:51:47[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 1801/2296 - Loss: 0.0842[0m
+[[36m04-11 03:53:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 1901/2296 - Loss: 0.0980[0m
+[[36m04-11 03:55:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 2001/2296 - Loss: 0.0935[0m
+[[36m04-11 03:57:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 2101/2296 - Loss: 0.1132[0m
+[[36m04-11 04:00:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 2201/2296 - Loss: 0.1025[0m
+done running 1 epoch
+[[36m04-11 04:01:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 14 | Loss=0.0977 | Reco=0.0977 | Grad=0.0707[0m
+[[36m04-11 04:01:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 04:01:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 04:02:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 14 - Step 1/30.060766220092773 - Loss: 0.1334[0m
+[[36m04-11 04:02:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 14 | 3/14 | 0.30 it/sec | Loss 0.1476 | Reco 0.1476 | Nsdr 6.661[0m
+[[36m04-11 04:02:21[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 14 | 6/14 | 0.31 it/sec | Loss 0.1490 | Reco 0.1490 | Nsdr 6.775[0m
+[[36m04-11 04:02:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 14 | 9/14 | 0.32 it/sec | Loss 0.1526 | Reco 0.1526 | Nsdr 6.330[0m
+[[36m04-11 04:02:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 14 | 12/14 | 0.33 it/sec | Loss 0.1645 | Reco 0.1645 | Nsdr 5.893[0m
+[[36m04-11 04:02:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 14 | Loss=0.1692 | Reco=0.1692 | Nsdr=5.694 | Best=0.1692 | Bname=main[0m
+[[36m04-11 04:02:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.1692[0m
+[[36m04-11 04:02:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 04:02:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 04:02:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 1/2296 - Loss: 0.1054[0m
+[[36m04-11 04:04:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 101/2296 - Loss: 0.1030[0m
+[[36m04-11 04:06:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 201/2296 - Loss: 0.0804[0m
+[[36m04-11 04:09:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 301/2296 - Loss: 0.0789[0m
+[[36m04-11 04:11:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 401/2296 - Loss: 0.0928[0m
+[[36m04-11 04:13:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 501/2296 - Loss: 0.0855[0m
+[[36m04-11 04:14:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 15 | 574/2296 | 0.81 it/sec | Loss 0.0947 | Reco 0.0947 | Grad 0.0690[0m
+[[36m04-11 04:15:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 601/2296 - Loss: 0.0821[0m
+[[36m04-11 04:17:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 701/2296 - Loss: 0.0985[0m
+[[36m04-11 04:19:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 801/2296 - Loss: 0.1149[0m
+[[36m04-11 04:21:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 901/2296 - Loss: 0.0622[0m
+[[36m04-11 04:23:21[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 1001/2296 - Loss: 0.1366[0m
+[[36m04-11 04:25:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 1101/2296 - Loss: 0.0915[0m
+[[36m04-11 04:26:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 15 | 1148/2296 | 0.81 it/sec | Loss 0.0956 | Reco 0.0956 | Grad 0.0698[0m
+[[36m04-11 04:27:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 1201/2296 - Loss: 0.1055[0m
+[[36m04-11 04:29:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 1301/2296 - Loss: 0.1097[0m
+[[36m04-11 04:31:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 1401/2296 - Loss: 0.1293[0m
+[[36m04-11 04:33:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 1501/2296 - Loss: 0.0860[0m
+[[36m04-11 04:35:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 1601/2296 - Loss: 0.0771[0m
+[[36m04-11 04:37:47[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 1701/2296 - Loss: 0.0749[0m
+[[36m04-11 04:38:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 15 | 1722/2296 | 0.81 it/sec | Loss 0.0963 | Reco 0.0963 | Grad 0.0702[0m
+[[36m04-11 04:39:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 1801/2296 - Loss: 0.1027[0m
+[[36m04-11 04:41:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 1901/2296 - Loss: 0.0836[0m
+[[36m04-11 04:43:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 2001/2296 - Loss: 0.1065[0m
+[[36m04-11 04:46:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 2101/2296 - Loss: 0.1331[0m
+[[36m04-11 04:48:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 2201/2296 - Loss: 0.0984[0m
+done running 1 epoch
+[[36m04-11 04:50:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 15 | Loss=0.0961 | Reco=0.0961 | Grad=0.0702[0m
+[[36m04-11 04:50:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 04:50:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 04:50:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 15 - Step 1/30.18068504333496 - Loss: 0.1337[0m
+[[36m04-11 04:50:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 15 | 3/14 | 0.30 it/sec | Loss 0.1498 | Reco 0.1498 | Nsdr 6.553[0m
+[[36m04-11 04:50:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 15 | 6/14 | 0.31 it/sec | Loss 0.1505 | Reco 0.1505 | Nsdr 6.699[0m
+[[36m04-11 04:50:33[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 15 | 9/14 | 0.32 it/sec | Loss 0.1542 | Reco 0.1542 | Nsdr 6.238[0m
+[[36m04-11 04:50:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 15 | 12/14 | 0.33 it/sec | Loss 0.1653 | Reco 0.1653 | Nsdr 5.870[0m
+[[36m04-11 04:50:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 15 | Loss=0.1700 | Reco=0.1700 | Nsdr=5.671 | Best=0.1692 | Bname=main[0m
+[[36m04-11 04:50:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 04:50:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 04:50:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 1/2296 - Loss: 0.0872[0m
+[[36m04-11 04:52:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 101/2296 - Loss: 0.0973[0m
+[[36m04-11 04:54:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 201/2296 - Loss: 0.1196[0m
+[[36m04-11 04:57:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 301/2296 - Loss: 0.1220[0m
+[[36m04-11 04:59:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 401/2296 - Loss: 0.0721[0m
+[[36m04-11 05:01:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 501/2296 - Loss: 0.1199[0m
+[[36m04-11 05:02:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 16 | 574/2296 | 0.81 it/sec | Loss 0.0969 | Reco 0.0969 | Grad 0.0730[0m
+[[36m04-11 05:03:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 601/2296 - Loss: 0.0963[0m
+[[36m04-11 05:05:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 701/2296 - Loss: 0.1049[0m
+[[36m04-11 05:07:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 801/2296 - Loss: 0.0999[0m
+[[36m04-11 05:09:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 901/2296 - Loss: 0.0754[0m
+[[36m04-11 05:11:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 1001/2296 - Loss: 0.1072[0m
+[[36m04-11 05:13:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 1101/2296 - Loss: 0.0922[0m
+[[36m04-11 05:14:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 16 | 1148/2296 | 0.81 it/sec | Loss 0.0958 | Reco 0.0958 | Grad 0.0727[0m
+[[36m04-11 05:15:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 1201/2296 - Loss: 0.1452[0m
+[[36m04-11 05:17:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 1301/2296 - Loss: 0.0829[0m
+[[36m04-11 05:19:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 1401/2296 - Loss: 0.0861[0m
+[[36m04-11 05:21:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 1501/2296 - Loss: 0.0658[0m
+[[36m04-11 05:23:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 1601/2296 - Loss: 0.0648[0m
+[[36m04-11 05:25:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 1701/2296 - Loss: 0.0841[0m
+[[36m04-11 05:26:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 16 | 1722/2296 | 0.81 it/sec | Loss 0.0956 | Reco 0.0956 | Grad 0.0708[0m
+[[36m04-11 05:27:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 1801/2296 - Loss: 0.0845[0m
+[[36m04-11 05:29:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 1901/2296 - Loss: 0.0933[0m
+[[36m04-11 05:31:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 2001/2296 - Loss: 0.1094[0m
+[[36m04-11 05:34:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 2101/2296 - Loss: 0.1195[0m
+[[36m04-11 05:36:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 2201/2296 - Loss: 0.1158[0m
+done running 1 epoch
+[[36m04-11 05:38:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 16 | Loss=0.0952 | Reco=0.0952 | Grad=0.0697[0m
+[[36m04-11 05:38:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 05:38:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 05:38:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 16 - Step 1/29.414836883544922 - Loss: 0.1348[0m
+[[36m04-11 05:38:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 16 | 3/14 | 0.30 it/sec | Loss 0.1472 | Reco 0.1472 | Nsdr 6.630[0m
+[[36m04-11 05:38:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 16 | 6/14 | 0.32 it/sec | Loss 0.1490 | Reco 0.1490 | Nsdr 6.755[0m
+[[36m04-11 05:38:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 16 | 9/14 | 0.32 it/sec | Loss 0.1511 | Reco 0.1511 | Nsdr 6.394[0m
+[[36m04-11 05:38:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 16 | 12/14 | 0.33 it/sec | Loss 0.1627 | Reco 0.1627 | Nsdr 5.987[0m
+[[36m04-11 05:38:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 16 | Loss=0.1675 | Reco=0.1675 | Nsdr=5.783 | Best=0.1675 | Bname=main[0m
+[[36m04-11 05:38:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.1675[0m
+[[36m04-11 05:38:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 05:38:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 05:38:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 1/2296 - Loss: 0.0862[0m
+[[36m04-11 05:40:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 101/2296 - Loss: 0.1087[0m
+[[36m04-11 05:42:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 201/2296 - Loss: 0.1111[0m
+[[36m04-11 05:45:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 301/2296 - Loss: 0.1303[0m
+[[36m04-11 05:47:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 401/2296 - Loss: 0.1001[0m
+[[36m04-11 05:49:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 501/2296 - Loss: 0.1376[0m
+[[36m04-11 05:50:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 17 | 574/2296 | 0.81 it/sec | Loss 0.0952 | Reco 0.0952 | Grad 0.0724[0m
+[[36m04-11 05:51:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 601/2296 - Loss: 0.0927[0m
+[[36m04-11 05:53:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 701/2296 - Loss: 0.0693[0m
+[[36m04-11 05:55:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 801/2296 - Loss: 0.0772[0m
+[[36m04-11 05:57:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 901/2296 - Loss: 0.1140[0m
+[[36m04-11 05:59:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 1001/2296 - Loss: 0.0972[0m
+[[36m04-11 06:01:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 1101/2296 - Loss: 0.1175[0m
+[[36m04-11 06:02:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 17 | 1148/2296 | 0.81 it/sec | Loss 0.0950 | Reco 0.0950 | Grad 0.0693[0m
+[[36m04-11 06:03:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 1201/2296 - Loss: 0.1213[0m
+[[36m04-11 06:05:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 1301/2296 - Loss: 0.0563[0m
+[[36m04-11 06:07:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 1401/2296 - Loss: 0.1133[0m
+[[36m04-11 06:09:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 1501/2296 - Loss: 0.1173[0m
+[[36m04-11 06:11:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 1601/2296 - Loss: 0.1005[0m
+[[36m04-11 06:13:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 1701/2296 - Loss: 0.1093[0m
+[[36m04-11 06:14:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 17 | 1722/2296 | 0.81 it/sec | Loss 0.0946 | Reco 0.0946 | Grad 0.0682[0m
+[[36m04-11 06:15:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 1801/2296 - Loss: 0.0948[0m
+[[36m04-11 06:17:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 1901/2296 - Loss: 0.1272[0m
+[[36m04-11 06:19:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 2001/2296 - Loss: 0.0838[0m
+[[36m04-11 06:22:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 2101/2296 - Loss: 0.1096[0m
+[[36m04-11 06:24:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 2201/2296 - Loss: 0.0988[0m
+done running 1 epoch
+[[36m04-11 06:26:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 17 | Loss=0.0942 | Reco=0.0942 | Grad=0.0678[0m
+[[36m04-11 06:26:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 06:26:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 06:26:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 17 - Step 1/31.56179428100586 - Loss: 0.1285[0m
+[[36m04-11 06:26:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 17 | 3/14 | 0.31 it/sec | Loss 0.1422 | Reco 0.1422 | Nsdr 6.913[0m
+[[36m04-11 06:26:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 17 | 6/14 | 0.32 it/sec | Loss 0.1444 | Reco 0.1444 | Nsdr 7.007[0m
+[[36m04-11 06:26:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 17 | 9/14 | 0.33 it/sec | Loss 0.1491 | Reco 0.1491 | Nsdr 6.504[0m
+[[36m04-11 06:26:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 17 | 12/14 | 0.33 it/sec | Loss 0.1610 | Reco 0.1610 | Nsdr 6.082[0m
+[[36m04-11 06:26:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 17 | Loss=0.1660 | Reco=0.1660 | Nsdr=5.874 | Best=0.1660 | Bname=main[0m
+[[36m04-11 06:26:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.1660[0m
+[[36m04-11 06:26:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 06:26:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 06:26:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 1/2296 - Loss: 0.0964[0m
+[[36m04-11 06:28:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 101/2296 - Loss: 0.1311[0m
+[[36m04-11 06:30:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 201/2296 - Loss: 0.0948[0m
+[[36m04-11 06:33:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 301/2296 - Loss: 0.0555[0m
+[[36m04-11 06:35:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 401/2296 - Loss: 0.1203[0m
+[[36m04-11 06:37:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 501/2296 - Loss: 0.1106[0m
+[[36m04-11 06:38:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 18 | 574/2296 | 0.81 it/sec | Loss 0.0943 | Reco 0.0943 | Grad 0.0667[0m
+[[36m04-11 06:39:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 601/2296 - Loss: 0.0932[0m
+[[36m04-11 06:41:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 701/2296 - Loss: 0.1031[0m
+[[36m04-11 06:43:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 801/2296 - Loss: 0.0767[0m
+[[36m04-11 06:45:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 901/2296 - Loss: 0.1015[0m
+[[36m04-11 06:47:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 1001/2296 - Loss: 0.1220[0m
+[[36m04-11 06:49:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 1101/2296 - Loss: 0.1185[0m
+[[36m04-11 06:50:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 18 | 1148/2296 | 0.81 it/sec | Loss 0.0935 | Reco 0.0935 | Grad 0.0665[0m
+[[36m04-11 06:51:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 1201/2296 - Loss: 0.0862[0m
+[[36m04-11 06:53:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 1301/2296 - Loss: 0.0912[0m
+[[36m04-11 06:55:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 1401/2296 - Loss: 0.0767[0m
+[[36m04-11 06:57:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 1501/2296 - Loss: 0.1087[0m
+[[36m04-11 06:59:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 1601/2296 - Loss: 0.0959[0m
+[[36m04-11 07:01:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 1701/2296 - Loss: 0.1076[0m
+[[36m04-11 07:02:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 18 | 1722/2296 | 0.81 it/sec | Loss 0.0932 | Reco 0.0932 | Grad 0.0672[0m
+[[36m04-11 07:03:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 1801/2296 - Loss: 0.0611[0m
+[[36m04-11 07:05:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 1901/2296 - Loss: 0.1110[0m
+[[36m04-11 07:07:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 2001/2296 - Loss: 0.0963[0m
+[[36m04-11 07:09:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 2101/2296 - Loss: 0.0937[0m
+[[36m04-11 07:12:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 2201/2296 - Loss: 0.0393[0m
+done running 1 epoch
+[[36m04-11 07:14:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 18 | Loss=0.0935 | Reco=0.0935 | Grad=0.0674[0m
+[[36m04-11 07:14:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 07:14:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 07:14:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 18 - Step 1/30.3063907623291 - Loss: 0.1325[0m
+[[36m04-11 07:14:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 18 | 3/14 | 0.30 it/sec | Loss 0.1456 | Reco 0.1456 | Nsdr 6.771[0m
+[[36m04-11 07:14:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 18 | 6/14 | 0.32 it/sec | Loss 0.1474 | Reco 0.1474 | Nsdr 6.850[0m
+[[36m04-11 07:14:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 18 | 9/14 | 0.33 it/sec | Loss 0.1493 | Reco 0.1493 | Nsdr 6.469[0m
+[[36m04-11 07:14:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 18 | 12/14 | 0.33 it/sec | Loss 0.1615 | Reco 0.1615 | Nsdr 6.016[0m
+[[36m04-11 07:14:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 18 | Loss=0.1675 | Reco=0.1675 | Nsdr=5.780 | Best=0.1660 | Bname=main[0m
+[[36m04-11 07:14:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 07:14:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 07:14:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 1/2296 - Loss: 0.0689[0m
+[[36m04-11 07:16:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 101/2296 - Loss: 0.0801[0m
+[[36m04-11 07:18:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 201/2296 - Loss: 0.0731[0m
+[[36m04-11 07:21:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 301/2296 - Loss: 0.1057[0m
+[[36m04-11 07:23:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 401/2296 - Loss: 0.0600[0m
+[[36m04-11 07:25:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 501/2296 - Loss: 0.0882[0m
+[[36m04-11 07:26:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 19 | 574/2296 | 0.81 it/sec | Loss 0.0922 | Reco 0.0922 | Grad 0.0662[0m
+[[36m04-11 07:27:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 601/2296 - Loss: 0.1119[0m
+[[36m04-11 07:29:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 701/2296 - Loss: 0.1073[0m
+[[36m04-11 07:31:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 801/2296 - Loss: 0.0765[0m
+[[36m04-11 07:33:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 901/2296 - Loss: 0.0796[0m
+[[36m04-11 07:35:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 1001/2296 - Loss: 0.0791[0m
+[[36m04-11 07:37:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 1101/2296 - Loss: 0.0907[0m
+[[36m04-11 07:38:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 19 | 1148/2296 | 0.81 it/sec | Loss 0.0925 | Reco 0.0925 | Grad 0.0692[0m
+[[36m04-11 07:39:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 1201/2296 - Loss: 0.0943[0m
+[[36m04-11 07:41:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 1301/2296 - Loss: 0.0695[0m
+[[36m04-11 07:43:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 1401/2296 - Loss: 0.1079[0m
+[[36m04-11 07:45:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 1501/2296 - Loss: 0.1207[0m
+[[36m04-11 07:47:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 1601/2296 - Loss: 0.1043[0m
+[[36m04-11 07:49:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 1701/2296 - Loss: 0.1132[0m
+[[36m04-11 07:50:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 19 | 1722/2296 | 0.81 it/sec | Loss 0.0922 | Reco 0.0922 | Grad 0.0688[0m
+[[36m04-11 07:51:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 1801/2296 - Loss: 0.0808[0m
+[[36m04-11 07:53:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 1901/2296 - Loss: 0.0803[0m
+[[36m04-11 07:55:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 2001/2296 - Loss: 0.0541[0m
+[[36m04-11 07:58:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 2101/2296 - Loss: 0.1101[0m
+[[36m04-11 08:00:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 2201/2296 - Loss: 0.0953[0m
+done running 1 epoch
+[[36m04-11 08:02:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 19 | Loss=0.0924 | Reco=0.0924 | Grad=0.0681[0m
+[[36m04-11 08:02:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 08:02:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 08:02:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 19 - Step 1/31.637691497802734 - Loss: 0.1295[0m
+[[36m04-11 08:02:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 19 | 3/14 | 0.30 it/sec | Loss 0.1426 | Reco 0.1426 | Nsdr 6.978[0m
+[[36m04-11 08:02:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 19 | 6/14 | 0.32 it/sec | Loss 0.1458 | Reco 0.1458 | Nsdr 6.979[0m
+[[36m04-11 08:02:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 19 | 9/14 | 0.33 it/sec | Loss 0.1481 | Reco 0.1481 | Nsdr 6.609[0m
+[[36m04-11 08:02:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 19 | 12/14 | 0.33 it/sec | Loss 0.1593 | Reco 0.1593 | Nsdr 6.199[0m
+[[36m04-11 08:02:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 19 | Loss=0.1645 | Reco=0.1645 | Nsdr=5.977 | Best=0.1645 | Bname=main[0m
+[[36m04-11 08:02:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.1645[0m
+[[36m04-11 08:02:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 08:02:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 08:02:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 1/2296 - Loss: 0.0857[0m
+[[36m04-11 08:04:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 101/2296 - Loss: 0.1148[0m
+[[36m04-11 08:06:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 201/2296 - Loss: 0.1294[0m
+[[36m04-11 08:09:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 301/2296 - Loss: 0.1265[0m
+[[36m04-11 08:11:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 401/2296 - Loss: 0.0660[0m
+[[36m04-11 08:13:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 501/2296 - Loss: 0.1082[0m
+[[36m04-11 08:14:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 20 | 574/2296 | 0.81 it/sec | Loss 0.0917 | Reco 0.0917 | Grad 0.0649[0m
+[[36m04-11 08:15:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 601/2296 - Loss: 0.1018[0m
+[[36m04-11 08:17:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 701/2296 - Loss: 0.1264[0m
+[[36m04-11 08:19:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 801/2296 - Loss: 0.0976[0m
+[[36m04-11 08:21:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 901/2296 - Loss: 0.0727[0m
+[[36m04-11 08:23:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 1001/2296 - Loss: 0.1012[0m
+[[36m04-11 08:25:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 1101/2296 - Loss: 0.0501[0m
+[[36m04-11 08:26:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 20 | 1148/2296 | 0.81 it/sec | Loss 0.0925 | Reco 0.0925 | Grad 0.0663[0m
+[[36m04-11 08:27:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 1201/2296 - Loss: 0.1125[0m
+[[36m04-11 08:29:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 1301/2296 - Loss: 0.0930[0m
+[[36m04-11 08:31:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 1401/2296 - Loss: 0.0941[0m
+[[36m04-11 08:33:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 1501/2296 - Loss: 0.0724[0m
+[[36m04-11 08:35:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 1601/2296 - Loss: 0.0779[0m
+[[36m04-11 08:37:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 1701/2296 - Loss: 0.0973[0m
+[[36m04-11 08:38:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 20 | 1722/2296 | 0.81 it/sec | Loss 0.0920 | Reco 0.0920 | Grad 0.0664[0m
+[[36m04-11 08:39:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 1801/2296 - Loss: 0.0684[0m
+[[36m04-11 08:41:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 1901/2296 - Loss: 0.0848[0m
+[[36m04-11 08:43:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 2001/2296 - Loss: 0.0717[0m
+[[36m04-11 08:46:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 2101/2296 - Loss: 0.0728[0m
+[[36m04-11 08:48:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 2201/2296 - Loss: 0.0900[0m
+done running 1 epoch
+[[36m04-11 08:50:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 20 | Loss=0.0917 | Reco=0.0917 | Grad=0.0672[0m
+[[36m04-11 08:50:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 08:50:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 08:50:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 20 - Step 1/31.22329330444336 - Loss: 0.1283[0m
+[[36m04-11 08:50:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 20 | 3/14 | 0.30 it/sec | Loss 0.1406 | Reco 0.1406 | Nsdr 6.981[0m
+[[36m04-11 08:50:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 20 | 6/14 | 0.31 it/sec | Loss 0.1440 | Reco 0.1440 | Nsdr 7.049[0m
+[[36m04-11 08:50:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 20 | 9/14 | 0.32 it/sec | Loss 0.1481 | Reco 0.1481 | Nsdr 6.583[0m
+[[36m04-11 08:50:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 20 | 12/14 | 0.33 it/sec | Loss 0.1589 | Reco 0.1589 | Nsdr 6.184[0m
+[[36m04-11 08:50:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 20 | Loss=0.1647 | Reco=0.1647 | Nsdr=5.947 | Best=0.1645 | Bname=main[0m
+[[36m04-11 08:50:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 08:50:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Evaluating on the test set...[0m
+[[36m04-11 08:52:24[0m][[34mdemucs.evaluate[0m][[32mINFO[0m] - Eval | 12/50 | 0.15 it/sec[0m
+[[36m04-11 08:53:54[0m][[34mdemucs.evaluate[0m][[32mINFO[0m] - Eval | 24/50 | 0.14 it/sec[0m
+[[36m04-11 08:55:20[0m][[34mdemucs.evaluate[0m][[32mINFO[0m] - Eval | 36/50 | 0.14 it/sec[0m
+[[36m04-11 08:56:50[0m][[34mdemucs.evaluate[0m][[32mINFO[0m] - Eval | 48/50 | 0.14 it/sec[0m
+[[36m04-11 08:56:57[0m][[34mdemucs.evaluate[0m][[32mINFO[0m] - Eval (BSS) | 12/50 | 5417.38 it/sec[0m
+[[36m04-11 08:56:57[0m][[34mdemucs.evaluate[0m][[32mINFO[0m] - Eval (BSS) | 24/50 | 6908.07 it/sec[0m
+[[36m04-11 08:56:57[0m][[34mdemucs.evaluate[0m][[32mINFO[0m] - Eval (BSS) | 36/50 | 8111.50 it/sec[0m
+[[36m04-11 08:56:57[0m][[34mdemucs.evaluate[0m][[32mINFO[0m] - Eval (BSS) | 48/50 | 8992.78 it/sec[0m
+[[36m04-11 08:56:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTest Summary | Epoch 20 | Nsdr=5.260 | Nsdr_drums=6.144 | Nsdr_bass=4.946 | Nsdr_other=3.776 | Nsdr_vocals=6.176[0m
+[[36m04-11 08:57:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 08:57:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 08:57:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 1/2296 - Loss: 0.0701[0m
+[[36m04-11 08:59:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 101/2296 - Loss: 0.0733[0m
+[[36m04-11 09:01:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 201/2296 - Loss: 0.0950[0m
+[[36m04-11 09:03:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 301/2296 - Loss: 0.0681[0m
+[[36m04-11 09:05:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 401/2296 - Loss: 0.1072[0m
+[[36m04-11 09:07:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 501/2296 - Loss: 0.0864[0m
+[[36m04-11 09:08:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 21 | 574/2296 | 0.81 it/sec | Loss 0.0915 | Reco 0.0915 | Grad 0.0676[0m
+[[36m04-11 09:09:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 601/2296 - Loss: 0.0911[0m
+[[36m04-11 09:11:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 701/2296 - Loss: 0.0927[0m
+[[36m04-11 09:13:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 801/2296 - Loss: 0.0849[0m
+[[36m04-11 09:15:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 901/2296 - Loss: 0.1126[0m
+[[36m04-11 09:17:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 1001/2296 - Loss: 0.0820[0m
+[[36m04-11 09:19:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 1101/2296 - Loss: 0.1137[0m
+[[36m04-11 09:20:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 21 | 1148/2296 | 0.81 it/sec | Loss 0.0914 | Reco 0.0914 | Grad 0.0667[0m
+[[36m04-11 09:21:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 1201/2296 - Loss: 0.1354[0m
+[[36m04-11 09:23:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 1301/2296 - Loss: 0.1177[0m
+[[36m04-11 09:25:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 1401/2296 - Loss: 0.0868[0m
+[[36m04-11 09:27:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 1501/2296 - Loss: 0.0925[0m
+[[36m04-11 09:29:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 1601/2296 - Loss: 0.1142[0m
+[[36m04-11 09:31:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 1701/2296 - Loss: 0.1024[0m
+[[36m04-11 09:32:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 21 | 1722/2296 | 0.81 it/sec | Loss 0.0913 | Reco 0.0913 | Grad 0.0666[0m
+[[36m04-11 09:33:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 1801/2296 - Loss: 0.0901[0m
+[[36m04-11 09:36:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 1901/2296 - Loss: 0.0945[0m
+[[36m04-11 09:38:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 2001/2296 - Loss: 0.0925[0m
+[[36m04-11 09:40:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 2101/2296 - Loss: 0.1173[0m
+[[36m04-11 09:42:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 2201/2296 - Loss: 0.0870[0m
+done running 1 epoch
+[[36m04-11 09:44:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 21 | Loss=0.0912 | Reco=0.0912 | Grad=0.0664[0m
+[[36m04-11 09:44:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 09:44:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 09:44:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 21 - Step 1/31.907974243164062 - Loss: 0.1274[0m
+[[36m04-11 09:44:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 21 | 3/14 | 0.30 it/sec | Loss 0.1388 | Reco 0.1388 | Nsdr 7.077[0m
+[[36m04-11 09:44:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 21 | 6/14 | 0.32 it/sec | Loss 0.1422 | Reco 0.1422 | Nsdr 7.138[0m
+[[36m04-11 09:44:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 21 | 9/14 | 0.33 it/sec | Loss 0.1460 | Reco 0.1460 | Nsdr 6.695[0m
+[[36m04-11 09:44:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 21 | 12/14 | 0.33 it/sec | Loss 0.1568 | Reco 0.1568 | Nsdr 6.294[0m
+[[36m04-11 09:44:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 21 | Loss=0.1616 | Reco=0.1616 | Nsdr=6.080 | Best=0.1616 | Bname=main[0m
+[[36m04-11 09:44:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.1616[0m
+[[36m04-11 09:44:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 09:44:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 09:44:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 1/2296 - Loss: 0.0890[0m
+[[36m04-11 09:47:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 101/2296 - Loss: 0.0774[0m
+[[36m04-11 09:49:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 201/2296 - Loss: 0.0771[0m
+[[36m04-11 09:51:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 301/2296 - Loss: 0.0937[0m
+[[36m04-11 09:53:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 401/2296 - Loss: 0.0952[0m
+[[36m04-11 09:55:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 501/2296 - Loss: 0.0747[0m
+[[36m04-11 09:57:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 22 | 574/2296 | 0.79 it/sec | Loss 0.0900 | Reco 0.0900 | Grad 0.0646[0m
+[[36m04-11 09:57:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 601/2296 - Loss: 0.1126[0m
+[[36m04-11 09:59:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 701/2296 - Loss: 0.0956[0m
+[[36m04-11 10:01:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 801/2296 - Loss: 0.0775[0m
+[[36m04-11 10:03:47[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 901/2296 - Loss: 0.0761[0m
+[[36m04-11 10:05:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 1001/2296 - Loss: 0.0974[0m
+[[36m04-11 10:07:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 1101/2296 - Loss: 0.1059[0m
+[[36m04-11 10:08:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 22 | 1148/2296 | 0.80 it/sec | Loss 0.0900 | Reco 0.0900 | Grad 0.0656[0m
+[[36m04-11 10:09:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 1201/2296 - Loss: 0.0993[0m
+[[36m04-11 10:12:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 1301/2296 - Loss: 0.0730[0m
+[[36m04-11 10:14:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 1401/2296 - Loss: 0.0629[0m
+[[36m04-11 10:16:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 1501/2296 - Loss: 0.0715[0m
+[[36m04-11 10:18:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 1601/2296 - Loss: 0.1121[0m
+[[36m04-11 10:20:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 1701/2296 - Loss: 0.1094[0m
+[[36m04-11 10:20:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 22 | 1722/2296 | 0.80 it/sec | Loss 0.0903 | Reco 0.0903 | Grad 0.0655[0m
+[[36m04-11 10:22:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 1801/2296 - Loss: 0.0961[0m
+[[36m04-11 10:24:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 1901/2296 - Loss: 0.0754[0m
+[[36m04-11 10:26:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 2001/2296 - Loss: 0.1141[0m
+[[36m04-11 10:28:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 2101/2296 - Loss: 0.1157[0m
+[[36m04-11 10:30:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 2201/2296 - Loss: 0.1007[0m
+done running 1 epoch
+[[36m04-11 10:32:27[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 22 | Loss=0.0902 | Reco=0.0902 | Grad=0.0654[0m
+[[36m04-11 10:32:27[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 10:32:27[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 10:32:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 22 - Step 1/32.35198974609375 - Loss: 0.1250[0m
+[[36m04-11 10:32:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 22 | 3/14 | 0.16 it/sec | Loss 0.1411 | Reco 0.1411 | Nsdr 7.049[0m
+[[36m04-11 10:33:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 22 | 6/14 | 0.21 it/sec | Loss 0.1435 | Reco 0.1435 | Nsdr 7.128[0m
+[[36m04-11 10:33:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 22 | 9/14 | 0.24 it/sec | Loss 0.1470 | Reco 0.1470 | Nsdr 6.674[0m
+[[36m04-11 10:33:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 22 | 12/14 | 0.25 it/sec | Loss 0.1573 | Reco 0.1573 | Nsdr 6.316[0m
+[[36m04-11 10:33:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 22 | Loss=0.1620 | Reco=0.1620 | Nsdr=6.109 | Best=0.1616 | Bname=main[0m
+[[36m04-11 10:33:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 10:33:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 10:33:27[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 1/2296 - Loss: 0.0753[0m
+[[36m04-11 10:35:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 101/2296 - Loss: 0.0869[0m
+[[36m04-11 10:37:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 201/2296 - Loss: 0.0536[0m
+[[36m04-11 10:39:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 301/2296 - Loss: 0.0763[0m
+[[36m04-11 10:41:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 401/2296 - Loss: 0.0823[0m
+[[36m04-11 10:43:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 501/2296 - Loss: 0.1023[0m
+[[36m04-11 10:45:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 23 | 574/2296 | 0.81 it/sec | Loss 0.0897 | Reco 0.0897 | Grad 0.0655[0m
+[[36m04-11 10:45:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 601/2296 - Loss: 0.0750[0m
+[[36m04-11 10:47:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 701/2296 - Loss: 0.0983[0m
+[[36m04-11 10:49:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 801/2296 - Loss: 0.0854[0m
+[[36m04-11 10:51:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 901/2296 - Loss: 0.1139[0m
+[[36m04-11 10:53:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 1001/2296 - Loss: 0.0744[0m
+[[36m04-11 10:56:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 1101/2296 - Loss: 0.1107[0m
+[[36m04-11 10:57:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 23 | 1148/2296 | 0.81 it/sec | Loss 0.0897 | Reco 0.0897 | Grad 0.0658[0m
+[[36m04-11 10:58:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 1201/2296 - Loss: 0.1427[0m
+[[36m04-11 11:00:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 1301/2296 - Loss: 0.0939[0m
+[[36m04-11 11:02:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 1401/2296 - Loss: 0.1149[0m
+[[36m04-11 11:04:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 1501/2296 - Loss: 0.0457[0m
+[[36m04-11 11:06:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 1601/2296 - Loss: 0.1240[0m
+[[36m04-11 11:08:21[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 1701/2296 - Loss: 0.0942[0m
+[[36m04-11 11:08:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 23 | 1722/2296 | 0.81 it/sec | Loss 0.0895 | Reco 0.0895 | Grad 0.0651[0m
+[[36m04-11 11:10:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 1801/2296 - Loss: 0.0995[0m
+[[36m04-11 11:12:27[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 1901/2296 - Loss: 0.0867[0m
+[[36m04-11 11:14:30[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 2001/2296 - Loss: 0.1078[0m
+[[36m04-11 11:16:33[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 2101/2296 - Loss: 0.1139[0m
+[[36m04-11 11:18:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 2201/2296 - Loss: 0.0957[0m
+done running 1 epoch
+[[36m04-11 11:20:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 23 | Loss=0.0895 | Reco=0.0895 | Grad=0.0654[0m
+[[36m04-11 11:20:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 11:20:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 11:20:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 23 - Step 1/31.22551155090332 - Loss: 0.1291[0m
+[[36m04-11 11:20:47[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 23 | 3/14 | 0.30 it/sec | Loss 0.1376 | Reco 0.1376 | Nsdr 7.134[0m
+[[36m04-11 11:20:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 23 | 6/14 | 0.32 it/sec | Loss 0.1415 | Reco 0.1415 | Nsdr 7.152[0m
+[[36m04-11 11:21:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 23 | 9/14 | 0.33 it/sec | Loss 0.1448 | Reco 0.1448 | Nsdr 6.738[0m
+[[36m04-11 11:21:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 23 | 12/14 | 0.33 it/sec | Loss 0.1557 | Reco 0.1557 | Nsdr 6.315[0m
+[[36m04-11 11:21:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 23 | Loss=0.1609 | Reco=0.1609 | Nsdr=6.085 | Best=0.1609 | Bname=main[0m
+[[36m04-11 11:21:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.1609[0m
+[[36m04-11 11:21:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 11:21:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 11:21:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 1/2296 - Loss: 0.0729[0m
+[[36m04-11 11:23:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 101/2296 - Loss: 0.1145[0m
+[[36m04-11 11:25:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 201/2296 - Loss: 0.1119[0m
+[[36m04-11 11:27:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 301/2296 - Loss: 0.0655[0m
+[[36m04-11 11:29:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 401/2296 - Loss: 0.1273[0m
+[[36m04-11 11:31:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 501/2296 - Loss: 0.0808[0m
+[[36m04-11 11:33:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 24 | 574/2296 | 0.81 it/sec | Loss 0.0891 | Reco 0.0891 | Grad 0.0644[0m
+[[36m04-11 11:33:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 601/2296 - Loss: 0.1066[0m
+[[36m04-11 11:35:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 701/2296 - Loss: 0.1022[0m
+[[36m04-11 11:37:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 801/2296 - Loss: 0.0778[0m
+[[36m04-11 11:39:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 901/2296 - Loss: 0.0910[0m
+[[36m04-11 11:41:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 1001/2296 - Loss: 0.0560[0m
+[[36m04-11 11:43:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 1101/2296 - Loss: 0.1080[0m
+[[36m04-11 11:44:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 24 | 1148/2296 | 0.81 it/sec | Loss 0.0893 | Reco 0.0893 | Grad 0.0646[0m
+[[36m04-11 11:46:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 1201/2296 - Loss: 0.0862[0m
+[[36m04-11 11:48:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 1301/2296 - Loss: 0.0891[0m
+[[36m04-11 11:50:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 1401/2296 - Loss: 0.0771[0m
+[[36m04-11 11:52:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 1501/2296 - Loss: 0.0938[0m
+[[36m04-11 11:54:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 1601/2296 - Loss: 0.0883[0m
+[[36m04-11 11:56:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 1701/2296 - Loss: 0.1473[0m
+[[36m04-11 11:56:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 24 | 1722/2296 | 0.81 it/sec | Loss 0.0893 | Reco 0.0893 | Grad 0.0657[0m
+[[36m04-11 11:58:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 1801/2296 - Loss: 0.0864[0m
+[[36m04-11 12:00:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 1901/2296 - Loss: 0.1251[0m
+[[36m04-11 12:02:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 2001/2296 - Loss: 0.0948[0m
+[[36m04-11 12:04:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 2101/2296 - Loss: 0.1042[0m
+[[36m04-11 12:06:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 2201/2296 - Loss: 0.0756[0m
+done running 1 epoch
+[[36m04-11 12:08:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 24 | Loss=0.0892 | Reco=0.0892 | Grad=0.0663[0m
+[[36m04-11 12:08:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 12:08:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 12:08:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 24 - Step 1/30.975910186767578 - Loss: 0.1306[0m
+[[36m04-11 12:08:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 24 | 3/14 | 0.30 it/sec | Loss 0.1402 | Reco 0.1402 | Nsdr 7.107[0m
+[[36m04-11 12:08:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 24 | 6/14 | 0.32 it/sec | Loss 0.1429 | Reco 0.1429 | Nsdr 7.151[0m
+[[36m04-11 12:09:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 24 | 9/14 | 0.33 it/sec | Loss 0.1449 | Reco 0.1449 | Nsdr 6.768[0m
+[[36m04-11 12:09:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 24 | 12/14 | 0.33 it/sec | Loss 0.1560 | Reco 0.1560 | Nsdr 6.350[0m
+[[36m04-11 12:09:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 24 | Loss=0.1620 | Reco=0.1620 | Nsdr=6.097 | Best=0.1609 | Bname=main[0m
+[[36m04-11 12:09:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 12:09:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 12:09:21[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 1/2296 - Loss: 0.0629[0m
+[[36m04-11 12:11:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 101/2296 - Loss: 0.1314[0m
+[[36m04-11 12:13:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 201/2296 - Loss: 0.0849[0m
+[[36m04-11 12:15:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 301/2296 - Loss: 0.0817[0m
+[[36m04-11 12:17:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 401/2296 - Loss: 0.0988[0m
+[[36m04-11 12:19:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 501/2296 - Loss: 0.1045[0m
+[[36m04-11 12:21:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 25 | 574/2296 | 0.81 it/sec | Loss 0.0890 | Reco 0.0890 | Grad 0.0624[0m
+[[36m04-11 12:21:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 601/2296 - Loss: 0.0901[0m
+[[36m04-11 12:23:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 701/2296 - Loss: 0.0524[0m
+[[36m04-11 12:25:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 801/2296 - Loss: 0.0982[0m
+[[36m04-11 12:27:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 901/2296 - Loss: 0.1045[0m
+[[36m04-11 12:29:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 1001/2296 - Loss: 0.0950[0m
+[[36m04-11 12:31:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 1101/2296 - Loss: 0.0950[0m
+[[36m04-11 12:32:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 25 | 1148/2296 | 0.81 it/sec | Loss 0.0895 | Reco 0.0895 | Grad 0.0641[0m
+[[36m04-11 12:33:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 1201/2296 - Loss: 0.0661[0m
+[[36m04-11 12:36:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 1301/2296 - Loss: 0.0947[0m
+[[36m04-11 12:38:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 1401/2296 - Loss: 0.0869[0m
+[[36m04-11 12:40:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 1501/2296 - Loss: 0.0768[0m
+[[36m04-11 12:42:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 1601/2296 - Loss: 0.0680[0m
+[[36m04-11 12:44:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 1701/2296 - Loss: 0.0918[0m
+[[36m04-11 12:44:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 25 | 1722/2296 | 0.81 it/sec | Loss 0.0891 | Reco 0.0891 | Grad 0.0636[0m
+[[36m04-11 12:46:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 1801/2296 - Loss: 0.0924[0m
+[[36m04-11 12:48:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 1901/2296 - Loss: 0.0959[0m
+[[36m04-11 12:50:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 2001/2296 - Loss: 0.1101[0m
+[[36m04-11 12:52:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 2101/2296 - Loss: 0.0791[0m
+[[36m04-11 12:54:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 2201/2296 - Loss: 0.0998[0m
+done running 1 epoch
+[[36m04-11 12:56:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 25 | Loss=0.0886 | Reco=0.0886 | Grad=0.0639[0m
+[[36m04-11 12:56:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 12:56:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 12:56:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 25 - Step 1/31.923538208007812 - Loss: 0.1261[0m
+[[36m04-11 12:56:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 25 | 3/14 | 0.30 it/sec | Loss 0.1376 | Reco 0.1376 | Nsdr 7.154[0m
+[[36m04-11 12:56:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 25 | 6/14 | 0.32 it/sec | Loss 0.1417 | Reco 0.1417 | Nsdr 7.151[0m
+[[36m04-11 12:57:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 25 | 9/14 | 0.33 it/sec | Loss 0.1446 | Reco 0.1446 | Nsdr 6.771[0m
+[[36m04-11 12:57:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 25 | 12/14 | 0.33 it/sec | Loss 0.1555 | Reco 0.1555 | Nsdr 6.366[0m
+[[36m04-11 12:57:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 25 | Loss=0.1604 | Reco=0.1604 | Nsdr=6.149 | Best=0.1604 | Bname=main[0m
+[[36m04-11 12:57:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.1604[0m
+[[36m04-11 12:57:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 12:57:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 12:57:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 1/2296 - Loss: 0.0804[0m
+[[36m04-11 12:59:21[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 101/2296 - Loss: 0.0796[0m
+[[36m04-11 13:01:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 201/2296 - Loss: 0.0906[0m
+[[36m04-11 13:03:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 301/2296 - Loss: 0.0838[0m
+[[36m04-11 13:05:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 401/2296 - Loss: 0.0834[0m
+[[36m04-11 13:07:33[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 501/2296 - Loss: 0.0878[0m
+[[36m04-11 13:09:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 26 | 574/2296 | 0.81 it/sec | Loss 0.0881 | Reco 0.0881 | Grad 0.0648[0m
+[[36m04-11 13:09:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 601/2296 - Loss: 0.0960[0m
+[[36m04-11 13:11:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 701/2296 - Loss: 0.0711[0m
+[[36m04-11 13:13:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 801/2296 - Loss: 0.0650[0m
+[[36m04-11 13:15:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 901/2296 - Loss: 0.0880[0m
+[[36m04-11 13:17:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 1001/2296 - Loss: 0.1031[0m
+[[36m04-11 13:19:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 1101/2296 - Loss: 0.0780[0m
+[[36m04-11 13:20:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 26 | 1148/2296 | 0.81 it/sec | Loss 0.0874 | Reco 0.0874 | Grad 0.0646[0m
+[[36m04-11 13:21:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 1201/2296 - Loss: 0.0632[0m
+[[36m04-11 13:24:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 1301/2296 - Loss: 0.0976[0m
+[[36m04-11 13:26:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 1401/2296 - Loss: 0.0859[0m
+[[36m04-11 13:28:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 1501/2296 - Loss: 0.0812[0m
+[[36m04-11 13:30:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 1601/2296 - Loss: 0.0683[0m
+[[36m04-11 13:32:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 1701/2296 - Loss: 0.0734[0m
+[[36m04-11 13:32:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 26 | 1722/2296 | 0.81 it/sec | Loss 0.0879 | Reco 0.0879 | Grad 0.0649[0m
+[[36m04-11 13:34:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 1801/2296 - Loss: 0.0827[0m
+[[36m04-11 13:36:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 1901/2296 - Loss: 0.0815[0m
+[[36m04-11 13:38:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 2001/2296 - Loss: 0.0912[0m
+[[36m04-11 13:40:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 2101/2296 - Loss: 0.0735[0m
+[[36m04-11 13:42:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 2201/2296 - Loss: 0.0754[0m
+done running 1 epoch
+[[36m04-11 13:44:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 26 | Loss=0.0879 | Reco=0.0879 | Grad=0.0649[0m
+[[36m04-11 13:44:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 13:44:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 13:44:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 26 - Step 1/32.472679138183594 - Loss: 0.1246[0m
+[[36m04-11 13:44:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 26 | 3/14 | 0.30 it/sec | Loss 0.1395 | Reco 0.1395 | Nsdr 7.123[0m
+[[36m04-11 13:44:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 26 | 6/14 | 0.32 it/sec | Loss 0.1416 | Reco 0.1416 | Nsdr 7.220[0m
+[[36m04-11 13:44:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 26 | 9/14 | 0.33 it/sec | Loss 0.1446 | Reco 0.1446 | Nsdr 6.810[0m
+[[36m04-11 13:45:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 26 | 12/14 | 0.33 it/sec | Loss 0.1547 | Reco 0.1547 | Nsdr 6.450[0m
+[[36m04-11 13:45:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 26 | Loss=0.1599 | Reco=0.1599 | Nsdr=6.229 | Best=0.1599 | Bname=main[0m
+[[36m04-11 13:45:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.1599[0m
+[[36m04-11 13:45:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 13:45:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 13:45:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 1/2296 - Loss: 0.1040[0m
+[[36m04-11 13:47:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 101/2296 - Loss: 0.0911[0m
+[[36m04-11 13:49:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 201/2296 - Loss: 0.0731[0m
+[[36m04-11 13:51:27[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 301/2296 - Loss: 0.0676[0m
+[[36m04-11 13:53:30[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 401/2296 - Loss: 0.0604[0m
+[[36m04-11 13:55:33[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 501/2296 - Loss: 0.0852[0m
+[[36m04-11 13:57:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 27 | 574/2296 | 0.81 it/sec | Loss 0.0873 | Reco 0.0873 | Grad 0.0638[0m
+[[36m04-11 13:57:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 601/2296 - Loss: 0.0502[0m
+[[36m04-11 13:59:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 701/2296 - Loss: 0.1005[0m
+[[36m04-11 14:01:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 801/2296 - Loss: 0.0771[0m
+[[36m04-11 14:03:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 901/2296 - Loss: 0.0903[0m
+[[36m04-11 14:05:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 1001/2296 - Loss: 0.0989[0m
+[[36m04-11 14:07:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 1101/2296 - Loss: 0.0604[0m
+[[36m04-11 14:08:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 27 | 1148/2296 | 0.81 it/sec | Loss 0.0868 | Reco 0.0868 | Grad 0.0643[0m
+[[36m04-11 14:09:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 1201/2296 - Loss: 0.0991[0m
+[[36m04-11 14:11:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 1301/2296 - Loss: 0.0965[0m
+[[36m04-11 14:14:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 1401/2296 - Loss: 0.0860[0m
+[[36m04-11 14:16:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 1501/2296 - Loss: 0.0657[0m
+[[36m04-11 14:18:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 1601/2296 - Loss: 0.1290[0m
+[[36m04-11 14:20:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 1701/2296 - Loss: 0.0939[0m
+[[36m04-11 14:20:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 27 | 1722/2296 | 0.81 it/sec | Loss 0.0869 | Reco 0.0869 | Grad 0.0635[0m
+[[36m04-11 14:22:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 1801/2296 - Loss: 0.0743[0m
+[[36m04-11 14:24:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 1901/2296 - Loss: 0.0915[0m
+[[36m04-11 14:26:21[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 2001/2296 - Loss: 0.0537[0m
+[[36m04-11 14:28:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 2101/2296 - Loss: 0.0784[0m
+[[36m04-11 14:30:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 2201/2296 - Loss: 0.0918[0m
+done running 1 epoch
+[[36m04-11 14:32:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 27 | Loss=0.0874 | Reco=0.0874 | Grad=0.0640[0m
+[[36m04-11 14:32:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 14:32:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 14:32:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 27 - Step 1/31.370162963867188 - Loss: 0.1283[0m
+[[36m04-11 14:32:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 27 | 3/14 | 0.30 it/sec | Loss 0.1391 | Reco 0.1391 | Nsdr 7.151[0m
+[[36m04-11 14:32:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 27 | 6/14 | 0.32 it/sec | Loss 0.1413 | Reco 0.1413 | Nsdr 7.248[0m
+[[36m04-11 14:32:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 27 | 9/14 | 0.33 it/sec | Loss 0.1431 | Reco 0.1431 | Nsdr 6.876[0m
+[[36m04-11 14:33:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 27 | 12/14 | 0.33 it/sec | Loss 0.1527 | Reco 0.1527 | Nsdr 6.534[0m
+[[36m04-11 14:33:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 27 | Loss=0.1582 | Reco=0.1582 | Nsdr=6.297 | Best=0.1582 | Bname=main[0m
+[[36m04-11 14:33:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.1582[0m
+[[36m04-11 14:33:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 14:33:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 14:33:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 1/2296 - Loss: 0.0674[0m
+[[36m04-11 14:35:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 101/2296 - Loss: 0.0862[0m
+[[36m04-11 14:37:21[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 201/2296 - Loss: 0.1045[0m
+[[36m04-11 14:39:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 301/2296 - Loss: 0.1289[0m
+[[36m04-11 14:41:30[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 401/2296 - Loss: 0.0826[0m
+[[36m04-11 14:43:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 501/2296 - Loss: 0.0617[0m
+[[36m04-11 14:45:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 28 | 574/2296 | 0.81 it/sec | Loss 0.0863 | Reco 0.0863 | Grad 0.0658[0m
+[[36m04-11 14:45:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 601/2296 - Loss: 0.1093[0m
+[[36m04-11 14:47:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 701/2296 - Loss: 0.0936[0m
+[[36m04-11 14:49:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 801/2296 - Loss: 0.0945[0m
+[[36m04-11 14:51:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 901/2296 - Loss: 0.0745[0m
+[[36m04-11 14:53:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 1001/2296 - Loss: 0.0917[0m
+[[36m04-11 14:55:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 1101/2296 - Loss: 0.1004[0m
+[[36m04-11 14:56:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 28 | 1148/2296 | 0.81 it/sec | Loss 0.0863 | Reco 0.0863 | Grad 0.0647[0m
+[[36m04-11 14:57:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 1201/2296 - Loss: 0.0734[0m
+[[36m04-11 14:59:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 1301/2296 - Loss: 0.0802[0m
+[[36m04-11 15:02:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 1401/2296 - Loss: 0.0794[0m
+[[36m04-11 15:04:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 1501/2296 - Loss: 0.1305[0m
+[[36m04-11 15:06:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 1601/2296 - Loss: 0.0896[0m
+[[36m04-11 15:08:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 1701/2296 - Loss: 0.0993[0m
+[[36m04-11 15:08:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 28 | 1722/2296 | 0.81 it/sec | Loss 0.0870 | Reco 0.0870 | Grad 0.0652[0m
+[[36m04-11 15:10:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 1801/2296 - Loss: 0.1085[0m
+[[36m04-11 15:12:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 1901/2296 - Loss: 0.0773[0m
+[[36m04-11 15:14:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 2001/2296 - Loss: 0.0947[0m
+[[36m04-11 15:16:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 2101/2296 - Loss: 0.0589[0m
+[[36m04-11 15:18:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 2201/2296 - Loss: 0.0716[0m
+done running 1 epoch
+[[36m04-11 15:20:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 28 | Loss=0.0872 | Reco=0.0872 | Grad=0.0650[0m
+[[36m04-11 15:20:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 15:20:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 15:20:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 28 - Step 1/30.36288070678711 - Loss: 0.1319[0m
+[[36m04-11 15:20:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 28 | 3/14 | 0.30 it/sec | Loss 0.1378 | Reco 0.1378 | Nsdr 7.180[0m
+[[36m04-11 15:20:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 28 | 6/14 | 0.32 it/sec | Loss 0.1404 | Reco 0.1404 | Nsdr 7.270[0m
+[[36m04-11 15:20:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 28 | 9/14 | 0.32 it/sec | Loss 0.1435 | Reco 0.1435 | Nsdr 6.860[0m
+[[36m04-11 15:21:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 28 | 12/14 | 0.33 it/sec | Loss 0.1540 | Reco 0.1540 | Nsdr 6.472[0m
+[[36m04-11 15:21:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 28 | Loss=0.1589 | Reco=0.1589 | Nsdr=6.258 | Best=0.1582 | Bname=main[0m
+[[36m04-11 15:21:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 15:21:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 15:21:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 1/2296 - Loss: 0.1017[0m
+[[36m04-11 15:23:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 101/2296 - Loss: 0.0991[0m
+[[36m04-11 15:25:21[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 201/2296 - Loss: 0.1136[0m
+[[36m04-11 15:27:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 301/2296 - Loss: 0.0991[0m
+[[36m04-11 15:29:27[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 401/2296 - Loss: 0.0517[0m
+[[36m04-11 15:31:30[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 501/2296 - Loss: 0.1215[0m
+[[36m04-11 15:33:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 29 | 574/2296 | 0.81 it/sec | Loss 0.0874 | Reco 0.0874 | Grad 0.0598[0m
+[[36m04-11 15:33:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 601/2296 - Loss: 0.1195[0m
+[[36m04-11 15:35:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 701/2296 - Loss: 0.0737[0m
+[[36m04-11 15:37:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 801/2296 - Loss: 0.0825[0m
+[[36m04-11 15:39:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 901/2296 - Loss: 0.0535[0m
+[[36m04-11 15:41:47[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 1001/2296 - Loss: 0.0728[0m
+[[36m04-11 15:43:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 1101/2296 - Loss: 0.0798[0m
+[[36m04-11 15:44:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 29 | 1148/2296 | 0.81 it/sec | Loss 0.0864 | Reco 0.0864 | Grad 0.0626[0m
+[[36m04-11 15:45:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 1201/2296 - Loss: 0.0940[0m
+[[36m04-11 15:47:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 1301/2296 - Loss: 0.0854[0m
+[[36m04-11 15:49:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 1401/2296 - Loss: 0.0877[0m
+[[36m04-11 15:52:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 1501/2296 - Loss: 0.0982[0m
+[[36m04-11 15:54:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 1601/2296 - Loss: 0.1083[0m
+[[36m04-11 15:56:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 1701/2296 - Loss: 0.0889[0m
+[[36m04-11 15:56:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 29 | 1722/2296 | 0.81 it/sec | Loss 0.0867 | Reco 0.0867 | Grad 0.0634[0m
+[[36m04-11 15:58:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 1801/2296 - Loss: 0.0794[0m
+[[36m04-11 16:00:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 1901/2296 - Loss: 0.1137[0m
+[[36m04-11 16:02:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 2001/2296 - Loss: 0.0735[0m
+[[36m04-11 16:04:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 2101/2296 - Loss: 0.1115[0m
+[[36m04-11 16:06:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 2201/2296 - Loss: 0.0612[0m
+done running 1 epoch
+[[36m04-11 16:08:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 29 | Loss=0.0865 | Reco=0.0865 | Grad=0.0632[0m
+[[36m04-11 16:08:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 16:08:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 16:08:30[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 29 - Step 1/31.868371963500977 - Loss: 0.1266[0m
+[[36m04-11 16:08:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 29 | 3/14 | 0.29 it/sec | Loss 0.1387 | Reco 0.1387 | Nsdr 7.177[0m
+[[36m04-11 16:08:47[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 29 | 6/14 | 0.31 it/sec | Loss 0.1411 | Reco 0.1411 | Nsdr 7.273[0m
+[[36m04-11 16:08:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 29 | 9/14 | 0.32 it/sec | Loss 0.1430 | Reco 0.1430 | Nsdr 6.921[0m
+[[36m04-11 16:09:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 29 | 12/14 | 0.33 it/sec | Loss 0.1528 | Reco 0.1528 | Nsdr 6.554[0m
+[[36m04-11 16:09:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 29 | Loss=0.1580 | Reco=0.1580 | Nsdr=6.321 | Best=0.1580 | Bname=main[0m
+[[36m04-11 16:09:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.1580[0m
+[[36m04-11 16:09:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 16:09:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 16:09:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 1/2296 - Loss: 0.0596[0m
+[[36m04-11 16:11:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 101/2296 - Loss: 0.0865[0m
+[[36m04-11 16:13:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 201/2296 - Loss: 0.0808[0m
+[[36m04-11 16:15:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 301/2296 - Loss: 0.0742[0m
+[[36m04-11 16:17:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 401/2296 - Loss: 0.0780[0m
+[[36m04-11 16:19:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 501/2296 - Loss: 0.0919[0m
+[[36m04-11 16:21:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 30 | 574/2296 | 0.81 it/sec | Loss 0.0855 | Reco 0.0855 | Grad 0.0637[0m
+[[36m04-11 16:21:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 601/2296 - Loss: 0.0836[0m
+[[36m04-11 16:23:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 701/2296 - Loss: 0.0503[0m
+[[36m04-11 16:25:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 801/2296 - Loss: 0.0669[0m
+[[36m04-11 16:27:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 901/2296 - Loss: 0.1062[0m
+[[36m04-11 16:29:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 1001/2296 - Loss: 0.0585[0m
+[[36m04-11 16:31:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 1101/2296 - Loss: 0.0798[0m
+[[36m04-11 16:32:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 30 | 1148/2296 | 0.81 it/sec | Loss 0.0857 | Reco 0.0857 | Grad 0.0645[0m
+[[36m04-11 16:33:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 1201/2296 - Loss: 0.0853[0m
+[[36m04-11 16:35:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 1301/2296 - Loss: 0.0637[0m
+[[36m04-11 16:38:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 1401/2296 - Loss: 0.1004[0m
+[[36m04-11 16:40:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 1501/2296 - Loss: 0.0601[0m
+[[36m04-11 16:42:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 1601/2296 - Loss: 0.1162[0m
+[[36m04-11 16:44:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 1701/2296 - Loss: 0.1036[0m
+[[36m04-11 16:44:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 30 | 1722/2296 | 0.81 it/sec | Loss 0.0859 | Reco 0.0859 | Grad 0.0639[0m
+[[36m04-11 16:46:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 1801/2296 - Loss: 0.0966[0m
+[[36m04-11 16:48:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 1901/2296 - Loss: 0.1017[0m
+[[36m04-11 16:50:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 2001/2296 - Loss: 0.0734[0m
+[[36m04-11 16:52:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 2101/2296 - Loss: 0.1041[0m
+[[36m04-11 16:54:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 2201/2296 - Loss: 0.1042[0m
+done running 1 epoch
+[[36m04-11 16:56:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 30 | Loss=0.0862 | Reco=0.0862 | Grad=0.0634[0m
+[[36m04-11 16:56:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 16:56:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 16:56:30[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 30 - Step 1/32.698909759521484 - Loss: 0.1236[0m
+[[36m04-11 16:56:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 30 | 3/14 | 0.30 it/sec | Loss 0.1365 | Reco 0.1365 | Nsdr 7.291[0m
+[[36m04-11 16:56:47[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 30 | 6/14 | 0.32 it/sec | Loss 0.1400 | Reco 0.1400 | Nsdr 7.353[0m
+[[36m04-11 16:56:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 30 | 9/14 | 0.32 it/sec | Loss 0.1429 | Reco 0.1429 | Nsdr 6.926[0m
+[[36m04-11 16:57:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 30 | 12/14 | 0.33 it/sec | Loss 0.1526 | Reco 0.1526 | Nsdr 6.557[0m
+[[36m04-11 16:57:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 30 | Loss=0.1580 | Reco=0.1580 | Nsdr=6.323 | Best=0.1580 | Bname=main[0m
+[[36m04-11 16:57:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 16:57:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 16:57:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 1/2296 - Loss: 0.0930[0m
+[[36m04-11 16:59:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 101/2296 - Loss: 0.0609[0m
+[[36m04-11 17:01:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 201/2296 - Loss: 0.0793[0m
+[[36m04-11 17:03:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 301/2296 - Loss: 0.0855[0m
+[[36m04-11 17:05:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 401/2296 - Loss: 0.1063[0m
+[[36m04-11 17:07:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 501/2296 - Loss: 0.0717[0m
+[[36m04-11 17:09:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 31 | 574/2296 | 0.81 it/sec | Loss 0.0864 | Reco 0.0864 | Grad 0.0636[0m
+[[36m04-11 17:09:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 601/2296 - Loss: 0.0726[0m
+[[36m04-11 17:11:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 701/2296 - Loss: 0.0558[0m
+[[36m04-11 17:13:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 801/2296 - Loss: 0.1298[0m
+[[36m04-11 17:15:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 901/2296 - Loss: 0.0838[0m
+[[36m04-11 17:17:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 1001/2296 - Loss: 0.1064[0m
+[[36m04-11 17:19:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 1101/2296 - Loss: 0.0899[0m
+[[36m04-11 17:20:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 31 | 1148/2296 | 0.81 it/sec | Loss 0.0856 | Reco 0.0856 | Grad 0.0635[0m
+[[36m04-11 17:21:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 1201/2296 - Loss: 0.1282[0m
+[[36m04-11 17:23:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 1301/2296 - Loss: 0.0954[0m
+[[36m04-11 17:26:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 1401/2296 - Loss: 0.1084[0m
+[[36m04-11 17:28:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 1501/2296 - Loss: 0.1094[0m
+[[36m04-11 17:30:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 1601/2296 - Loss: 0.0693[0m
+[[36m04-11 17:32:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 1701/2296 - Loss: 0.0903[0m
+[[36m04-11 17:32:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 31 | 1722/2296 | 0.81 it/sec | Loss 0.0854 | Reco 0.0854 | Grad 0.0631[0m
+[[36m04-11 17:34:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 1801/2296 - Loss: 0.0733[0m
+[[36m04-11 17:36:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 1901/2296 - Loss: 0.0701[0m
+[[36m04-11 17:38:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 2001/2296 - Loss: 0.1108[0m
+[[36m04-11 17:40:21[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 2101/2296 - Loss: 0.0873[0m
+[[36m04-11 17:42:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 2201/2296 - Loss: 0.1214[0m
+done running 1 epoch
+[[36m04-11 17:44:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 31 | Loss=0.0855 | Reco=0.0855 | Grad=0.0629[0m
+[[36m04-11 17:44:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 17:44:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 17:44:27[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 31 - Step 1/33.00688171386719 - Loss: 0.1237[0m
+[[36m04-11 17:44:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 31 | 3/14 | 0.30 it/sec | Loss 0.1350 | Reco 0.1350 | Nsdr 7.384[0m
+[[36m04-11 17:44:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 31 | 6/14 | 0.32 it/sec | Loss 0.1378 | Reco 0.1378 | Nsdr 7.448[0m
+[[36m04-11 17:44:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 31 | 9/14 | 0.32 it/sec | Loss 0.1407 | Reco 0.1407 | Nsdr 7.035[0m
+[[36m04-11 17:45:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 31 | 12/14 | 0.33 it/sec | Loss 0.1510 | Reco 0.1510 | Nsdr 6.637[0m
+[[36m04-11 17:45:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 31 | Loss=0.1569 | Reco=0.1569 | Nsdr=6.385 | Best=0.1569 | Bname=main[0m
+[[36m04-11 17:45:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.1569[0m
+[[36m04-11 17:45:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 17:45:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-11 17:45:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 1/2296 - Loss: 0.1031[0m
+[[36m04-11 17:47:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 101/2296 - Loss: 0.0938[0m
+[[36m04-11 17:49:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 201/2296 - Loss: 0.0985[0m
+[[36m04-11 17:51:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 301/2296 - Loss: 0.0780[0m
+[[36m04-11 17:53:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 401/2296 - Loss: 0.0869[0m
+[[36m04-11 17:55:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 501/2296 - Loss: 0.0830[0m
+[[36m04-11 17:57:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 32 | 574/2296 | 0.81 it/sec | Loss 0.0857 | Reco 0.0857 | Grad 0.0614[0m
+[[36m04-11 17:57:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 601/2296 - Loss: 0.0983[0m
+[[36m04-11 17:59:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 701/2296 - Loss: 0.0928[0m
+[[36m04-11 18:01:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 801/2296 - Loss: 0.0520[0m
+[[36m04-11 18:03:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 901/2296 - Loss: 0.0591[0m
+[[36m04-11 18:05:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 1001/2296 - Loss: 0.0877[0m
+[[36m04-11 18:07:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 1101/2296 - Loss: 0.0620[0m
+[[36m04-11 18:08:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 32 | 1148/2296 | 0.81 it/sec | Loss 0.0852 | Reco 0.0852 | Grad 0.0608[0m
+[[36m04-11 18:09:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 1201/2296 - Loss: 0.0742[0m
+[[36m04-11 18:11:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 1301/2296 - Loss: 0.0949[0m
+[[36m04-11 18:13:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 1401/2296 - Loss: 0.0837[0m
+[[36m04-11 18:15:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 1501/2296 - Loss: 0.1031[0m
+[[36m04-11 18:18:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 1601/2296 - Loss: 0.0913[0m
+[[36m04-11 18:20:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 1701/2296 - Loss: 0.0860[0m
+[[36m04-11 18:20:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 32 | 1722/2296 | 0.81 it/sec | Loss 0.0855 | Reco 0.0855 | Grad 0.0617[0m
+[[36m04-11 18:22:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 1801/2296 - Loss: 0.0612[0m
+[[36m04-11 18:24:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 1901/2296 - Loss: 0.1157[0m
+[[36m04-11 18:26:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 2001/2296 - Loss: 0.0746[0m
+[[36m04-11 18:28:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 2101/2296 - Loss: 0.0949[0m
+[[36m04-11 18:30:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 2201/2296 - Loss: 0.0832[0m
+done running 1 epoch
+[[36m04-11 18:32:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 32 | Loss=0.0849 | Reco=0.0849 | Grad=0.0618[0m
+[[36m04-11 18:32:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-11 18:32:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-11 18:32:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 32 - Step 1/31.831018447875977 - Loss: 0.1269[0m
+[[36m04-11 18:32:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 32 | 3/14 | 0.30 it/sec | Loss 0.1379 | Reco 0.1379 | Nsdr 7.227[0m
+[[36m04-11 18:32:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 32 | 6/14 | 0.32 it/sec | Loss 0.1410 | Reco 0.1410 | Nsdr 7.300[0m
+[[36m04-11 18:32:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 32 | 9/14 | 0.33 it/sec | Loss 0.1459 | Reco 0.1459 | Nsdr 6.780[0m
+[[36m04-11 18:33:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 32 | 12/14 | 0.33 it/sec | Loss 0.1554 | Reco 0.1554 | Nsdr 6.436[0m
+[[36m04-11 18:33:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 32 | Loss=0.1604 | Reco=0.1604 | Nsdr=6.225 | Best=0.1569 | Bname=main[0m
+Error executing job with overrides: ['model=htdemucs']
+Traceback (most recent call last):
+  File "/project/6002780/kaim/demucs/demucs_env/lib/python3.10/site-packages/torch/serialization.py", line 619, in save
+    _save(obj, opened_zipfile, pickle_module, pickle_protocol, _disable_byteorder_record)
+  File "/project/6002780/kaim/demucs/demucs_env/lib/python3.10/site-packages/torch/serialization.py", line 853, in _save
+    zip_file.write_record(name, storage.data_ptr(), num_bytes)
+OSError: [Errno 7] Argument list too long
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/6002780/kaim/demucs/demucs_env/lib/python3.10/site-packages/dora/utils.py", line 56, in write_and_rename
+    yield f
+  File "/project/6002780/kaim/demucs/demucs/solver.py", line 89, in _serialize
+    torch.save(package, tmp)
+  File "/project/6002780/kaim/demucs/demucs_env/lib/python3.10/site-packages/torch/serialization.py", line 618, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+  File "/project/6002780/kaim/demucs/demucs_env/lib/python3.10/site-packages/torch/serialization.py", line 482, in __exit__
+    self.file_like.write_end_of_file()
+RuntimeError: [enforce fail at inline_container.cc:424] . unexpected pos 339492416 vs 339492336
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/6002780/kaim/demucs/demucs/train.py", line 284, in main
+    solver.train()
+  File "/project/6002780/kaim/demucs/demucs/solver.py", line 301, in train
+    self._serialize(epoch)
+  File "/project/6002780/kaim/demucs/demucs/solver.py", line 88, in _serialize
+    with write_and_rename(self.checkpoint_file) as tmp:
+  File "/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.10.13/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/project/6002780/kaim/demucs/demucs_env/lib/python3.10/site-packages/dora/utils.py", line 55, in write_and_rename
+    with open(tmp_path, mode) as f:
+OSError: [Errno 7] Argument list too long
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mdemucs_2025-04-10[0m at: [34mhttps://wandb.ai/kaimikkelsen-mcgill-university/demucs/runs/0uvt6rmg[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20250410_164900-0uvt6rmg/logs[0m
+[1mExecutor:[0m Worker 0 died, killing all workers
