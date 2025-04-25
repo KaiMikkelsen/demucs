@@ -17,6 +17,6 @@ source demucs_env/bin/activate
 module load soundtouch/2.3.3
 HYDRA_FULL_ERROR=1
 
+dora run -d model=htdemucs
 
-
-dora run -f 8ad9d354
+#dora run -f 8ad9d354
