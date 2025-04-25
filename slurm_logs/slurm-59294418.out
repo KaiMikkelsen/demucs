@@ -1,0 +1,799 @@
+Already up to date.
+/project/6002780/kaim/demucs/demucs/train.py:22: UserWarning: TorchAudio's global backend is now deprecated. Please enable distpatcher by setting `TORCHAUDIO_USE_BACKEND_DISPATCHER=1`, and specify backend when calling load/info/save function.
+  import torchaudio
+[1mParser[0m Injecting argv ['model=htdemucs'] from sig 8ad9d354
+/project/6002780/kaim/demucs/demucs_env/lib/python3.10/site-packages/hydra/_internal/hydra.py:119: UserWarning: Future Hydra versions will no longer change working directory at job runtime by default.
+See https://hydra.cc/docs/1.2/upgrades/1.1_to_1.2/changes_to_job_working_dir/ for more information.
+  ret = run_job(
+[[36m04-21 13:45:50[0m][[34mdemucs.train[0m][[32mINFO[0m] - For logs, checkpoints and samples check /project/6002780/kaim/demucs/outputs/xps/8ad9d354[0m
+wandb: Appending key for api.wandb.ai to your netrc file: /home/kaim/.netrc
+wandb: Currently logged in as: kaimikkelsen (kaimikkelsen-mcgill-university) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Tracking run with wandb version 0.19.6
+wandb: Run data is saved locally in /project/6002780/kaim/demucs/outputs/xps/8ad9d354/wandb/run-20250421_134550-x2rnmbrq
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run demucs_2025-04-21
+wandb: ⭐️ View project at https://wandb.ai/kaimikkelsen-mcgill-university/demucs
+wandb: 🚀 View run at https://wandb.ai/kaimikkelsen-mcgill-university/demucs/runs/x2rnmbrq
+[[36m04-21 13:45:55[0m][[34mdora.distrib[0m][[32mINFO[0m] - world_size is 1, skipping init.[0m
+musdb dataset
+train_path /home/kaim/scratch/MUSDB18HQ/train
+valid_path /home/kaim/scratch/MUSDB18HQ/valid
+Valid path exists: True
+metadata_file /project/6002780/kaim/demucs/metadata/musdb_6c8313ae.json
+metadata path /project/6002780/kaim/demucs/metadata
+after 14
+valid sampled
+[[36m04-21 13:46:05[0m][[34mdemucs.train[0m][[32mINFO[0m] - train/valid set size: 18368 14[0m
+[[36m04-21 13:46:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Loading checkpoint model: /project/6002780/kaim/demucs/outputs/xps/8ad9d354/checkpoint.th[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Replaying metrics from previous run[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 1 | Loss=0.1659 | Reco=0.1659 | Grad=0.0818[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 1 | Loss=0.2207 | Reco=0.2207 | Nsdr=3.522 | Best=0.2207 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 2 | Loss=0.1401 | Reco=0.1401 | Grad=0.0848[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 2 | Loss=0.2021 | Reco=0.2021 | Nsdr=4.227 | Best=0.2021 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 3 | Loss=0.1303 | Reco=0.1303 | Grad=0.0836[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 3 | Loss=0.1966 | Reco=0.1966 | Nsdr=4.431 | Best=0.1966 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 4 | Loss=0.1232 | Reco=0.1232 | Grad=0.0810[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 4 | Loss=0.1915 | Reco=0.1915 | Nsdr=4.691 | Best=0.1915 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 5 | Loss=0.1182 | Reco=0.1182 | Grad=0.0776[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 5 | Loss=0.1864 | Reco=0.1864 | Nsdr=4.866 | Best=0.1864 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 6 | Loss=0.1139 | Reco=0.1139 | Grad=0.0782[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 6 | Loss=0.1871 | Reco=0.1871 | Nsdr=4.947 | Best=0.1864 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 7 | Loss=0.1107 | Reco=0.1107 | Grad=0.0761[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 7 | Loss=0.1816 | Reco=0.1816 | Nsdr=5.082 | Best=0.1816 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 8 | Loss=0.1084 | Reco=0.1084 | Grad=0.0775[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 8 | Loss=0.1780 | Reco=0.1780 | Nsdr=5.266 | Best=0.1780 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 9 | Loss=0.1055 | Reco=0.1055 | Grad=0.0751[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 9 | Loss=0.1797 | Reco=0.1797 | Nsdr=5.188 | Best=0.1780 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 10 | Loss=0.1032 | Reco=0.1032 | Grad=0.0729[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 10 | Loss=0.1734 | Reco=0.1734 | Nsdr=5.473 | Best=0.1734 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 11 | Loss=0.1014 | Reco=0.1014 | Grad=0.0720[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 11 | Loss=0.1741 | Reco=0.1741 | Nsdr=5.479 | Best=0.1734 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 12 | Loss=0.1000 | Reco=0.1000 | Grad=0.0735[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 12 | Loss=0.1741 | Reco=0.1741 | Nsdr=5.492 | Best=0.1734 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 13 | Loss=0.0987 | Reco=0.0987 | Grad=0.0708[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 13 | Loss=0.1711 | Reco=0.1711 | Nsdr=5.647 | Best=0.1711 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 14 | Loss=0.0977 | Reco=0.0977 | Grad=0.0707[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 14 | Loss=0.1692 | Reco=0.1692 | Nsdr=5.694 | Best=0.1692 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 15 | Loss=0.0961 | Reco=0.0961 | Grad=0.0702[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 15 | Loss=0.1700 | Reco=0.1700 | Nsdr=5.671 | Best=0.1692 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 16 | Loss=0.0952 | Reco=0.0952 | Grad=0.0697[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 16 | Loss=0.1675 | Reco=0.1675 | Nsdr=5.783 | Best=0.1675 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 17 | Loss=0.0942 | Reco=0.0942 | Grad=0.0678[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 17 | Loss=0.1660 | Reco=0.1660 | Nsdr=5.874 | Best=0.1660 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 18 | Loss=0.0935 | Reco=0.0935 | Grad=0.0674[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 18 | Loss=0.1675 | Reco=0.1675 | Nsdr=5.780 | Best=0.1660 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 19 | Loss=0.0924 | Reco=0.0924 | Grad=0.0681[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 19 | Loss=0.1645 | Reco=0.1645 | Nsdr=5.977 | Best=0.1645 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 20 | Loss=0.0917 | Reco=0.0917 | Grad=0.0672[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 20 | Loss=0.1647 | Reco=0.1647 | Nsdr=5.947 | Best=0.1645 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTest Summary | Epoch 20 | Nsdr=5.260 | Nsdr_drums=6.144 | Nsdr_bass=4.946 | Nsdr_other=3.776 | Nsdr_vocals=6.176[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 21 | Loss=0.0912 | Reco=0.0912 | Grad=0.0664[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 21 | Loss=0.1616 | Reco=0.1616 | Nsdr=6.080 | Best=0.1616 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 22 | Loss=0.0902 | Reco=0.0902 | Grad=0.0654[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 22 | Loss=0.1620 | Reco=0.1620 | Nsdr=6.109 | Best=0.1616 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 23 | Loss=0.0895 | Reco=0.0895 | Grad=0.0654[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 23 | Loss=0.1609 | Reco=0.1609 | Nsdr=6.085 | Best=0.1609 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 24 | Loss=0.0892 | Reco=0.0892 | Grad=0.0663[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 24 | Loss=0.1620 | Reco=0.1620 | Nsdr=6.097 | Best=0.1609 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 25 | Loss=0.0886 | Reco=0.0886 | Grad=0.0639[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 25 | Loss=0.1604 | Reco=0.1604 | Nsdr=6.149 | Best=0.1604 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 26 | Loss=0.0879 | Reco=0.0879 | Grad=0.0649[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 26 | Loss=0.1599 | Reco=0.1599 | Nsdr=6.229 | Best=0.1599 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 27 | Loss=0.0874 | Reco=0.0874 | Grad=0.0640[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 27 | Loss=0.1582 | Reco=0.1582 | Nsdr=6.297 | Best=0.1582 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 28 | Loss=0.0872 | Reco=0.0872 | Grad=0.0650[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 28 | Loss=0.1589 | Reco=0.1589 | Nsdr=6.258 | Best=0.1582 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 29 | Loss=0.0865 | Reco=0.0865 | Grad=0.0632[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 29 | Loss=0.1580 | Reco=0.1580 | Nsdr=6.321 | Best=0.1580 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 30 | Loss=0.0862 | Reco=0.0862 | Grad=0.0634[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 30 | Loss=0.1580 | Reco=0.1580 | Nsdr=6.323 | Best=0.1580 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 31 | Loss=0.0855 | Reco=0.0855 | Grad=0.0629[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 31 | Loss=0.1569 | Reco=0.1569 | Nsdr=6.385 | Best=0.1569 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 32 | Loss=0.0852 | Reco=0.0852 | Grad=0.0642[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 32 | Loss=0.1583 | Reco=0.1583 | Nsdr=6.258 | Best=0.1569 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 33 | Loss=0.0850 | Reco=0.0850 | Grad=0.0635[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 33 | Loss=0.1576 | Reco=0.1576 | Nsdr=6.349 | Best=0.1569 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 34 | Loss=0.0843 | Reco=0.0843 | Grad=0.0617[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 34 | Loss=0.1572 | Reco=0.1572 | Nsdr=6.376 | Best=0.1569 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 35 | Loss=0.0837 | Reco=0.0837 | Grad=0.0614[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 35 | Loss=0.1567 | Reco=0.1567 | Nsdr=6.430 | Best=0.1567 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 36 | Loss=0.0836 | Reco=0.0836 | Grad=0.0621[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 36 | Loss=0.1564 | Reco=0.1564 | Nsdr=6.372 | Best=0.1564 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 37 | Loss=0.0831 | Reco=0.0831 | Grad=0.0625[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 37 | Loss=0.1554 | Reco=0.1554 | Nsdr=6.440 | Best=0.1554 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 38 | Loss=0.0828 | Reco=0.0828 | Grad=0.0617[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 38 | Loss=0.1529 | Reco=0.1529 | Nsdr=6.573 | Best=0.1529 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 39 | Loss=0.0827 | Reco=0.0827 | Grad=0.0621[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 39 | Loss=0.1547 | Reco=0.1547 | Nsdr=6.513 | Best=0.1529 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 40 | Loss=0.0820 | Reco=0.0820 | Grad=0.0612[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 40 | Loss=0.1547 | Reco=0.1547 | Nsdr=6.512 | Best=0.1529 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTest Summary | Epoch 40 | Nsdr=5.808 | Nsdr_drums=6.831 | Nsdr_bass=5.454 | Nsdr_other=4.240 | Nsdr_vocals=6.707[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 41 | Loss=0.0818 | Reco=0.0818 | Grad=0.0609[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 41 | Loss=0.1547 | Reco=0.1547 | Nsdr=6.506 | Best=0.1529 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 42 | Loss=0.0814 | Reco=0.0814 | Grad=0.0615[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 42 | Loss=0.1541 | Reco=0.1541 | Nsdr=6.551 | Best=0.1529 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 43 | Loss=0.0811 | Reco=0.0811 | Grad=0.0622[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 43 | Loss=0.1548 | Reco=0.1548 | Nsdr=6.505 | Best=0.1529 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 44 | Loss=0.0810 | Reco=0.0810 | Grad=0.0608[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 44 | Loss=0.1523 | Reco=0.1523 | Nsdr=6.635 | Best=0.1523 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 45 | Loss=0.0809 | Reco=0.0809 | Grad=0.0613[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 45 | Loss=0.1528 | Reco=0.1528 | Nsdr=6.588 | Best=0.1523 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 46 | Loss=0.0799 | Reco=0.0799 | Grad=0.0591[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 46 | Loss=0.1536 | Reco=0.1536 | Nsdr=6.562 | Best=0.1523 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 47 | Loss=0.0777 | Reco=0.0777 | Grad=0.0528[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 47 | Loss=0.1528 | Reco=0.1528 | Nsdr=6.586 | Best=0.1523 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 48 | Loss=0.0801 | Reco=0.0801 | Grad=0.0612[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 48 | Loss=0.1552 | Reco=0.1552 | Nsdr=6.552 | Best=0.1523 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 49 | Loss=0.0794 | Reco=0.0794 | Grad=0.0590[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 49 | Loss=0.1517 | Reco=0.1517 | Nsdr=6.689 | Best=0.1517 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 50 | Loss=0.0788 | Reco=0.0788 | Grad=0.0579[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 50 | Loss=0.1518 | Reco=0.1518 | Nsdr=6.672 | Best=0.1517 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 51 | Loss=0.0787 | Reco=0.0787 | Grad=0.0583[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 51 | Loss=0.1518 | Reco=0.1518 | Nsdr=6.640 | Best=0.1517 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 52 | Loss=0.0784 | Reco=0.0784 | Grad=0.0592[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 52 | Loss=0.1505 | Reco=0.1505 | Nsdr=6.760 | Best=0.1505 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 53 | Loss=0.0782 | Reco=0.0782 | Grad=0.0583[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 53 | Loss=0.1489 | Reco=0.1489 | Nsdr=6.820 | Best=0.1489 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 54 | Loss=0.0783 | Reco=0.0783 | Grad=0.0598[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 54 | Loss=0.1510 | Reco=0.1510 | Nsdr=6.737 | Best=0.1489 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 55 | Loss=0.0776 | Reco=0.0776 | Grad=0.0578[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 55 | Loss=0.1497 | Reco=0.1497 | Nsdr=6.769 | Best=0.1489 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 56 | Loss=0.0775 | Reco=0.0775 | Grad=0.0582[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 56 | Loss=0.1512 | Reco=0.1512 | Nsdr=6.731 | Best=0.1489 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 57 | Loss=0.0775 | Reco=0.0775 | Grad=0.0594[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 57 | Loss=0.1496 | Reco=0.1496 | Nsdr=6.785 | Best=0.1489 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 58 | Loss=0.0769 | Reco=0.0769 | Grad=0.0579[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 58 | Loss=0.1524 | Reco=0.1524 | Nsdr=6.693 | Best=0.1489 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 59 | Loss=0.0771 | Reco=0.0771 | Grad=0.0579[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 59 | Loss=0.1505 | Reco=0.1505 | Nsdr=6.746 | Best=0.1489 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 60 | Loss=0.0770 | Reco=0.0770 | Grad=0.0577[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 60 | Loss=0.1512 | Reco=0.1512 | Nsdr=6.721 | Best=0.1489 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTest Summary | Epoch 60 | Nsdr=5.994 | Nsdr_drums=7.062 | Nsdr_bass=5.710 | Nsdr_other=4.321 | Nsdr_vocals=6.882[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 61 | Loss=0.0771 | Reco=0.0771 | Grad=0.0605[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 61 | Loss=0.1497 | Reco=0.1497 | Nsdr=6.845 | Best=0.1489 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 62 | Loss=0.0767 | Reco=0.0767 | Grad=0.0588[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 62 | Loss=0.1506 | Reco=0.1506 | Nsdr=6.805 | Best=0.1489 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 63 | Loss=0.0768 | Reco=0.0768 | Grad=0.0599[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 63 | Loss=0.1508 | Reco=0.1508 | Nsdr=6.771 | Best=0.1489 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 64 | Loss=0.0766 | Reco=0.0766 | Grad=0.0589[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 64 | Loss=0.1506 | Reco=0.1506 | Nsdr=6.744 | Best=0.1489 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 65 | Loss=0.0761 | Reco=0.0761 | Grad=0.0584[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 65 | Loss=0.1491 | Reco=0.1491 | Nsdr=6.867 | Best=0.1489 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 66 | Loss=0.0760 | Reco=0.0760 | Grad=0.0578[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 66 | Loss=0.1496 | Reco=0.1496 | Nsdr=6.859 | Best=0.1489 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 67 | Loss=0.0762 | Reco=0.0762 | Grad=0.0589[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 67 | Loss=0.1487 | Reco=0.1487 | Nsdr=6.893 | Best=0.1487 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 68 | Loss=0.0758 | Reco=0.0758 | Grad=0.0583[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 68 | Loss=0.1486 | Reco=0.1486 | Nsdr=6.906 | Best=0.1486 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 69 | Loss=0.0755 | Reco=0.0755 | Grad=0.0575[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 69 | Loss=0.1492 | Reco=0.1492 | Nsdr=6.833 | Best=0.1486 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 70 | Loss=0.0759 | Reco=0.0759 | Grad=0.0599[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 70 | Loss=0.1470 | Reco=0.1470 | Nsdr=6.954 | Best=0.1470 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 71 | Loss=0.0755 | Reco=0.0755 | Grad=0.0569[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 71 | Loss=0.1490 | Reco=0.1490 | Nsdr=6.913 | Best=0.1470 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 72 | Loss=0.0751 | Reco=0.0751 | Grad=0.0580[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 72 | Loss=0.1487 | Reco=0.1487 | Nsdr=6.901 | Best=0.1470 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 73 | Loss=0.0749 | Reco=0.0749 | Grad=0.0572[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 73 | Loss=0.1486 | Reco=0.1486 | Nsdr=6.943 | Best=0.1470 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 74 | Loss=0.0749 | Reco=0.0749 | Grad=0.0575[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 74 | Loss=0.1505 | Reco=0.1505 | Nsdr=6.780 | Best=0.1470 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 75 | Loss=0.0748 | Reco=0.0748 | Grad=0.0573[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 75 | Loss=0.1488 | Reco=0.1488 | Nsdr=6.917 | Best=0.1470 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 76 | Loss=0.0747 | Reco=0.0747 | Grad=0.0575[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 76 | Loss=0.1485 | Reco=0.1485 | Nsdr=6.916 | Best=0.1470 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 77 | Loss=0.0744 | Reco=0.0744 | Grad=0.0575[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 77 | Loss=0.1481 | Reco=0.1481 | Nsdr=6.940 | Best=0.1470 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 78 | Loss=0.0743 | Reco=0.0743 | Grad=0.0580[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 78 | Loss=0.1478 | Reco=0.1478 | Nsdr=6.984 | Best=0.1470 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 79 | Loss=0.0744 | Reco=0.0744 | Grad=0.0570[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 79 | Loss=0.1470 | Reco=0.1470 | Nsdr=7.003 | Best=0.1470 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 80 | Loss=0.0743 | Reco=0.0743 | Grad=0.0570[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 80 | Loss=0.1481 | Reco=0.1481 | Nsdr=6.927 | Best=0.1470 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTest Summary | Epoch 80 | Nsdr=6.270 | Nsdr_drums=7.473 | Nsdr_bass=6.085 | Nsdr_other=4.507 | Nsdr_vocals=7.015[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 81 | Loss=0.0741 | Reco=0.0741 | Grad=0.0577[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 81 | Loss=0.1465 | Reco=0.1465 | Nsdr=7.017 | Best=0.1465 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 82 | Loss=0.0736 | Reco=0.0736 | Grad=0.0559[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 82 | Loss=0.1481 | Reco=0.1481 | Nsdr=6.934 | Best=0.1465 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 83 | Loss=0.0737 | Reco=0.0737 | Grad=0.0573[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 83 | Loss=0.1475 | Reco=0.1475 | Nsdr=7.000 | Best=0.1465 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 84 | Loss=0.0734 | Reco=0.0734 | Grad=0.0563[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 84 | Loss=0.1480 | Reco=0.1480 | Nsdr=6.942 | Best=0.1465 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 85 | Loss=0.0732 | Reco=0.0732 | Grad=0.0563[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 85 | Loss=0.1468 | Reco=0.1468 | Nsdr=7.004 | Best=0.1465 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 86 | Loss=0.0732 | Reco=0.0732 | Grad=0.0568[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 86 | Loss=0.1448 | Reco=0.1448 | Nsdr=7.123 | Best=0.1448 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 87 | Loss=0.0731 | Reco=0.0731 | Grad=0.0556[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 87 | Loss=0.1452 | Reco=0.1452 | Nsdr=7.114 | Best=0.1448 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 88 | Loss=0.0731 | Reco=0.0731 | Grad=0.0573[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 88 | Loss=0.1445 | Reco=0.1445 | Nsdr=7.149 | Best=0.1445 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 89 | Loss=0.0727 | Reco=0.0727 | Grad=0.0562[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 89 | Loss=0.1452 | Reco=0.1452 | Nsdr=7.113 | Best=0.1445 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 90 | Loss=0.0730 | Reco=0.0730 | Grad=0.0566[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 90 | Loss=0.1444 | Reco=0.1444 | Nsdr=7.116 | Best=0.1444 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 91 | Loss=0.0725 | Reco=0.0725 | Grad=0.0557[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 91 | Loss=0.1450 | Reco=0.1450 | Nsdr=7.125 | Best=0.1444 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 92 | Loss=0.0724 | Reco=0.0724 | Grad=0.0557[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 92 | Loss=0.1469 | Reco=0.1469 | Nsdr=7.020 | Best=0.1444 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 93 | Loss=0.0723 | Reco=0.0723 | Grad=0.0558[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 93 | Loss=0.1476 | Reco=0.1476 | Nsdr=6.978 | Best=0.1444 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 94 | Loss=0.0725 | Reco=0.0725 | Grad=0.0564[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 94 | Loss=0.1459 | Reco=0.1459 | Nsdr=7.108 | Best=0.1444 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 95 | Loss=0.0721 | Reco=0.0721 | Grad=0.0560[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 95 | Loss=0.1458 | Reco=0.1458 | Nsdr=7.073 | Best=0.1444 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 96 | Loss=0.0720 | Reco=0.0720 | Grad=0.0555[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 96 | Loss=0.1462 | Reco=0.1462 | Nsdr=7.087 | Best=0.1444 | Bname=main[0m
+[[36m04-21 13:46:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 97 | Loss=0.0722 | Reco=0.0722 | Grad=0.0564[0m
+[[36m04-21 13:46:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 97 | Loss=0.1455 | Reco=0.1455 | Nsdr=7.080 | Best=0.1444 | Bname=main[0m
+[[36m04-21 13:46:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 98 | Loss=0.0719 | Reco=0.0719 | Grad=0.0551[0m
+[[36m04-21 13:46:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 98 | Loss=0.1455 | Reco=0.1455 | Nsdr=7.101 | Best=0.1444 | Bname=main[0m
+[[36m04-21 13:46:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 99 | Loss=0.0714 | Reco=0.0714 | Grad=0.0551[0m
+[[36m04-21 13:46:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 99 | Loss=0.1451 | Reco=0.1451 | Nsdr=7.132 | Best=0.1444 | Bname=main[0m
+[[36m04-21 13:46:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 100 | Loss=0.0715 | Reco=0.0715 | Grad=0.0540[0m
+[[36m04-21 13:46:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 100 | Loss=0.1464 | Reco=0.1464 | Nsdr=7.066 | Best=0.1444 | Bname=main[0m
+[[36m04-21 13:46:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTest Summary | Epoch 100 | Nsdr=6.313 | Nsdr_drums=7.545 | Nsdr_bass=6.149 | Nsdr_other=4.507 | Nsdr_vocals=7.050[0m
+[[36m04-21 13:46:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 101 | Loss=0.0716 | Reco=0.0716 | Grad=0.0556[0m
+[[36m04-21 13:46:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 101 | Loss=0.1453 | Reco=0.1453 | Nsdr=7.138 | Best=0.1444 | Bname=main[0m
+[[36m04-21 13:46:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 102 | Loss=0.0712 | Reco=0.0712 | Grad=0.0549[0m
+[[36m04-21 13:46:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 102 | Loss=0.1433 | Reco=0.1433 | Nsdr=7.193 | Best=0.1433 | Bname=main[0m
+[[36m04-21 13:46:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 103 | Loss=0.0717 | Reco=0.0717 | Grad=0.0716[0m
+[[36m04-21 13:46:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 103 | Loss=0.1450 | Reco=0.1450 | Nsdr=7.149 | Best=0.1433 | Bname=main[0m
+[[36m04-21 13:46:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 104 | Loss=0.0712 | Reco=0.0712 | Grad=0.0530[0m
+[[36m04-21 13:46:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 104 | Loss=0.1439 | Reco=0.1439 | Nsdr=7.195 | Best=0.1433 | Bname=main[0m
+[[36m04-21 13:46:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 13:46:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-21 13:46:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 1/2296 - Loss: 0.0448[0m
+[[36m04-21 13:49:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 101/2296 - Loss: 0.0721[0m
+[[36m04-21 13:51:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 201/2296 - Loss: 0.0597[0m
+[[36m04-21 13:53:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 301/2296 - Loss: 0.0409[0m
+[[36m04-21 13:55:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 401/2296 - Loss: 0.0728[0m
+[[36m04-21 13:57:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 501/2296 - Loss: 0.0620[0m
+[[36m04-21 13:58:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 105 | 574/2296 | 0.77 it/sec | Loss 0.0697 | Reco 0.0697 | Grad 0.0488[0m
+[[36m04-21 13:59:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 601/2296 - Loss: 0.0703[0m
+[[36m04-21 14:01:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 701/2296 - Loss: 0.0576[0m
+[[36m04-21 14:03:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 801/2296 - Loss: 0.0732[0m
+[[36m04-21 14:05:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 901/2296 - Loss: 0.0659[0m
+[[36m04-21 14:07:21[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 1001/2296 - Loss: 0.0585[0m
+[[36m04-21 14:09:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 1101/2296 - Loss: 0.0682[0m
+[[36m04-21 14:10:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 105 | 1148/2296 | 0.79 it/sec | Loss 0.0698 | Reco 0.0698 | Grad 0.0485[0m
+[[36m04-21 14:11:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 1201/2296 - Loss: 0.0654[0m
+[[36m04-21 14:13:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 1301/2296 - Loss: 0.0670[0m
+[[36m04-21 14:15:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 1401/2296 - Loss: 0.0513[0m
+[[36m04-21 14:17:30[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 1501/2296 - Loss: 0.0627[0m
+[[36m04-21 14:19:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 1601/2296 - Loss: 0.0575[0m
+[[36m04-21 14:21:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 1701/2296 - Loss: 0.0617[0m
+[[36m04-21 14:22:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 105 | 1722/2296 | 0.80 it/sec | Loss 0.0696 | Reco 0.0696 | Grad 0.0484[0m
+[[36m04-21 14:23:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 1801/2296 - Loss: 0.0869[0m
+[[36m04-21 14:25:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 1901/2296 - Loss: 0.0824[0m
+[[36m04-21 14:27:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 2001/2296 - Loss: 0.0490[0m
+[[36m04-21 14:29:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 2101/2296 - Loss: 0.0763[0m
+[[36m04-21 14:31:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 2201/2296 - Loss: 0.0947[0m
+done running 1 epoch
+[[36m04-21 14:33:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 105 | Loss=0.0696 | Reco=0.0696 | Grad=0.0488[0m
+[[36m04-21 14:33:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 14:33:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-21 14:34:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 105 - Step 1/33.697731018066406 - Loss: 0.1200[0m
+[[36m04-21 14:34:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 105 | 3/14 | 0.15 it/sec | Loss 0.1233 | Reco 0.1233 | Nsdr 8.149[0m
+[[36m04-21 14:34:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 105 | 6/14 | 0.20 it/sec | Loss 0.1270 | Reco 0.1270 | Nsdr 8.151[0m
+[[36m04-21 14:34:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 105 | 9/14 | 0.22 it/sec | Loss 0.1302 | Reco 0.1302 | Nsdr 7.741[0m
+[[36m04-21 14:34:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 105 | 12/14 | 0.24 it/sec | Loss 0.1390 | Reco 0.1390 | Nsdr 7.374[0m
+[[36m04-21 14:34:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 105 | Loss=0.1442 | Reco=0.1442 | Nsdr=7.131 | Best=0.1433 | Bname=main[0m
+[INFO] Free disk space: 7414858.79 GB
+[INFO] Checkpoint size: 411.12 MB
+[[36m04-21 14:34:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 14:34:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-21 14:34:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 1/2296 - Loss: 0.0452[0m
+[[36m04-21 14:36:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 101/2296 - Loss: 0.0968[0m
+[[36m04-21 14:38:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 201/2296 - Loss: 0.0777[0m
+[[36m04-21 14:40:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 301/2296 - Loss: 0.0699[0m
+[[36m04-21 14:42:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 401/2296 - Loss: 0.0899[0m
+[[36m04-21 14:44:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 501/2296 - Loss: 0.0651[0m
+[[36m04-21 14:46:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 106 | 574/2296 | 0.82 it/sec | Loss 0.0693 | Reco 0.0693 | Grad 0.0471[0m
+[[36m04-21 14:46:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 601/2296 - Loss: 0.0782[0m
+[[36m04-21 14:49:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 701/2296 - Loss: 0.0613[0m
+[[36m04-21 14:51:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 801/2296 - Loss: 0.0675[0m
+[[36m04-21 14:53:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 901/2296 - Loss: 0.0847[0m
+[[36m04-21 14:55:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 1001/2296 - Loss: 0.0876[0m
+[[36m04-21 14:57:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 1101/2296 - Loss: 0.0503[0m
+[[36m04-21 14:58:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 106 | 1148/2296 | 0.82 it/sec | Loss 0.0693 | Reco 0.0693 | Grad 0.0484[0m
+[[36m04-21 14:59:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 1201/2296 - Loss: 0.0593[0m
+[[36m04-21 15:01:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 1301/2296 - Loss: 0.0699[0m
+[[36m04-21 15:03:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 1401/2296 - Loss: 0.0885[0m
+[[36m04-21 15:05:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 1501/2296 - Loss: 0.0649[0m
+[[36m04-21 15:07:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 1601/2296 - Loss: 0.0877[0m
+[[36m04-21 15:09:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 1701/2296 - Loss: 0.0743[0m
+[[36m04-21 15:09:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 106 | 1722/2296 | 0.82 it/sec | Loss 0.0693 | Reco 0.0693 | Grad 0.0496[0m
+[[36m04-21 15:11:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 1801/2296 - Loss: 0.0823[0m
+[[36m04-21 15:13:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 1901/2296 - Loss: 0.0816[0m
+[[36m04-21 15:15:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 2001/2296 - Loss: 0.0783[0m
+[[36m04-21 15:17:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 2101/2296 - Loss: 0.0735[0m
+[[36m04-21 15:19:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 2201/2296 - Loss: 0.0792[0m
+done running 1 epoch
+[[36m04-21 15:21:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 106 | Loss=0.0698 | Reco=0.0698 | Grad=0.0497[0m
+[[36m04-21 15:21:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 15:21:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-21 15:21:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 106 - Step 1/35.20427703857422 - Loss: 0.1154[0m
+[[36m04-21 15:21:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 106 | 3/14 | 0.26 it/sec | Loss 0.1210 | Reco 0.1210 | Nsdr 8.265[0m
+[[36m04-21 15:21:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 106 | 6/14 | 0.29 it/sec | Loss 0.1254 | Reco 0.1254 | Nsdr 8.247[0m
+[[36m04-21 15:22:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 106 | 9/14 | 0.31 it/sec | Loss 0.1293 | Reco 0.1293 | Nsdr 7.796[0m
+[[36m04-21 15:22:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 106 | 12/14 | 0.31 it/sec | Loss 0.1378 | Reco 0.1378 | Nsdr 7.445[0m
+[[36m04-21 15:22:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 106 | Loss=0.1434 | Reco=0.1434 | Nsdr=7.183 | Best=0.1433 | Bname=main[0m
+[INFO] Free disk space: 7412806.10 GB
+[INFO] Checkpoint size: 411.12 MB
+[[36m04-21 15:22:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 15:22:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-21 15:22:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 1/2296 - Loss: 0.0483[0m
+[[36m04-21 15:24:21[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 101/2296 - Loss: 0.0807[0m
+[[36m04-21 15:26:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 201/2296 - Loss: 0.0799[0m
+[[36m04-21 15:28:27[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 301/2296 - Loss: 0.0657[0m
+[[36m04-21 15:30:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 401/2296 - Loss: 0.0757[0m
+[[36m04-21 15:32:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 501/2296 - Loss: 0.0615[0m
+[[36m04-21 15:34:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 107 | 574/2296 | 0.82 it/sec | Loss 0.0700 | Reco 0.0700 | Grad 0.0489[0m
+[[36m04-21 15:34:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 601/2296 - Loss: 0.0705[0m
+[[36m04-21 15:36:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 701/2296 - Loss: 0.0602[0m
+[[36m04-21 15:38:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 801/2296 - Loss: 0.0674[0m
+[[36m04-21 15:40:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 901/2296 - Loss: 0.0803[0m
+[[36m04-21 15:42:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 1001/2296 - Loss: 0.0802[0m
+[[36m04-21 15:44:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 1101/2296 - Loss: 0.0611[0m
+[[36m04-21 15:45:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 107 | 1148/2296 | 0.82 it/sec | Loss 0.0698 | Reco 0.0698 | Grad 0.0498[0m
+[[36m04-21 15:46:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 1201/2296 - Loss: 0.0852[0m
+[[36m04-21 15:48:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 1301/2296 - Loss: 0.0855[0m
+[[36m04-21 15:50:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 1401/2296 - Loss: 0.0509[0m
+[[36m04-21 15:52:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 1501/2296 - Loss: 0.0651[0m
+[[36m04-21 15:54:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 1601/2296 - Loss: 0.0697[0m
+[[36m04-21 15:56:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 1701/2296 - Loss: 0.0655[0m
+[[36m04-21 15:57:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 107 | 1722/2296 | 0.82 it/sec | Loss 0.0698 | Reco 0.0698 | Grad 0.0499[0m
+[[36m04-21 15:59:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 1801/2296 - Loss: 0.0675[0m
+[[36m04-21 16:01:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 1901/2296 - Loss: 0.0661[0m
+[[36m04-21 16:03:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 2001/2296 - Loss: 0.0548[0m
+[[36m04-21 16:05:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 2101/2296 - Loss: 0.0792[0m
+[[36m04-21 16:07:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 2201/2296 - Loss: 0.0610[0m
+done running 1 epoch
+[[36m04-21 16:09:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 107 | Loss=0.0697 | Reco=0.0697 | Grad=0.0499[0m
+[[36m04-21 16:09:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 16:09:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-21 16:09:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 107 - Step 1/35.90106964111328 - Loss: 0.1137[0m
+[[36m04-21 16:09:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 107 | 3/14 | 0.30 it/sec | Loss 0.1218 | Reco 0.1218 | Nsdr 8.313[0m
+[[36m04-21 16:09:27[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 107 | 6/14 | 0.32 it/sec | Loss 0.1261 | Reco 0.1261 | Nsdr 8.240[0m
+[[36m04-21 16:09:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 107 | 9/14 | 0.32 it/sec | Loss 0.1300 | Reco 0.1300 | Nsdr 7.798[0m
+[[36m04-21 16:09:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 107 | 12/14 | 0.33 it/sec | Loss 0.1381 | Reco 0.1381 | Nsdr 7.463[0m
+[[36m04-21 16:09:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 107 | Loss=0.1434 | Reco=0.1434 | Nsdr=7.219 | Best=0.1433 | Bname=main[0m
+[INFO] Free disk space: 7410764.95 GB
+[INFO] Checkpoint size: 411.12 MB
+[[36m04-21 16:09:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 16:09:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-21 16:09:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 1/2296 - Loss: 0.0780[0m
+[[36m04-21 16:11:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 101/2296 - Loss: 0.0868[0m
+[[36m04-21 16:13:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 201/2296 - Loss: 0.0772[0m
+[[36m04-21 16:15:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 301/2296 - Loss: 0.0840[0m
+[[36m04-21 16:18:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 401/2296 - Loss: 0.1020[0m
+[[36m04-21 16:20:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 501/2296 - Loss: 0.0391[0m
+[[36m04-21 16:21:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 108 | 574/2296 | 0.82 it/sec | Loss 0.0713 | Reco 0.0713 | Grad 0.0552[0m
+[[36m04-21 16:22:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 601/2296 - Loss: 0.0803[0m
+[[36m04-21 16:24:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 701/2296 - Loss: 0.0637[0m
+[[36m04-21 16:26:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 801/2296 - Loss: 0.0747[0m
+[[36m04-21 16:28:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 901/2296 - Loss: 0.0727[0m
+[[36m04-21 16:30:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 1001/2296 - Loss: 0.0854[0m
+[[36m04-21 16:32:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 1101/2296 - Loss: 0.0615[0m
+[[36m04-21 16:33:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 108 | 1148/2296 | 0.82 it/sec | Loss 0.0710 | Reco 0.0710 | Grad 0.0547[0m
+[[36m04-21 16:34:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 1201/2296 - Loss: 0.0639[0m
+[[36m04-21 16:36:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 1301/2296 - Loss: 0.0623[0m
+[[36m04-21 16:38:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 1401/2296 - Loss: 0.0933[0m
+[[36m04-21 16:40:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 1501/2296 - Loss: 0.0692[0m
+[[36m04-21 16:42:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 1601/2296 - Loss: 0.0823[0m
+[[36m04-21 16:44:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 1701/2296 - Loss: 0.0895[0m
+[[36m04-21 16:44:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 108 | 1722/2296 | 0.82 it/sec | Loss 0.0708 | Reco 0.0708 | Grad 0.0545[0m
+[[36m04-21 16:46:30[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 1801/2296 - Loss: 0.0732[0m
+[[36m04-21 16:48:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 1901/2296 - Loss: 0.0590[0m
+[[36m04-21 16:50:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 2001/2296 - Loss: 0.1013[0m
+[[36m04-21 16:52:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 2101/2296 - Loss: 0.0727[0m
+[[36m04-21 16:54:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 2201/2296 - Loss: 0.0530[0m
+done running 1 epoch
+[[36m04-21 16:56:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 108 | Loss=0.0708 | Reco=0.0708 | Grad=0.0553[0m
+[[36m04-21 16:56:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 16:56:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-21 16:56:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 108 - Step 1/36.02286911010742 - Loss: 0.1137[0m
+[[36m04-21 16:56:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 108 | 3/14 | 0.28 it/sec | Loss 0.1219 | Reco 0.1219 | Nsdr 8.283[0m
+[[36m04-21 16:57:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 108 | 6/14 | 0.30 it/sec | Loss 0.1269 | Reco 0.1269 | Nsdr 8.240[0m
+[[36m04-21 16:57:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 108 | 9/14 | 0.31 it/sec | Loss 0.1316 | Reco 0.1316 | Nsdr 7.773[0m
+[[36m04-21 16:57:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 108 | 12/14 | 0.32 it/sec | Loss 0.1396 | Reco 0.1396 | Nsdr 7.433[0m
+[[36m04-21 16:57:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 108 | Loss=0.1447 | Reco=0.1447 | Nsdr=7.186 | Best=0.1433 | Bname=main[0m
+[INFO] Free disk space: 7408459.63 GB
+[INFO] Checkpoint size: 411.12 MB
+[[36m04-21 16:57:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 16:57:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-21 16:57:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 1/2296 - Loss: 0.0819[0m
+[[36m04-21 16:59:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 101/2296 - Loss: 0.0786[0m
+[[36m04-21 17:01:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 201/2296 - Loss: 0.0472[0m
+[[36m04-21 17:03:33[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 301/2296 - Loss: 0.0708[0m
+[[36m04-21 17:05:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 401/2296 - Loss: 0.0572[0m
+[[36m04-21 17:07:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 501/2296 - Loss: 0.0673[0m
+[[36m04-21 17:09:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 109 | 574/2296 | 0.82 it/sec | Loss 0.0715 | Reco 0.0715 | Grad 0.0535[0m
+[[36m04-21 17:09:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 601/2296 - Loss: 0.0872[0m
+[[36m04-21 17:11:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 701/2296 - Loss: 0.0424[0m
+[[36m04-21 17:13:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 801/2296 - Loss: 0.0995[0m
+[[36m04-21 17:15:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 901/2296 - Loss: 0.0568[0m
+[[36m04-21 17:17:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 1001/2296 - Loss: 0.0492[0m
+[[36m04-21 17:19:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 1101/2296 - Loss: 0.0922[0m
+[[36m04-21 17:20:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 109 | 1148/2296 | 0.82 it/sec | Loss 0.0705 | Reco 0.0705 | Grad 0.0532[0m
+[[36m04-21 17:21:53[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 1201/2296 - Loss: 0.1051[0m
+[[36m04-21 17:23:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 1301/2296 - Loss: 0.0859[0m
+[[36m04-21 17:25:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 1401/2296 - Loss: 0.0431[0m
+[[36m04-21 17:27:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 1501/2296 - Loss: 0.0783[0m
+[[36m04-21 17:30:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 1601/2296 - Loss: 0.0658[0m
+[[36m04-21 17:32:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 1701/2296 - Loss: 0.0657[0m
+[[36m04-21 17:32:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 109 | 1722/2296 | 0.82 it/sec | Loss 0.0708 | Reco 0.0708 | Grad 0.0534[0m
+[[36m04-21 17:34:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 1801/2296 - Loss: 0.0921[0m
+[[36m04-21 17:36:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 1901/2296 - Loss: 0.0830[0m
+[[36m04-21 17:38:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 2001/2296 - Loss: 0.0767[0m
+[[36m04-21 17:40:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 2101/2296 - Loss: 0.0496[0m
+[[36m04-21 17:42:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 2201/2296 - Loss: 0.0771[0m
+done running 1 epoch
+[[36m04-21 17:44:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 109 | Loss=0.0706 | Reco=0.0706 | Grad=0.0533[0m
+[[36m04-21 17:44:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 17:44:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-21 17:44:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 109 - Step 1/36.31477737426758 - Loss: 0.1123[0m
+[[36m04-21 17:44:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 109 | 3/14 | 0.30 it/sec | Loss 0.1232 | Reco 0.1232 | Nsdr 8.227[0m
+[[36m04-21 17:44:33[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 109 | 6/14 | 0.31 it/sec | Loss 0.1271 | Reco 0.1271 | Nsdr 8.201[0m
+[[36m04-21 17:44:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 109 | 9/14 | 0.32 it/sec | Loss 0.1302 | Reco 0.1302 | Nsdr 7.788[0m
+[[36m04-21 17:44:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 109 | 12/14 | 0.33 it/sec | Loss 0.1386 | Reco 0.1386 | Nsdr 7.431[0m
+[[36m04-21 17:44:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 109 | Loss=0.1440 | Reco=0.1440 | Nsdr=7.175 | Best=0.1433 | Bname=main[0m
+[INFO] Free disk space: 7405408.55 GB
+[INFO] Checkpoint size: 411.12 MB
+[[36m04-21 17:45:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 17:45:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-21 17:45:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 1/2296 - Loss: 0.0633[0m
+[[36m04-21 17:47:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 101/2296 - Loss: 0.0844[0m
+[[36m04-21 17:49:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 201/2296 - Loss: 0.0591[0m
+[[36m04-21 17:51:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 301/2296 - Loss: 0.0643[0m
+[[36m04-21 17:53:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 401/2296 - Loss: 0.1067[0m
+[[36m04-21 17:55:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 501/2296 - Loss: 0.0578[0m
+[[36m04-21 17:56:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 110 | 574/2296 | 0.82 it/sec | Loss 0.0703 | Reco 0.0703 | Grad 0.0530[0m
+[[36m04-21 17:57:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 601/2296 - Loss: 0.0900[0m
+[[36m04-21 17:59:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 701/2296 - Loss: 0.0764[0m
+[[36m04-21 18:01:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 801/2296 - Loss: 0.0892[0m
+[[36m04-21 18:03:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 901/2296 - Loss: 0.0585[0m
+[[36m04-21 18:05:21[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 1001/2296 - Loss: 0.0795[0m
+[[36m04-21 18:07:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 1101/2296 - Loss: 0.0728[0m
+[[36m04-21 18:08:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 110 | 1148/2296 | 0.82 it/sec | Loss 0.0702 | Reco 0.0702 | Grad 0.0530[0m
+[[36m04-21 18:09:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 1201/2296 - Loss: 0.0585[0m
+[[36m04-21 18:11:30[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 1301/2296 - Loss: 0.0816[0m
+[[36m04-21 18:13:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 1401/2296 - Loss: 0.0613[0m
+[[36m04-21 18:15:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 1501/2296 - Loss: 0.0542[0m
+[[36m04-21 18:17:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 1601/2296 - Loss: 0.0718[0m
+[[36m04-21 18:19:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 1701/2296 - Loss: 0.0724[0m
+[[36m04-21 18:20:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 110 | 1722/2296 | 0.82 it/sec | Loss 0.0701 | Reco 0.0701 | Grad 0.0533[0m
+[[36m04-21 18:21:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 1801/2296 - Loss: 0.0667[0m
+[[36m04-21 18:23:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 1901/2296 - Loss: 0.0671[0m
+[[36m04-21 18:25:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 2001/2296 - Loss: 0.0719[0m
+[[36m04-21 18:27:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 2101/2296 - Loss: 0.0855[0m
+[[36m04-21 18:29:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 2201/2296 - Loss: 0.0626[0m
+done running 1 epoch
+[[36m04-21 18:31:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 110 | Loss=0.0704 | Reco=0.0704 | Grad=0.0539[0m
+[[36m04-21 18:31:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 18:31:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-21 18:31:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 110 - Step 1/35.39072799682617 - Loss: 0.1146[0m
+[[36m04-21 18:31:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 110 | 3/14 | 0.30 it/sec | Loss 0.1213 | Reco 0.1213 | Nsdr 8.335[0m
+[[36m04-21 18:32:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 110 | 6/14 | 0.32 it/sec | Loss 0.1262 | Reco 0.1262 | Nsdr 8.268[0m
+[[36m04-21 18:32:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 110 | 9/14 | 0.32 it/sec | Loss 0.1319 | Reco 0.1319 | Nsdr 7.773[0m
+[[36m04-21 18:32:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 110 | 12/14 | 0.33 it/sec | Loss 0.1398 | Reco 0.1398 | Nsdr 7.427[0m
+[[36m04-21 18:32:30[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 110 | Loss=0.1449 | Reco=0.1449 | Nsdr=7.181 | Best=0.1433 | Bname=main[0m
+[INFO] Free disk space: 7403054.95 GB
+[INFO] Checkpoint size: 411.12 MB
+[[36m04-21 18:32:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 18:32:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-21 18:32:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 1/2296 - Loss: 0.0798[0m
+[[36m04-21 18:34:36[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 101/2296 - Loss: 0.0577[0m
+[[36m04-21 18:36:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 201/2296 - Loss: 0.0595[0m
+[[36m04-21 18:38:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 301/2296 - Loss: 0.0577[0m
+[[36m04-21 18:40:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 401/2296 - Loss: 0.0712[0m
+[[36m04-21 18:42:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 501/2296 - Loss: 0.0565[0m
+[[36m04-21 18:44:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 111 | 574/2296 | 0.82 it/sec | Loss 0.0700 | Reco 0.0700 | Grad 0.0543[0m
+[[36m04-21 18:44:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 601/2296 - Loss: 0.0899[0m
+[[36m04-21 18:46:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 701/2296 - Loss: 0.0810[0m
+[[36m04-21 18:48:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 801/2296 - Loss: 0.1033[0m
+[[36m04-21 18:50:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 901/2296 - Loss: 0.0505[0m
+[[36m04-21 18:52:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 1001/2296 - Loss: 0.0739[0m
+[[36m04-21 18:54:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 1101/2296 - Loss: 0.0652[0m
+[[36m04-21 18:55:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 111 | 1148/2296 | 0.82 it/sec | Loss 0.0706 | Reco 0.0706 | Grad 0.0540[0m
+[[36m04-21 18:57:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 1201/2296 - Loss: 0.0703[0m
+[[36m04-21 18:59:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 1301/2296 - Loss: 0.0382[0m
+[[36m04-21 19:01:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 1401/2296 - Loss: 0.0779[0m
+[[36m04-21 19:03:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 1501/2296 - Loss: 0.0804[0m
+[[36m04-21 19:05:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 1601/2296 - Loss: 0.0763[0m
+[[36m04-21 19:07:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 1701/2296 - Loss: 0.0708[0m
+[[36m04-21 19:07:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 111 | 1722/2296 | 0.82 it/sec | Loss 0.0704 | Reco 0.0704 | Grad 0.0532[0m
+[[36m04-21 19:09:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 1801/2296 - Loss: 0.0742[0m
+[[36m04-21 19:11:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 1901/2296 - Loss: 0.0424[0m
+[[36m04-21 19:13:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 2001/2296 - Loss: 0.0892[0m
+[[36m04-21 19:15:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 2101/2296 - Loss: 0.0888[0m
+[[36m04-21 19:17:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 2201/2296 - Loss: 0.0823[0m
+done running 1 epoch
+[[36m04-21 19:19:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 111 | Loss=0.0703 | Reco=0.0703 | Grad=0.0534[0m
+[[36m04-21 19:19:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 19:19:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-21 19:19:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 111 - Step 1/36.72268295288086 - Loss: 0.1112[0m
+[[36m04-21 19:19:33[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 111 | 3/14 | 0.31 it/sec | Loss 0.1203 | Reco 0.1203 | Nsdr 8.363[0m
+[[36m04-21 19:19:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 111 | 6/14 | 0.32 it/sec | Loss 0.1250 | Reco 0.1250 | Nsdr 8.301[0m
+[[36m04-21 19:19:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 111 | 9/14 | 0.33 it/sec | Loss 0.1287 | Reco 0.1287 | Nsdr 7.854[0m
+[[36m04-21 19:19:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 111 | 12/14 | 0.33 it/sec | Loss 0.1374 | Reco 0.1374 | Nsdr 7.487[0m
+[[36m04-21 19:20:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 111 | Loss=0.1424 | Reco=0.1424 | Nsdr=7.247 | Best=0.1424 | Bname=main[0m
+[[36m04-21 19:20:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mNew best valid loss 0.1424[0m
+[INFO] Free disk space: 7399031.88 GB
+[INFO] Checkpoint size: 411.12 MB
+[[36m04-21 19:20:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 19:20:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-21 19:20:08[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 1/2296 - Loss: 0.0682[0m
+[[36m04-21 19:22:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 101/2296 - Loss: 0.0725[0m
+[[36m04-21 19:24:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 201/2296 - Loss: 0.0354[0m
+[[36m04-21 19:26:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 301/2296 - Loss: 0.0451[0m
+[[36m04-21 19:28:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 401/2296 - Loss: 0.0810[0m
+[[36m04-21 19:30:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 501/2296 - Loss: 0.0593[0m
+[[36m04-21 19:31:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 112 | 574/2296 | 0.82 it/sec | Loss 0.0704 | Reco 0.0704 | Grad 0.0555[0m
+[[36m04-21 19:32:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 601/2296 - Loss: 0.1164[0m
+[[36m04-21 19:34:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 701/2296 - Loss: 0.0707[0m
+[[36m04-21 19:36:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 801/2296 - Loss: 0.0948[0m
+[[36m04-21 19:38:27[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 901/2296 - Loss: 0.0732[0m
+[[36m04-21 19:40:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 1001/2296 - Loss: 0.0854[0m
+[[36m04-21 19:42:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 1101/2296 - Loss: 0.0614[0m
+[[36m04-21 19:43:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 112 | 1148/2296 | 0.82 it/sec | Loss 0.0705 | Reco 0.0705 | Grad 0.0550[0m
+[[36m04-21 19:44:33[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 1201/2296 - Loss: 0.0783[0m
+[[36m04-21 19:46:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 1301/2296 - Loss: 0.0533[0m
+[[36m04-21 19:48:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 1401/2296 - Loss: 0.0656[0m
+[[36m04-21 19:50:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 1501/2296 - Loss: 0.0774[0m
+[[36m04-21 19:52:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 1601/2296 - Loss: 0.0685[0m
+[[36m04-21 19:54:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 1701/2296 - Loss: 0.0486[0m
+[[36m04-21 19:55:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 112 | 1722/2296 | 0.82 it/sec | Loss 0.0707 | Reco 0.0707 | Grad 0.0557[0m
+[[36m04-21 19:56:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 1801/2296 - Loss: 0.0551[0m
+[[36m04-21 19:58:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 1901/2296 - Loss: 0.0395[0m
+[[36m04-21 20:00:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 2001/2296 - Loss: 0.0636[0m
+[[36m04-21 20:02:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 2101/2296 - Loss: 0.0761[0m
+[[36m04-21 20:04:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 2201/2296 - Loss: 0.0885[0m
+done running 1 epoch
+[[36m04-21 20:06:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 112 | Loss=0.0706 | Reco=0.0706 | Grad=0.0553[0m
+[[36m04-21 20:06:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 20:06:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-21 20:07:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 112 - Step 1/35.87317657470703 - Loss: 0.1135[0m
+[[36m04-21 20:07:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 112 | 3/14 | 0.30 it/sec | Loss 0.1217 | Reco 0.1217 | Nsdr 8.241[0m
+[[36m04-21 20:07:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 112 | 6/14 | 0.31 it/sec | Loss 0.1255 | Reco 0.1255 | Nsdr 8.246[0m
+[[36m04-21 20:07:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 112 | 9/14 | 0.32 it/sec | Loss 0.1298 | Reco 0.1298 | Nsdr 7.774[0m
+[[36m04-21 20:07:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 112 | 12/14 | 0.33 it/sec | Loss 0.1388 | Reco 0.1388 | Nsdr 7.406[0m
+[[36m04-21 20:07:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 112 | Loss=0.1442 | Reco=0.1442 | Nsdr=7.159 | Best=0.1424 | Bname=main[0m
+[INFO] Free disk space: 7394491.67 GB
+[INFO] Checkpoint size: 411.12 MB
+[[36m04-21 20:07:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 20:07:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-21 20:07:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 1/2296 - Loss: 0.0843[0m
+[[36m04-21 20:09:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 101/2296 - Loss: 0.0701[0m
+[[36m04-21 20:11:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 201/2296 - Loss: 0.0552[0m
+[[36m04-21 20:13:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 301/2296 - Loss: 0.0619[0m
+[[36m04-21 20:39:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 401/2296 - Loss: 0.0747[0m
+[[36m04-21 20:41:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 501/2296 - Loss: 0.0781[0m
+[[36m04-21 20:43:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 113 | 574/2296 | 0.27 it/sec | Loss 0.0701 | Reco 0.0701 | Grad 0.0545[0m
+[[36m04-21 20:43:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 601/2296 - Loss: 0.0720[0m
+[[36m04-21 20:45:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 701/2296 - Loss: 0.0663[0m
+[[36m04-21 20:48:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 801/2296 - Loss: 0.0538[0m
+[[36m04-21 20:50:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 901/2296 - Loss: 0.0653[0m
+[[36m04-21 20:52:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 1001/2296 - Loss: 0.1005[0m
+[[36m04-21 20:54:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 1101/2296 - Loss: 0.0754[0m
+[[36m04-21 20:55:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 113 | 1148/2296 | 0.40 it/sec | Loss 0.0704 | Reco 0.0704 | Grad 0.0529[0m
+[[36m04-21 20:56:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 1201/2296 - Loss: 0.0600[0m
+[[36m04-21 20:58:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 1301/2296 - Loss: 0.0806[0m
+[[36m04-21 21:00:17[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 1401/2296 - Loss: 0.0862[0m
+[[36m04-21 21:02:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 1501/2296 - Loss: 0.0566[0m
+[[36m04-21 21:04:21[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 1601/2296 - Loss: 0.0877[0m
+[[36m04-21 21:06:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 1701/2296 - Loss: 0.0620[0m
+[[36m04-21 21:06:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 113 | 1722/2296 | 0.49 it/sec | Loss 0.0703 | Reco 0.0703 | Grad 0.0535[0m
+[[36m04-21 21:08:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 1801/2296 - Loss: 0.0853[0m
+[[36m04-21 21:10:27[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 1901/2296 - Loss: 0.0706[0m
+[[36m04-21 21:12:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 2001/2296 - Loss: 0.0392[0m
+[[36m04-21 21:15:00[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 2101/2296 - Loss: 0.0772[0m
+[[36m04-21 21:17:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 2201/2296 - Loss: 0.0705[0m
+done running 1 epoch
+[[36m04-21 21:18:58[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 113 | Loss=0.0702 | Reco=0.0702 | Grad=0.0536[0m
+[[36m04-21 21:18:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 21:18:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-21 21:19:14[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 113 - Step 1/36.31999588012695 - Loss: 0.1130[0m
+[[36m04-21 21:19:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 113 | 3/14 | 0.16 it/sec | Loss 0.1211 | Reco 0.1211 | Nsdr 8.283[0m
+[[36m04-21 21:19:33[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 113 | 6/14 | 0.20 it/sec | Loss 0.1255 | Reco 0.1255 | Nsdr 8.236[0m
+[[36m04-21 21:19:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 113 | 9/14 | 0.23 it/sec | Loss 0.1292 | Reco 0.1292 | Nsdr 7.798[0m
+[[36m04-21 21:19:51[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 113 | 12/14 | 0.25 it/sec | Loss 0.1378 | Reco 0.1378 | Nsdr 7.443[0m
+[[36m04-21 21:19:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 113 | Loss=0.1427 | Reco=0.1427 | Nsdr=7.210 | Best=0.1424 | Bname=main[0m
+[INFO] Free disk space: 7390129.31 GB
+[INFO] Checkpoint size: 411.12 MB
+[[36m04-21 21:20:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 21:20:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-21 21:20:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 1/2296 - Loss: 0.0444[0m
+[[36m04-21 21:22:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 101/2296 - Loss: 0.0656[0m
+[[36m04-21 21:24:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 201/2296 - Loss: 0.0605[0m
+[[36m04-21 21:26:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 301/2296 - Loss: 0.0649[0m
+[[36m04-21 21:28:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 401/2296 - Loss: 0.0906[0m
+[[36m04-21 21:30:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 501/2296 - Loss: 0.0438[0m
+[[36m04-21 21:31:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 114 | 574/2296 | 0.82 it/sec | Loss 0.0707 | Reco 0.0707 | Grad 0.0554[0m
+[[36m04-21 21:32:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 601/2296 - Loss: 0.0506[0m
+[[36m04-21 21:34:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 701/2296 - Loss: 0.0564[0m
+[[36m04-21 21:36:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 801/2296 - Loss: 0.0709[0m
+[[36m04-21 21:38:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 901/2296 - Loss: 0.0311[0m
+[[36m04-21 21:40:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 1001/2296 - Loss: 0.0532[0m
+[[36m04-21 21:42:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 1101/2296 - Loss: 0.0623[0m
+[[36m04-21 21:43:25[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 114 | 1148/2296 | 0.82 it/sec | Loss 0.0703 | Reco 0.0703 | Grad 0.0540[0m
+[[36m04-21 21:44:28[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 1201/2296 - Loss: 0.0678[0m
+[[36m04-21 21:46:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 1301/2296 - Loss: 0.0465[0m
+[[36m04-21 21:48:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 1401/2296 - Loss: 0.0634[0m
+[[36m04-21 21:50:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 1501/2296 - Loss: 0.0640[0m
+[[36m04-21 21:52:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 1601/2296 - Loss: 0.0695[0m
+[[36m04-21 21:54:42[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 1701/2296 - Loss: 0.0801[0m
+[[36m04-21 21:55:10[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 114 | 1722/2296 | 0.82 it/sec | Loss 0.0702 | Reco 0.0702 | Grad 0.0531[0m
+[[36m04-21 21:56:44[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 1801/2296 - Loss: 0.0998[0m
+[[36m04-21 21:58:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 1901/2296 - Loss: 0.0587[0m
+[[36m04-21 22:00:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 2001/2296 - Loss: 0.0823[0m
+[[36m04-21 22:02:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 2101/2296 - Loss: 0.0518[0m
+[[36m04-21 22:04:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 2201/2296 - Loss: 0.0711[0m
+done running 1 epoch
+[[36m04-21 22:06:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 114 | Loss=0.0700 | Reco=0.0700 | Grad=0.0532[0m
+[[36m04-21 22:06:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 22:06:49[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-21 22:06:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 114 - Step 1/35.67864227294922 - Loss: 0.1144[0m
+[[36m04-21 22:07:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 114 | 3/14 | 0.30 it/sec | Loss 0.1217 | Reco 0.1217 | Nsdr 8.314[0m
+[[36m04-21 22:07:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 114 | 6/14 | 0.32 it/sec | Loss 0.1257 | Reco 0.1257 | Nsdr 8.276[0m
+[[36m04-21 22:07:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 114 | 9/14 | 0.32 it/sec | Loss 0.1303 | Reco 0.1303 | Nsdr 7.810[0m
+[[36m04-21 22:07:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 114 | 12/14 | 0.33 it/sec | Loss 0.1383 | Reco 0.1383 | Nsdr 7.487[0m
+[[36m04-21 22:07:34[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 114 | Loss=0.1429 | Reco=0.1429 | Nsdr=7.261 | Best=0.1424 | Bname=main[0m
+[INFO] Free disk space: 7387257.09 GB
+[INFO] Checkpoint size: 411.13 MB
+[[36m04-21 22:07:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 22:07:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-21 22:07:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 1/2296 - Loss: 0.0451[0m
+[[36m04-21 22:09:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 101/2296 - Loss: 0.0448[0m
+[[36m04-21 22:11:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 201/2296 - Loss: 0.0331[0m
+[[36m04-21 22:13:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 301/2296 - Loss: 0.0830[0m
+[[36m04-21 22:15:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 401/2296 - Loss: 0.0685[0m
+[[36m04-21 22:17:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 501/2296 - Loss: 0.1097[0m
+[[36m04-21 22:19:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 115 | 574/2296 | 0.81 it/sec | Loss 0.0693 | Reco 0.0693 | Grad 0.0532[0m
+[[36m04-21 22:19:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 601/2296 - Loss: 0.0783[0m
+[[36m04-21 22:21:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 701/2296 - Loss: 0.0667[0m
+[[36m04-21 22:23:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 801/2296 - Loss: 0.0763[0m
+[[36m04-21 22:25:59[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 901/2296 - Loss: 0.0713[0m
+[[36m04-21 22:28:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 1001/2296 - Loss: 0.0846[0m
+[[36m04-21 22:30:03[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 1101/2296 - Loss: 0.0707[0m
+[[36m04-21 22:31:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 115 | 1148/2296 | 0.82 it/sec | Loss 0.0692 | Reco 0.0692 | Grad 0.0529[0m
+[[36m04-21 22:32:05[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 1201/2296 - Loss: 0.0659[0m
+[[36m04-21 22:34:07[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 1301/2296 - Loss: 0.0646[0m
+[[36m04-21 22:36:09[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 1401/2296 - Loss: 0.0859[0m
+[[36m04-21 22:38:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 1501/2296 - Loss: 0.0727[0m
+[[36m04-21 22:40:13[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 1601/2296 - Loss: 0.0770[0m
+[[36m04-21 22:42:19[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 1701/2296 - Loss: 0.0465[0m
+[[36m04-21 22:42:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 115 | 1722/2296 | 0.82 it/sec | Loss 0.0701 | Reco 0.0701 | Grad 0.0540[0m
+[[36m04-21 22:44:21[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 1801/2296 - Loss: 0.0412[0m
+[[36m04-21 22:46:23[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 1901/2296 - Loss: 0.0787[0m
+[[36m04-21 22:48:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 2001/2296 - Loss: 0.0557[0m
+[[36m04-21 22:50:27[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 2101/2296 - Loss: 0.0683[0m
+[[36m04-21 22:52:29[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 2201/2296 - Loss: 0.0407[0m
+done running 1 epoch
+[[36m04-21 22:54:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 115 | Loss=0.0700 | Reco=0.0700 | Grad=0.0539[0m
+[[36m04-21 22:54:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 22:54:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-21 22:54:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 115 - Step 1/34.56255340576172 - Loss: 0.1171[0m
+[[36m04-21 22:54:40[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 115 | 3/14 | 0.30 it/sec | Loss 0.1243 | Reco 0.1243 | Nsdr 8.025[0m
+[[36m04-21 22:54:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 115 | 6/14 | 0.31 it/sec | Loss 0.1292 | Reco 0.1292 | Nsdr 8.016[0m
+[[36m04-21 22:54:57[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 115 | 9/14 | 0.32 it/sec | Loss 0.1351 | Reco 0.1351 | Nsdr 7.565[0m
+[[36m04-21 22:55:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 115 | 12/14 | 0.33 it/sec | Loss 0.1403 | Reco 0.1403 | Nsdr 7.387[0m
+[[36m04-21 22:55:11[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 115 | Loss=0.1451 | Reco=0.1451 | Nsdr=7.160 | Best=0.1424 | Bname=main[0m
+[INFO] Free disk space: 7384668.14 GB
+[INFO] Checkpoint size: 411.13 MB
+[[36m04-21 22:55:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 22:55:12[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Training...[0m
+running 1 epoch
+logging progress
+[[36m04-21 22:55:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 1/2296 - Loss: 0.0513[0m
+[[36m04-21 22:57:16[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 101/2296 - Loss: 0.0710[0m
+[[36m04-21 22:59:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 201/2296 - Loss: 0.0784[0m
+[[36m04-21 23:01:20[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 301/2296 - Loss: 0.0975[0m
+[[36m04-21 23:03:22[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 401/2296 - Loss: 0.0545[0m
+[[36m04-21 23:05:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 501/2296 - Loss: 0.0735[0m
+[[36m04-21 23:06:55[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 116 | 574/2296 | 0.82 it/sec | Loss 0.0707 | Reco 0.0707 | Grad 0.0544[0m
+[[36m04-21 23:07:26[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 601/2296 - Loss: 0.0595[0m
+[[36m04-21 23:09:31[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 701/2296 - Loss: 0.0544[0m
+[[36m04-21 23:11:33[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 801/2296 - Loss: 0.0592[0m
+[[36m04-21 23:13:35[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 901/2296 - Loss: 0.0820[0m
+[[36m04-21 23:15:37[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 1001/2296 - Loss: 0.0692[0m
+[[36m04-21 23:17:39[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 1101/2296 - Loss: 0.0751[0m
+[[36m04-21 23:18:38[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 116 | 1148/2296 | 0.82 it/sec | Loss 0.0700 | Reco 0.0700 | Grad 0.0529[0m
+[[36m04-21 23:19:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 1201/2296 - Loss: 0.0700[0m
+[[36m04-21 23:21:43[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 1301/2296 - Loss: 0.0630[0m
+[[36m04-21 23:23:45[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 1401/2296 - Loss: 0.0627[0m
+[[36m04-21 23:25:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 1501/2296 - Loss: 0.0716[0m
+[[36m04-21 23:27:48[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 1601/2296 - Loss: 0.0486[0m
+[[36m04-21 23:29:50[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 1701/2296 - Loss: 0.0476[0m
+[[36m04-21 23:30:18[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Train | Epoch 116 | 1722/2296 | 0.82 it/sec | Loss 0.0695 | Reco 0.0695 | Grad 0.0528[0m
+[[36m04-21 23:31:52[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 1801/2296 - Loss: 0.0846[0m
+[[36m04-21 23:33:54[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 1901/2296 - Loss: 0.0765[0m
+[[36m04-21 23:35:56[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 2001/2296 - Loss: 0.0492[0m
+[[36m04-21 23:38:02[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 2101/2296 - Loss: 0.0662[0m
+[[36m04-21 23:40:04[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 2201/2296 - Loss: 0.0667[0m
+done running 1 epoch
+[[36m04-21 23:42:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mTrain Summary | Epoch 116 | Loss=0.0698 | Reco=0.0698 | Grad=0.0538[0m
+[[36m04-21 23:42:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - ----------------------------------------------------------------------[0m
+[[36m04-21 23:42:01[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Cross validation...[0m
+logging progress
+[[36m04-21 23:42:06[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Epoch 116 - Step 1/35.47914505004883 - Loss: 0.1140[0m
+[[36m04-21 23:42:15[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 116 | 3/14 | 0.30 it/sec | Loss 0.1225 | Reco 0.1225 | Nsdr 8.232[0m
+[[36m04-21 23:42:24[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 116 | 6/14 | 0.32 it/sec | Loss 0.1273 | Reco 0.1273 | Nsdr 8.175[0m
+[[36m04-21 23:42:32[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 116 | 9/14 | 0.32 it/sec | Loss 0.1319 | Reco 0.1319 | Nsdr 7.708[0m
+[[36m04-21 23:42:41[0m][[34mdemucs.solver[0m][[32mINFO[0m] - Valid | Epoch 116 | 12/14 | 0.33 it/sec | Loss 0.1398 | Reco 0.1398 | Nsdr 7.385[0m
+[[36m04-21 23:42:46[0m][[34mdemucs.solver[0m][[32mINFO[0m] - [1mValid Summary | Epoch 116 | Loss=0.1447 | Reco=0.1447 | Nsdr=7.152 | Best=0.1424 | Bname=main[0m
+[INFO] Free disk space: 7382378.80 GB
+[INFO] Checkpoint size: 411.13 MB
+Error executing job with overrides: ['model=htdemucs']
+Traceback (most recent call last):
+  File "/project/6002780/kaim/demucs/demucs_env/lib/python3.10/site-packages/torch/serialization.py", line 619, in save
+    _save(obj, opened_zipfile, pickle_module, pickle_protocol, _disable_byteorder_record)
+  File "/project/6002780/kaim/demucs/demucs_env/lib/python3.10/site-packages/torch/serialization.py", line 853, in _save
+    zip_file.write_record(name, storage.data_ptr(), num_bytes)
+OSError: [Errno 7] Argument list too long
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/6002780/kaim/demucs/demucs_env/lib/python3.10/site-packages/dora/utils.py", line 56, in write_and_rename
+    yield f
+  File "/project/6002780/kaim/demucs/demucs/solver.py", line 107, in _serialize
+    torch.save(package, tmp)
+  File "/project/6002780/kaim/demucs/demucs_env/lib/python3.10/site-packages/torch/serialization.py", line 618, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+  File "/project/6002780/kaim/demucs/demucs_env/lib/python3.10/site-packages/torch/serialization.py", line 482, in __exit__
+    self.file_like.write_end_of_file()
+RuntimeError: [enforce fail at inline_container.cc:424] . unexpected pos 380370304 vs 380370192
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/project/6002780/kaim/demucs/demucs/train.py", line 284, in main
+    solver.train()
+  File "/project/6002780/kaim/demucs/demucs/solver.py", line 319, in train
+    self._serialize(epoch)
+  File "/project/6002780/kaim/demucs/demucs/solver.py", line 106, in _serialize
+    with write_and_rename(self.checkpoint_file) as tmp:
+  File "/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v3/Compiler/gcccore/python/3.10.13/lib/python3.10/contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/project/6002780/kaim/demucs/demucs_env/lib/python3.10/site-packages/dora/utils.py", line 55, in write_and_rename
+    with open(tmp_path, mode) as f:
+OSError: [Errno 7] Argument list too long
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mdemucs_2025-04-21[0m at: [34mhttps://wandb.ai/kaimikkelsen-mcgill-university/demucs/runs/x2rnmbrq[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20250421_134550-x2rnmbrq/logs[0m
