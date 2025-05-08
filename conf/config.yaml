@@ -6,6 +6,37 @@ defaults:
   - override hydra/hydra_logging: colorlog
   - override hydra/job_logging: colorlog
 
+# added to work with the other one
+training:
+  instruments:
+    - drums
+    - bass
+    - other
+    - vocals
+  other_fix: false
+  channels: 2
+  samplerate: 44100
+  segment: 11
+  use_train_segment: true  # to remove
+  nfft: 4096
+  wiener_iters: 0
+  end_iters: 0
+  freq_emb: 0.2
+
+# added to work with the other one
+inference:
+  batch_size: 8
+  dim_t: 256
+  num_overlap: 4
+  normalize: true
+
+# added to work with the other one
+audio:
+  chunk_size: 485100 # 44100 * 11
+  num_channels: 2
+  sample_rate: 44100
+  min_mean_abs: 0.000
+
 dummy:
 dset:
   musdb: /home/kaim/scratch/MUSDB18HQ
