@@ -16,6 +16,13 @@ training:
     - vocals
   other_fix: false
   channels: 2
+  samplerate: 44100
+  segment: 11
+  use_train_segment: true  # to remove
+  nfft: 4096
+  wiener_iters: 0
+  end_iters: 0
+  freq_emb: 0.2
 
 # added to work with the other one
 inference:
