@@ -15,6 +15,7 @@ training:
     - other
     - vocals
   other_fix: false
+  channels: 2
 
 # added to work with the other one
 inference:
